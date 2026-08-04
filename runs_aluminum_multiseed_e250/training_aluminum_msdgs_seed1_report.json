@@ -1,0 +1,28 @@
+{
+  "status": "done",
+  "started_at": "2026-08-01 13:58:36",
+  "dataset": "aluminum",
+  "model": "msdgs",
+  "seed": 1,
+  "pid": 4107,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 1,
+    "device": 0,
+    "cache": false,
+    "resume": false,
+    "patience": 0,
+    "deterministic": true,
+    "pretrained": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt"
+  },
+  "finished_at": "2026-08-01 14:15:12",
+  "run_dir": "/root/autodl-tmp/neu-det-yolo26/runs_aluminum_multiseed_e250/seed1/msdgs",
+  "best": "/root/autodl-tmp/neu-det-yolo26/runs_aluminum_multiseed_e250/seed1/msdgs/weights/best.pt",
+  "last": "/root/autodl-tmp/neu-det-yolo26/runs_aluminum_multiseed_e250/seed1/msdgs/weights/last.pt",
+  "results_csv": "/root/autodl-tmp/neu-det-yolo26/runs_aluminum_multiseed_e250/seed1/msdgs/results.csv",
+  "completed_epochs": 250
+}

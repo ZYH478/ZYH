@@ -1,0 +1,9 @@
+{
+  "status": "running",
+  "current": "y26n_i19_dcnv2_deep_e250",
+  "pending": [],
+  "updated_at": "2026-07-26 08:46:16",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_iter19_backbone_e250/combo_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_iter19_backbone_e250/combo_results.csv",
+  "stage": "iter19_backbone"
+}

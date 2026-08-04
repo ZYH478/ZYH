@@ -1,0 +1,95 @@
+[11:03:16] eval gsdown -> report_gsdown.json
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+INDEPENDENT_EVAL_START dataset=neudet_abl model=msdgs weights=/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/y26n_s3_vovgscsp_gsdown_e250/weights/best.pt
+y26n_s3_vovgscsp_gsdown_e250 summary (fused): 124 layers, 1,935,814 parameters, 0 gradients, 4.4 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 961.3±350.1 MB/s, size: 26.8 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 13.3Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.2s/it 0.4s<10.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 4.8it/s 0.5s<1.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 7.6it/s 0.6s<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 9.8it/s 0.8s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 11.3it/s 0.9s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 9.0it/s 1.1s
+                   all        299        682       0.74      0.645      0.691      0.363
+Speed: 0.6ms preprocess, 1.6ms inference, 0.0ms loss, 0.1ms postprocess per image
+INDEPENDENT_EVAL_DONE dataset=neudet_abl model=msdgs map50=0.690810 map50_95=0.363272 fps=2290.56 fused_params=1935814 output=/root/autodl-tmp/neu-det-yolo26/runs_neudet_ablation/report_gsdown.json
+[11:03:25] gsdown done params=1935814 map50=0.690810 map50_95=0.363272 fps=2290.6
+[11:03:25] eval db_d2 -> report_db_d2.json
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+INDEPENDENT_EVAL_START dataset=neudet_abl model=msdgs weights=/root/autodl-tmp/neu-det-yolo26/runs_dualbranch_gsdown_e250/y26n_gsdown_db_d2_e250/weights/best.pt
+y26n_gsdown_db_d2_e250 summary (fused): 116 layers, 1,777,318 parameters, 0 gradients, 4.1 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1307.1±244.0 MB/s, size: 30.1 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 43.2Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.2it/s 0.2s<7.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 5.8it/s 0.4s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 9.3it/s 0.5s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 11.1it/s 0.6s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 12.3it/s 0.7s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 10.8it/s 0.9s
+                   all        299        682      0.718      0.685        0.7      0.362
+Speed: 0.6ms preprocess, 1.4ms inference, 0.0ms loss, 0.1ms postprocess per image
+INDEPENDENT_EVAL_DONE dataset=neudet_abl model=msdgs map50=0.699879 map50_95=0.362483 fps=2426.05 fused_params=1777318 output=/root/autodl-tmp/neu-det-yolo26/runs_neudet_ablation/report_db_d2.json
+[11:03:35] db_d2 done params=1777318 map50=0.699879 map50_95=0.362483 fps=2426.0
+[11:03:35] eval db_d3 -> report_db_d3.json
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+INDEPENDENT_EVAL_START dataset=neudet_abl model=msdgs weights=/root/autodl-tmp/neu-det-yolo26/runs_dualbranch_gsdown_e250/y26n_gsdown_db_d3_e250/weights/best.pt
+y26n_gsdown_db_d3_e250 summary (fused): 116 layers, 1,777,318 parameters, 0 gradients, 4.1 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1229.5±428.1 MB/s, size: 31.7 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 41.8Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.0s/it 0.3s<9.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 5.5it/s 0.4s<1.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 8.2it/s 0.6s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 10.7it/s 0.7s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 12.2it/s 0.8s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 10.3it/s 1.0s
+                   all        299        682      0.766      0.649      0.728      0.378
+Speed: 0.6ms preprocess, 1.3ms inference, 0.0ms loss, 0.1ms postprocess per image
+INDEPENDENT_EVAL_DONE dataset=neudet_abl model=msdgs map50=0.728326 map50_95=0.377627 fps=2422.33 fused_params=1777318 output=/root/autodl-tmp/neu-det-yolo26/runs_neudet_ablation/report_db_d3.json
+[11:03:44] db_d3 done params=1777318 map50=0.728326 map50_95=0.377627 fps=2422.3
+[11:03:44] eval db_d5 -> report_db_d5.json
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+INDEPENDENT_EVAL_START dataset=neudet_abl model=msdgs weights=/root/autodl-tmp/neu-det-yolo26/runs_dualbranch_gsdown_e250/y26n_gsdown_db_d5_e250/weights/best.pt
+y26n_gsdown_db_d5_e250 summary (fused): 116 layers, 1,777,318 parameters, 0 gradients, 4.1 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1199.8±207.9 MB/s, size: 30.3 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 36.9Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.1it/s 0.3s<8.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 5.5it/s 0.4s<1.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 8.4it/s 0.5s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 11.4it/s 0.6s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 12.5it/s 0.8s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 10.3it/s 1.0s
+                   all        299        682      0.686      0.653      0.695      0.355
+Speed: 0.6ms preprocess, 1.5ms inference, 0.0ms loss, 0.1ms postprocess per image
+INDEPENDENT_EVAL_DONE dataset=neudet_abl model=msdgs map50=0.695404 map50_95=0.354715 fps=2417.99 fused_params=1777318 output=/root/autodl-tmp/neu-det-yolo26/runs_neudet_ablation/report_db_d5.json
+[11:03:53] db_d5 done params=1777318 map50=0.695404 map50_95=0.354715 fps=2418.0
+[11:03:53] eval msdgs_13local -> report_msdgs_13local.json
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+INDEPENDENT_EVAL_START dataset=neudet_abl model=msdgs weights=/root/autodl-tmp/neu-det-yolo26/runs_msdgs_gsdown_e250/y26n_gsdown_msdgs_13local_e250/weights/best.pt
+y26n_gsdown_msdgs_13local_e250 summary (fused): 116 layers, 1,777,318 parameters, 0 gradients, 4.1 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1200.5±374.5 MB/s, size: 33.5 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 54.5Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.1it/s 0.3s<8.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 5.6it/s 0.4s<1.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 9.4it/s 0.5s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 11.9it/s 0.6s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 13.8it/s 0.7s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 11.4it/s 0.9s
+                   all        299        682      0.692      0.667      0.694      0.364
+Speed: 0.5ms preprocess, 1.4ms inference, 0.0ms loss, 0.1ms postprocess per image
+INDEPENDENT_EVAL_DONE dataset=neudet_abl model=msdgs map50=0.694280 map50_95=0.364090 fps=2418.84 fused_params=1777318 output=/root/autodl-tmp/neu-det-yolo26/runs_neudet_ablation/report_msdgs_13local.json
+[11:04:03] msdgs_13local done params=1777318 map50=0.694280 map50_95=0.364090 fps=2418.8
+[11:04:03] eval msdgs_135local -> report_msdgs_135local.json
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+INDEPENDENT_EVAL_START dataset=neudet_abl model=msdgs weights=/root/autodl-tmp/neu-det-yolo26/runs_msdgs_gsdown_e250/y26n_gsdown_msdgs_135local_e250/weights/best.pt
+y26n_gsdown_msdgs_135local_e250 summary: 128 layers, 1,777,318 parameters, 0 gradients, 4.1 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+y26n_gsdown_msdgs_135local_e250 summary: 128 layers, 1,777,318 parameters, 0 gradients, 4.1 GFLOPs
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1676.9±493.3 MB/s, size: 37.4 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 46.4Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.1s/it 0.3s<10.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 5.1it/s 0.5s<1.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 8.2it/s 0.6s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 10.2it/s 0.7s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 11.4it/s 0.9s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 9.0it/s 1.1s
+                   all        299        682      0.726      0.663      0.699      0.347
+Speed: 0.6ms preprocess, 1.7ms inference, 0.0ms loss, 0.1ms postprocess per image
+INDEPENDENT_EVAL_DONE dataset=neudet_abl model=msdgs map50=0.699377 map50_95=0.346814 fps=2401.88 fused_params=1777318 output=/root/autodl-tmp/neu-det-yolo26/runs_neudet_ablation/report_msdgs_135local.json
+[11:04:13] msdgs_135local done params=1777318 map50=0.699377 map50_95=0.346814 fps=2401.9
+[11:04:13] SUMMARY -> ablation.json, ablation.md
+[11:04:13]   YOLO26n baseline (C3k2 neck + Conv-down)     p=2,376,006 ( +0.00%) mAP50=0.7046 mAP50-95=0.3741 fps=2128
+[11:04:13]   MSDGS {1,3,5} equal (OURS)                   p=1,777,318 (-25.20%) mAP50=0.7111 mAP50-95=0.3674 fps=2367
+[11:04:13]   GSConv-down + VoVGSCSP (Slim-neck)           p=1,935,814 (-18.53%) mAP50=0.6908 mAP50-95=0.3633 fps=2291
+[11:04:13]   DualBranchGS dil {1,2}                       p=1,777,318 (-25.20%) mAP50=0.6999 mAP50-95=0.3625 fps=2426
+[11:04:13]   DualBranchGS dil {1,3}                       p=1,777,318 (-25.20%) mAP50=0.7283 mAP50-95=0.3776 fps=2422
+[11:04:13]   DualBranchGS dil {1,5}                       p=1,777,318 (-25.20%) mAP50=0.6954 mAP50-95=0.3547 fps=2418
+[11:04:13]   MSDGS {1,3} local-split                      p=1,777,318 (-25.20%) mAP50=0.6943 mAP50-95=0.3641 fps=2419
+[11:04:13]   MSDGS {1,3,5} local-split                    p=1,777,318 (-25.20%) mAP50=0.6994 mAP50-95=0.3468 fps=2402
+[11:04:13] ALL DONE

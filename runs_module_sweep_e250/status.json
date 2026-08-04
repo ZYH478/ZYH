@@ -1,0 +1,8 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "updated_at": "2026-07-24 15:06:36",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_sweep_e250/sweep_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_module_sweep_e250/sweep_results.csv"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "run_name": "msdgs_p5cafm_gate_seed0",
+  "candidate": "msdgs_p5cafm_gate",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_detect_e250/msdgs_p5cafm_gate.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/msdgs_p5cafm_gate_seed0/weights/best.pt",
+  "params_unfused": 2082589,
+  "finished_at": "2026-07-29 15:21:29"
+}

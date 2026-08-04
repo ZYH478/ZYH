@@ -1,0 +1,99 @@
+{
+  "status": "pass",
+  "created_at": "2026-08-03 08:04:51",
+  "cuda": "NVIDIA GeForce RTX 4090",
+  "python": "3.8.20 (default, Oct  3 2024, 15:24:27) \n[GCC 11.2.0]",
+  "torch": "2.0.1+cu118",
+  "ultralytics_file": "/root/autodl-tmp/neu-det-yolo26/SLF-YOLO/SLF-YOLO/ultralytics/__init__.py",
+  "ultralytics_version": "8.2.91",
+  "datasets": {
+    "neudet": {
+      "yaml": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+      "nc": 6,
+      "names": [
+        "crazing",
+        "inclusion",
+        "patches",
+        "pitted_surface",
+        "rolled-in_scale",
+        "scratches"
+      ],
+      "split_counts": {
+        "train": 1200,
+        "val": 300,
+        "test": 299
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/dataset/train/images",
+      "val": "/root/autodl-tmp/neu-det-yolo26/dataset/valid/images",
+      "test": "/root/autodl-tmp/neu-det-yolo26/dataset/test/images"
+    },
+    "aluminum": {
+      "yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+      "nc": 4,
+      "names": [
+        "zhen_kong",
+        "ca_shang",
+        "zang_wu",
+        "zhe_zhou"
+      ],
+      "split_counts": {
+        "train": 1000,
+        "val": 200,
+        "test": 200
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum/train.txt",
+      "val": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum/val.txt",
+      "test": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum/test.txt"
+    },
+    "pcb": {
+      "yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "nc": 6,
+      "names": [
+        "missing_hole",
+        "mouse_bite",
+        "open_circuit",
+        "short",
+        "spurious_copper",
+        "spur"
+      ],
+      "split_counts": {
+        "train": 891,
+        "val": 120,
+        "test": 60
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb/train.txt",
+      "val": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb/val.txt",
+      "test": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb/test.txt"
+    }
+  },
+  "model": {
+    "repo": "https://github.com/zacianfans/SLF-YOLO",
+    "repo_head": "da113f16d8a46b0543f13366b0d3c1f2ae445d24",
+    "code_root": "/root/autodl-tmp/neu-det-yolo26/SLF-YOLO/SLF-YOLO",
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/SLF-YOLO/SLF-YOLO/new_cfg/yolov8-SlimAsfNeck-CGLU.yaml",
+    "model_name": "slf_yolo_slimasfneck_cglu_n",
+    "model_class": "DetectionModel",
+    "detect_class": "Detect",
+    "end2end": false,
+    "reg_max": 16,
+    "nl": 3,
+    "fused_params_default_head": 2810364,
+    "forward_type": "tuple",
+    "scale_note": "cfg has scales; Ultralytics 8.2.91 warns no explicit scale and assumes scale='n'"
+  },
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 0,
+    "deterministic": true,
+    "cache": false,
+    "resume": false,
+    "patience": 0,
+    "workers": 8,
+    "pretrained": false,
+    "optimizer": "SGD",
+    "amp": false,
+    "close_mosaic": 10
+  }
+}

@@ -1,0 +1,2 @@
+name,note,val_map50,val_map50_95,val_precision,val_recall,test_map50,test_map50_95,params,gflops,infer_ms_val,weights,cfg
+y26n_s2_simam_p4_e250,stage2 attention 位置/数量细化：SimAM at P4,0.7035093035855923,0.39197095125492465,0.6922017363102487,0.6934697811675715,0.6992877656224977,0.38301146150893056,2376006,,2.640415709465742,/root/autodl-tmp/neu-det-yolo26/runs_module_combo_e250/y26n_s2_simam_p4_e250/weights/best.pt,/root/autodl-tmp/neu-det-yolo26/generated_models_module_combo_e250/y26n_s2_simam_p4_e250.yaml

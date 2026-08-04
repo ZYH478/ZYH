@@ -1,0 +1,22 @@
+{
+  "status": "failed",
+  "started_at": "2026-08-04 06:42:43",
+  "pid": 3049,
+  "dataset": "neudet",
+  "model": "Gold-YOLO-n",
+  "seed": 0,
+  "data": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/neudet.yaml",
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "workers": 8,
+    "device": 0,
+    "fuse_ab": true,
+    "base_training": true,
+    "self_distillation": false
+  },
+  "finished_at": "2026-08-04 07:10:34",
+  "error": "ModuleNotFoundError(\"No module named 'yolov6'\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py\", line 254, in train_worker\n    completed = checkpoint_epoch(last)\n  File \"/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py\", line 197, in checkpoint_epoch\n    ckpt = torch.load(path, map_location=\"cpu\")\n  File \"/root/miniconda3/envs/lightyolo/lib/python3.8/site-packages/torch/serialization.py\", line 809, in load\n    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)\n  File \"/root/miniconda3/envs/lightyolo/lib/python3.8/site-packages/torch/serialization.py\", line 1172, in _load\n    result = unpickler.load()\n  File \"/root/miniconda3/envs/lightyolo/lib/python3.8/site-packages/torch/serialization.py\", line 1165, in find_class\n    return super().find_class(mod_name, name)\nModuleNotFoundError: No module named 'yolov6'\n"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "candidate": "msdgs_pki_l4",
+  "name": "msdgs_pki_l4_seed2",
+  "seed": 2,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_pki_multiseed_e250/msdgs_pki_l4.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_pki_multiseed_e250/msdgs_pki_l4_seed2/weights/best.pt",
+  "params_unfused": 1902108,
+  "finished_at": "2026-07-31 19:47:57"
+}

@@ -1,0 +1,10 @@
+path: /root/autodl-tmp/neu-det-yolo26/generalization_aluminum_pcb/raw/aluminum_yolo26
+train: /root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum/train.txt
+val: /root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum/val.txt
+test: /root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum/test.txt
+nc: 4
+names:
+- zhen_kong
+- ca_shang
+- zang_wu
+- zhe_zhou

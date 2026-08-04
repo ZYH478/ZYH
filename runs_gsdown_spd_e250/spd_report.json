@@ -1,0 +1,34 @@
+{
+  "gsdown_spd_p3": {
+    "name": "gsdown_spd_p3",
+    "dry": true,
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_gsdown_spd_e250/y26n_gsdown_spd_p3_e250.yaml"
+  },
+  "gsdown_spd_p3p4": {
+    "name": "gsdown_spd_p3p4",
+    "dry": true,
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_gsdown_spd_e250/y26n_gsdown_spd_p3p4_e250.yaml"
+  },
+  "y26n_gsdown_spd_p3_e250": {
+    "name": "y26n_gsdown_spd_p3_e250",
+    "status": "done",
+    "val_map50": 0.731691239972363,
+    "val_map50_95": 0.39808756982101695,
+    "test_map50": 0.721392231876892,
+    "test_map50_95": 0.39362613975884597,
+    "weights": "/root/autodl-tmp/neu-det-yolo26/runs_gsdown_spd_e250/y26n_gsdown_spd_p3_e250/weights/best.pt",
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_gsdown_spd_e250/y26n_gsdown_spd_p3_e250.yaml",
+    "finished_at": "2026-07-27 09:41:09"
+  },
+  "y26n_gsdown_spd_p3p4_e250": {
+    "name": "y26n_gsdown_spd_p3p4_e250",
+    "status": "done",
+    "val_map50": 0.7089114772981411,
+    "val_map50_95": 0.38945375902704704,
+    "test_map50": 0.7011000749375289,
+    "test_map50_95": 0.3869779437847741,
+    "weights": "/root/autodl-tmp/neu-det-yolo26/runs_gsdown_spd_e250/y26n_gsdown_spd_p3p4_e250/weights/best.pt",
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_gsdown_spd_e250/y26n_gsdown_spd_p3p4_e250.yaml",
+    "finished_at": "2026-07-27 10:04:03"
+  }
+}

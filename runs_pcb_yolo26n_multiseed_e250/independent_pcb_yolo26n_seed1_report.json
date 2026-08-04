@@ -1,0 +1,57 @@
+{
+  "status": "done",
+  "created_at": "2026-08-01 23:41:01",
+  "dataset": "pcb",
+  "model": "yolo26n",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_yolo26n_multiseed_e250/seed1/yolo26n/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 2376006,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.757566933011188,
+    "recall": 0.6911844066020422,
+    "map50": 0.8035648749738523,
+    "map50_95": 0.3518257533831447,
+    "class_ap50": {
+      "missing_hole": 0.9216122740598048,
+      "mouse_bite": 0.741918301228236,
+      "open_circuit": 0.9014880241528908,
+      "short": 0.8193836079629182,
+      "spurious_copper": 0.7875625060105065,
+      "spur": 0.6494245364287572
+    },
+    "class_ap50_95": {
+      "missing_hole": 0.4793853426910738,
+      "mouse_bite": 0.24533900299164046,
+      "open_circuit": 0.406261418286695,
+      "short": 0.3141705929744515,
+      "spurious_copper": 0.3771745300337104,
+      "spur": 0.2886236333212964
+    }
+  },
+  "benchmark": {
+    "fps": 2166.7022372601864,
+    "infer_ms_per_image": 0.461530884495005,
+    "elapsed_seconds": 2.953797660768032,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  },
+  "seed": 1
+}

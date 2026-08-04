@@ -1,0 +1,54 @@
+{
+  "module_behavior": {
+    "deform_units_full_c3k": 4,
+    "deform_units_seen": 4,
+    "init_offset_max_abs": 0.0,
+    "init_mask_dev_from_one": 0.0,
+    "offset_grad_step1": 0.0013048752443864942,
+    "deform_grad_step1": 0.0010509168496355414,
+    "outer_cv1_grad_step1": 0.0015380408149212599,
+    "offset_grad_step2": 0.001157538266852498,
+    "deform_grad_step2": 0.0010645583970472217
+  },
+  "candidate": {
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_sppf_dcnv2_e250/msdgs_bb_sppfpre_dcnv2.yaml",
+    "changed_backbone_indices": [
+      8
+    ],
+    "layer6": "C3k2",
+    "layer8": "C3k2DCNv2",
+    "layer10": "C2PSA",
+    "deform_units_layer8": 2,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "detect_input_channels": [
+      64,
+      128,
+      256
+    ],
+    "eval_shape": [
+      1,
+      300,
+      6
+    ],
+    "fused_shape": [
+      1,
+      300,
+      6
+    ],
+    "fuse_device": "cuda",
+    "fused_deform_units": 2,
+    "preserved_mainpath_tensors": 50,
+    "preserved_mainpath_max_abs_error": 0.0,
+    "missing_deform_state_items": 6,
+    "official_matched_tensors": 400,
+    "baseline_matched_tensors": 402,
+    "params_unfused": 1936594,
+    "params_fused": 1808604,
+    "gflops_fused_inference": 4.0487424,
+    "budget_fused_params_max": 2500000,
+    "budget_gflops_max": 5.5,
+    "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_sppf_dcnv2_e250/build_check/msdgs_bb_sppfpre_dcnv2_roundtrip.pt"
+  }
+}

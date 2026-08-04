@@ -1,0 +1,2 @@
+name,note,val_map50,val_map50_95,val_precision,val_recall,test_map50,test_map50_95,params,gflops,infer_ms_val,weights,cfg
+y26n_s3_gsconv_neck_e250,赢家(SPD_P3+DySample) + neck C3k2->VoVGSCSP 降参,0.712404744495922,0.39044690394894105,0.7244581764719819,0.6646925378553683,0.7080446801102749,0.38294717440990095,2148518,,2.8922454950710135,/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/y26n_s3_gsconv_neck_e250/weights/best.pt,/root/autodl-tmp/neu-det-yolo26/generated_models_module_stage3_e250/y26n_s3_gsconv_neck_e250.yaml

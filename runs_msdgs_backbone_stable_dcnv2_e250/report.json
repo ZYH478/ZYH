@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "candidate": "msdgs_bb_p4_stable_dcnv2",
+  "started_at": "2026-07-31 11:21:17",
+  "protocol": {
+    "epochs": 250,
+    "imgsz": 640,
+    "batch": 32,
+    "seeds_requested": [
+      0,
+      3
+    ],
+    "cache": false,
+    "resume": false,
+    "deterministic": true,
+    "init_weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+    "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+    "save_period": 5,
+    "deform_strength": {
+      "zero_through_epoch": 20,
+      "linear_to_one_at_epoch": 80
+    },
+    "offset_limit": 1.5,
+    "mask_range": [
+      0.5,
+      1.5
+    ],
+    "offset_mask_gradient_scale": 0.25,
+    "final_eval": "independent subprocess reloads each best.pt for val and test"
+  },
+  "core_gate": {
+    "test_map50": 0.738,
+    "test_map50_95": 0.402
+  },
+  "seed3_diagnostic_gate": {
+    "test_map50": 0.73,
+    "test_map50_95": 0.397
+  },
+  "baseline": {
+    "test_map50": 0.7324113100352823,
+    "test_map50_95": 0.3988372172746915,
+    "test_crazing_map50_95": 0.1770695825201802
+  },
+  "experiments": {
+    "seed0": {
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2_seed0/weights/best.pt",
+      "evaluated_at": "2026-07-31 11:42:59",
+      "evaluator_pid": 19898,
+      "params_unfused": 1921042,
+      "params_fused": 1792988,
+      "gflops": null,
+      "val": {
+        "map50": 0.7293555651203453,
+        "map50_95": 0.3989756548259197,
+        "precision": 0.7577121403975089,
+        "recall": 0.6797331861905863,
+        "infer_ms": 2.792853048692147,
+        "fps_infer_only": 358.05679087493905,
+        "per_class": {
+          "crazing": {
+            "map50": 0.4924547810012391,
+            "map50_95": 0.18593091528277625,
+            "precision": 0.6377073077073078,
+            "recall": 0.42857142857142855
+          },
+          "inclusion": {
+            "map50": 0.8057225775808723,
+            "map50_95": 0.42721701172484244,
+            "precision": 0.7469595973724005,
+            "recall": 0.7610062893081762
+          },
+          "patches": {
+            "map50": 0.872253030459045,
+            "map50_95": 0.5484795035469952,
+            "precision": 0.8734052972076434,
+            "recall": 0.8116918840968345
+          },
+          "pitted_surface": {
+            "map50": 0.7365719400740716,
+            "map50_95": 0.4163098036030243,
+            "precision": 0.843713495684497,
+            "recall": 0.6843768649967874
+          },
+          "rolled-in_scale": {
+            "map50": 0.5915100787595413,
+            "map50_95": 0.289963259321813,
+            "precision": 0.5933423499203868,
+            "recall": 0.550561797752809
+          },
+          "scratches": {
+            "map50": 0.8776209828473022,
+            "map50_95": 0.5259534354760672,
+            "precision": 0.8511447944928181,
+            "recall": 0.8421908524174827
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7175395146810074,
+        "map50_95": 0.3868301008052096,
+        "precision": 0.7702921240375237,
+        "recall": 0.6617530388346055,
+        "infer_ms": 2.01148482469412,
+        "fps_infer_only": 497.1451873379491,
+        "per_class": {
+          "crazing": {
+            "map50": 0.3684054176389842,
+            "map50_95": 0.12840522402098362,
+            "precision": 0.5604228782800211,
+            "recall": 0.29523809523809524
+          },
+          "inclusion": {
+            "map50": 0.7648089871979766,
+            "map50_95": 0.4051090181729897,
+            "precision": 0.7945502500303556,
+            "recall": 0.700966617695642
+          },
+          "patches": {
+            "map50": 0.8910465684150242,
+            "map50_95": 0.569130825115068,
+            "precision": 0.8925432766492328,
+            "recall": 0.8364779874213837
+          },
+          "pitted_surface": {
+            "map50": 0.7843209340780176,
+            "map50_95": 0.45292942539200265,
+            "precision": 0.8750524224235253,
+            "recall": 0.7183098591549296
+          },
+          "rolled-in_scale": {
+            "map50": 0.5826350574507604,
+            "map50_95": 0.26641032687946464,
+            "precision": 0.6157277419049739,
+            "recall": 0.5581395348837209
+          },
+          "scratches": {
+            "map50": 0.9140201233052817,
+            "map50_95": 0.49899578525074884,
+            "precision": 0.8834561749370333,
+            "recall": 0.8613861386138614
+          }
+        }
+      },
+      "status": "done",
+      "candidate": "msdgs_bb_p4_stable_dcnv2",
+      "name": "msdgs_bb_p4_stable_dcnv2_seed0",
+      "seed": 0,
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2.yaml",
+      "source": "independent_seed0_report.json",
+      "gate": {
+        "core_pass": false,
+        "core_checks": {
+          "test_map50_ge_0.738": false,
+          "test_map50_95_ge_0.402": false
+        },
+        "seed3_diagnostic_pass": false,
+        "seed3_diagnostic_checks": null,
+        "crazing_reported_not_hard_gate": 0.12840522402098362,
+        "deltas_vs_msdgs": {
+          "map50": -0.014871795354274853,
+          "map50_95": -0.012007116469481938,
+          "crazing_map50_95": -0.04866435849919659
+        }
+      }
+    },
+    "seed3": {
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2_seed3/weights/best.pt",
+      "evaluated_at": "2026-07-31 12:05:16",
+      "evaluator_pid": 22791,
+      "params_unfused": 1921042,
+      "params_fused": 1792988,
+      "gflops": null,
+      "val": {
+        "map50": 0.7450486599010017,
+        "map50_95": 0.4063240272868971,
+        "precision": 0.734891138314257,
+        "recall": 0.6997130463647835,
+        "infer_ms": 2.3802804574370384,
+        "fps_infer_only": 420.11856076688866,
+        "per_class": {
+          "crazing": {
+            "map50": 0.5559293352453936,
+            "map50_95": 0.2033060552269151,
+            "precision": 0.6973872680273202,
+            "recall": 0.44682850102830973
+          },
+          "inclusion": {
+            "map50": 0.7906684240036176,
+            "map50_95": 0.4328412189973915,
+            "precision": 0.75000699043184,
+            "recall": 0.7547452945792769
+          },
+          "patches": {
+            "map50": 0.9017889504544213,
+            "map50_95": 0.567921654566373,
+            "precision": 0.8326106952152988,
+            "recall": 0.8319327731092437
+          },
+          "pitted_surface": {
+            "map50": 0.7524817265726221,
+            "map50_95": 0.45318699222267844,
+            "precision": 0.7097523627827749,
+            "recall": 0.7183098591549296
+          },
+          "rolled-in_scale": {
+            "map50": 0.5676583594427626,
+            "map50_95": 0.2615343925036523,
+            "precision": 0.5654947952071339,
+            "recall": 0.5842696629213483
+          },
+          "scratches": {
+            "map50": 0.9017651636871931,
+            "map50_95": 0.5191538502043728,
+            "precision": 0.8540947182211741,
+            "recall": 0.8621921873955918
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7136668756475887,
+        "map50_95": 0.39046749113447216,
+        "precision": 0.7485982592525625,
+        "recall": 0.6531157520415635,
+        "infer_ms": 1.5715954382981743,
+        "fps_infer_only": 636.2960693515788,
+        "per_class": {
+          "crazing": {
+            "map50": 0.343663909625463,
+            "map50_95": 0.1139290455899511,
+            "precision": 0.5013143324187731,
+            "recall": 0.26666666666666666
+          },
+          "inclusion": {
+            "map50": 0.7506525741722729,
+            "map50_95": 0.39499516923326483,
+            "precision": 0.7750589560909769,
+            "recall": 0.6675936741645178
+          },
+          "patches": {
+            "map50": 0.913872543763721,
+            "map50_95": 0.5848278145649681,
+            "precision": 0.8892809232713808,
+            "recall": 0.858763268264992
+          },
+          "pitted_surface": {
+            "map50": 0.7976562930770422,
+            "map50_95": 0.46145402260333396,
+            "precision": 0.8290351519136734,
+            "recall": 0.7323943661971831
+          },
+          "rolled-in_scale": {
+            "map50": 0.5740786722021847,
+            "map50_95": 0.2760057418568367,
+            "precision": 0.6038788932570195,
+            "recall": 0.5813953488372093
+          },
+          "scratches": {
+            "map50": 0.9020772610448486,
+            "map50_95": 0.5115931529584782,
+            "precision": 0.8930212985635526,
+            "recall": 0.8118811881188119
+          }
+        }
+      },
+      "status": "done",
+      "candidate": "msdgs_bb_p4_stable_dcnv2",
+      "name": "msdgs_bb_p4_stable_dcnv2_seed3",
+      "seed": 3,
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2.yaml",
+      "source": "independent_seed3_report.json",
+      "gate": {
+        "core_pass": false,
+        "core_checks": {
+          "test_map50_ge_0.738": false,
+          "test_map50_95_ge_0.402": false
+        },
+        "seed3_diagnostic_pass": false,
+        "seed3_diagnostic_checks": {
+          "test_map50_ge_0.730": false,
+          "test_map50_95_ge_0.397": false
+        },
+        "crazing_reported_not_hard_gate": 0.1139290455899511,
+        "deltas_vs_msdgs": {
+          "map50": -0.018744434387693576,
+          "map50_95": -0.008369726140219358,
+          "crazing_map50_95": -0.06314053693022911
+        }
+      }
+    }
+  },
+  "summary": {
+    "n": 2,
+    "seeds": [
+      0,
+      3
+    ],
+    "test_map50": {
+      "n": 2,
+      "mean": 0.715603195164298,
+      "std": 0.002738369321618096,
+      "min": 0.7136668756475887,
+      "max": 0.7175395146810074,
+      "range": 0.0038726390334187233
+    },
+    "test_map50_95": {
+      "n": 2,
+      "mean": 0.38864879596984087,
+      "std": 0.0025720233676439393,
+      "min": 0.3868301008052096,
+      "max": 0.39046749113447216,
+      "range": 0.0036373903292625798
+    },
+    "test_crazing_map50_95": {
+      "n": 2,
+      "mean": 0.12116713480546736,
+      "std": 0.010236203934249533,
+      "min": 0.1139290455899511,
+      "max": 0.12840522402098362,
+      "range": 0.014476178431032521
+    },
+    "core_pass_count": 0,
+    "seed0_core_pass": false,
+    "seed3_diagnostic_pass": false,
+    "continue_to_seed1_seed2": false
+  },
+  "finished_at": "2026-07-31 12:05:17"
+}

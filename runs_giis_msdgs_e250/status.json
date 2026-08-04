@@ -1,0 +1,8 @@
+{
+  "status": "done",
+  "current": "msdgs_giis_k3",
+  "updated_at": "2026-07-30 03:16:45",
+  "pid": 4849,
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_giis_msdgs_e250/report.json",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_giis_msdgs_e250/msdgs_giis_k3/weights/best.pt"
+}

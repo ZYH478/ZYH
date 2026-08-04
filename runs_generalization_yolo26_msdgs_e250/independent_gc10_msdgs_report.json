@@ -1,0 +1,64 @@
+{
+  "status": "done",
+  "created_at": "2026-07-31 16:23:48",
+  "dataset": "gc10",
+  "model": "msdgs",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/msdgs/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 1778098,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.6329418634799399,
+    "recall": 0.6029813254162686,
+    "map50": 0.6085712534108287,
+    "map50_95": 0.30564839685358347,
+    "class_ap50": {
+      "10_yaozhe": 0.8712500000000001,
+      "1_chongkong": 0.8919612943750876,
+      "2_hanfeng": 0.9645873344254737,
+      "3_yueyawan": 0.979474358974359,
+      "4_shuiban": 0.5592809632763012,
+      "5_youban": 0.6526356836602358,
+      "6_siban": 0.5479636533550005,
+      "7_yiwu": 0.33809191602179983,
+      "8_yahen": 0.13762250243382318,
+      "9_zhehen": 0.14284482758620692
+    },
+    "class_ap50_95": {
+      "10_yaozhe": 0.40061819157645073,
+      "1_chongkong": 0.4482967901443005,
+      "2_hanfeng": 0.5380822510605731,
+      "3_yueyawan": 0.6145698414375123,
+      "4_shuiban": 0.2808835297890165,
+      "5_youban": 0.32145229758785765,
+      "6_siban": 0.21281237842745337,
+      "7_yiwu": 0.12519339519151873,
+      "8_yahen": 0.0487846174381633,
+      "9_zhehen": 0.06579067588298874
+    }
+  },
+  "benchmark": {
+    "fps": 2368.5830309705384,
+    "infer_ms_per_image": 0.4221933480584994,
+    "elapsed_seconds": 2.702037427574396,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

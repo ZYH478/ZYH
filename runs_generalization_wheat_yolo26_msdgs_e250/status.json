@@ -1,0 +1,13 @@
+{
+  "status": "done",
+  "phase": "done",
+  "finished_at": "2026-08-01 12:44:41",
+  "pid": 14252,
+  "current": null,
+  "completed": [
+    "wheat/yolo26n",
+    "wheat/msdgs"
+  ],
+  "failures": [],
+  "pending": []
+}

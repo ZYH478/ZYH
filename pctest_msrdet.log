@@ -1,0 +1,42 @@
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+y26n_gsdown_lkbm_e250 summary (fused): 116 layers, 1,764,806 parameters, 0 gradients, 4.2 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1403.2±225.5 MB/s, size: 39.9 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 38.0Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.5s/it 0.4s<13.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 2/10 1.1s/it 1.1s<8.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 1.2it/s 1.7s<6.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 4/10 1.4it/s 2.2s<4.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 6/10 4.2it/s 2.4s<1.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 8/10 6.2it/s 2.6s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 6.5it/s 2.7s<0.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 3.4it/s 2.9s
+                   all        299        682      0.692      0.664      0.699      0.361
+Speed: 1.9ms preprocess, 2.9ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1m/root/autodl-tmp/neu-det-yolo26/runs/pctest_lkbm[0m
+PCTEST_JSON_START
+{"tag": "lkbm", "fused_params": 1764806, "test_map50": 0.6993706312181978, "test_map50_95": 0.36058281263309094, "precision": 0.6921542438331701, "recall": 0.6636907606372766, "per_class": {"crazing": [0.4793583928369207, 0.13377636974756602], "inclusion": [0.6936891317105243, 0.3417055863838959], "patches": [0.9029970080343617, 0.587169184591828], "pitted_surface": [0.7288113856012494, 0.4003772909517681], "rolled-in_scale": [0.4881459975595605, 0.2237328319076927], "scratches": [0.9032218715665701, 0.47673561221579525]}}
+PCTEST_JSON_END
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+y26n_gsdown_agspp_e250 summary (fused): 123 layers, 1,935,817 parameters, 0 gradients, 4.4 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1540.5±730.6 MB/s, size: 34.9 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 54.5Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.3s/it 0.4s<11.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 2/10 1.0it/s 1.0s<7.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 1.3it/s 1.6s<5.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 4/10 1.5it/s 2.1s<4.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 6/10 4.3it/s 2.3s<0.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 8/10 6.4it/s 2.4s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 6.6it/s 2.6s<0.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 3.6it/s 2.8s
+                   all        299        682       0.67      0.706      0.712      0.389
+Speed: 1.9ms preprocess, 2.8ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1m/root/autodl-tmp/neu-det-yolo26/runs/pctest_agspp[0m
+PCTEST_JSON_START
+{"tag": "agspp", "fused_params": 1935817, "test_map50": 0.711793737399733, "test_map50_95": 0.3893093300598031, "precision": 0.6704642135311225, "recall": 0.7064904384141615, "per_class": {"crazing": [0.3929020097417263, 0.1568339923311572], "inclusion": [0.7243352094181759, 0.3841602487351223], "patches": [0.9199639684234205, 0.5843573973402499], "pitted_surface": [0.7555982637238082, 0.4470688699211278], "rolled-in_scale": [0.596550278316162, 0.29857158698850805], "scratches": [0.8814126947751051, 0.4648638850426533]}}
+PCTEST_JSON_END
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+y26n_gsdown_agspp_fem_e250 summary (fused): 128 layers, 1,964,746 parameters, 0 gradients, 4.8 GFLOPs
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1692.6±478.2 MB/s, size: 42.1 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/test/labels.cache... 299 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 299/299 48.2Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.3s/it 0.4s<11.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 2/10 1.0it/s 1.0s<7.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 1.2it/s 1.6s<5.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 4/10 1.5it/s 2.1s<4.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 6/10 4.6it/s 2.3s<0.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 8/10 6.9it/s 2.4s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 7.1it/s 2.6s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 3.7it/s 2.7s
+                   all        299        682      0.756      0.661       0.71       0.38
+Speed: 1.7ms preprocess, 2.3ms inference, 0.0ms loss, 0.1ms postprocess per image
+Results saved to [1m/root/autodl-tmp/neu-det-yolo26/runs/pctest_agspp_fem[0m
+PCTEST_JSON_START
+{"tag": "agspp_fem", "fused_params": 1964746, "test_map50": 0.7096635439333813, "test_map50_95": 0.38020505820388617, "precision": 0.7558034673097049, "recall": 0.660614890866707, "per_class": {"crazing": [0.4569376376896451, 0.1462045046733524], "inclusion": [0.7570009494885628, 0.39469141785979567], "patches": [0.8986804937309054, 0.5770361835819433], "pitted_surface": [0.7136846945973916, 0.3957797440628874], "rolled-in_scale": [0.5846848124131863, 0.2976918723552563], "scratches": [0.8469926756805954, 0.469826626690082]}}
+PCTEST_JSON_END

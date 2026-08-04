@@ -1,0 +1,64 @@
+{
+  "status": "done",
+  "created_at": "2026-07-31 15:56:54",
+  "dataset": "gc10",
+  "model": "yolo26n",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/yolo26n/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 2376786,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.661245679689499,
+    "recall": 0.6486594354076572,
+    "map50": 0.6606594062295952,
+    "map50_95": 0.33009412557385753,
+    "class_ap50": {
+      "10_yaozhe": 0.766264637002342,
+      "1_chongkong": 0.8637267471140071,
+      "2_hanfeng": 0.9458714034262615,
+      "3_yueyawan": 0.9691684981684981,
+      "4_shuiban": 0.5681343308699263,
+      "5_youban": 0.6416553865461849,
+      "6_siban": 0.6104234818636585,
+      "7_yiwu": 0.30307607303156847,
+      "8_yahen": 0.5152735042735042,
+      "9_zhehen": 0.42300000000000004
+    },
+    "class_ap50_95": {
+      "10_yaozhe": 0.37349676788945213,
+      "1_chongkong": 0.45712411782372586,
+      "2_hanfeng": 0.5084891336161741,
+      "3_yueyawan": 0.6133939647075619,
+      "4_shuiban": 0.29068431783326754,
+      "5_youban": 0.31848689692181364,
+      "6_siban": 0.2696453562730774,
+      "7_yiwu": 0.12847149968930083,
+      "8_yahen": 0.231272163947164,
+      "9_zhehen": 0.10987703703703704
+    }
+  },
+  "benchmark": {
+    "fps": 2125.85079894338,
+    "infer_ms_per_image": 0.47039989847689867,
+    "elapsed_seconds": 3.0105593502521515,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "candidate": "msdgs_p5cls_p4tex",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_clstex_e250/msdgs_p5cls_p4tex.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_clstex_e250/msdgs_p5cls_p4tex/weights/best.pt",
+  "params_unfused": 1909800,
+  "finished_at": "2026-07-30 10:01:43"
+}

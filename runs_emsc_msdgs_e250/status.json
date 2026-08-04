@@ -1,0 +1,8 @@
+{
+  "status": "done",
+  "current": "msdgs_p5stage_emsc",
+  "updated_at": "2026-07-30 03:38:43",
+  "pid": 7868,
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_emsc_msdgs_e250/report.json",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_emsc_msdgs_e250/msdgs_p5stage_emsc/weights/best.pt"
+}

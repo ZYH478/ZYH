@@ -1,0 +1,12 @@
+{
+  "status": "done",
+  "phase": "done",
+  "finished_at": "2026-08-03 15:32:40",
+  "completed": [
+    "neudet",
+    "aluminum",
+    "pcb"
+  ],
+  "pending": [],
+  "model": "RT-DETR-HGNetv2-L"
+}

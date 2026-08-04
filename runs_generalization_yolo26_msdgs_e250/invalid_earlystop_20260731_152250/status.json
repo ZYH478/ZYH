@@ -1,0 +1,41 @@
+{
+  "status": "running",
+  "phase": "training",
+  "updated_at": "2026-07-31 14:58:56",
+  "pid": 26926,
+  "current": "steel_weld/yolo26n",
+  "completed": [],
+  "failures": [
+    {
+      "experiment": "gc10/yolo26n",
+      "stage": "training",
+      "rc": 1,
+      "error": "RuntimeError('incomplete results.csv: expected 250, got 234')"
+    },
+    {
+      "experiment": "gc10/msdgs",
+      "stage": "training",
+      "rc": 1,
+      "error": "RuntimeError('incomplete results.csv: expected 250, got 225')"
+    },
+    {
+      "experiment": "uwwt/yolo26n",
+      "stage": "training",
+      "rc": 1,
+      "error": "RuntimeError('incomplete results.csv: expected 250, got 173')"
+    },
+    {
+      "experiment": "uwwt/msdgs",
+      "stage": "training",
+      "rc": 1,
+      "error": "RuntimeError('incomplete results.csv: expected 250, got 241')"
+    }
+  ],
+  "pending": [
+    "gc10/yolo26n",
+    "gc10/msdgs",
+    "uwwt/yolo26n",
+    "uwwt/msdgs",
+    "steel_weld/msdgs"
+  ]
+}

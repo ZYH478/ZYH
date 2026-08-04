@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "candidate": "msdgs_p5box_res16",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_boxres_e250/msdgs_p5box_res16.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_e250/msdgs_p5box_res16_seed0/weights/best.pt",
+  "params_unfused": 1984036,
+  "finished_at": "2026-07-30 07:42:17"
+}

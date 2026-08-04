@@ -1,0 +1,48 @@
+{
+  "experiments": {
+    "y26n_i21_gsdown_pki_e250": {
+      "status": "done",
+      "val_map50": 0.7190789888573237,
+      "val_map50_95": 0.3933386772213773,
+      "test_map50": 0.7244687018528984,
+      "test_map50_95": 0.39220935724905476,
+      "fused_params": 1936126,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iter21_combo_e250/y26n_i21_gsdown_pki_e250/weights/best.pt",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter21_combo_e250/y26n_i21_gsdown_pki_e250.yaml",
+      "finished_at": "2026-07-26 11:59:58"
+    },
+    "y26n_i21_gsdown_pki_dwr_e250": {
+      "status": "done",
+      "val_map50": 0.7248177492293743,
+      "val_map50_95": 0.3948337500899249,
+      "test_map50": 0.6861117424370695,
+      "test_map50_95": 0.3733390138942175,
+      "fused_params": 2098750,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iter21_combo_e250/y26n_i21_gsdown_pki_dwr_e250/weights/best.pt",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter21_combo_e250/y26n_i21_gsdown_pki_dwr_e250.yaml",
+      "finished_at": "2026-07-26 12:21:36"
+    },
+    "y26n_i21_winner_dwr_e250": {
+      "status": "done",
+      "val_map50": 0.7197535925931109,
+      "val_map50_95": 0.40903821500771526,
+      "test_map50": 0.7442147581606826,
+      "test_map50_95": 0.41587664809566277,
+      "fused_params": 2340294,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iter21_combo_e250/y26n_i21_winner_dwr_e250/weights/best.pt",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter21_combo_e250/y26n_i21_winner_dwr_e250.yaml",
+      "finished_at": "2026-07-26 12:44:53"
+    },
+    "y26n_i21_winner_pki_dwr_e250": {
+      "status": "done",
+      "val_map50": 0.735008907087482,
+      "val_map50_95": 0.41654108290664443,
+      "test_map50": 0.7520583445037142,
+      "test_map50_95": 0.41154519437479975,
+      "fused_params": 2340606,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iter21_combo_e250/y26n_i21_winner_pki_dwr_e250/weights/best.pt",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter21_combo_e250/y26n_i21_winner_pki_dwr_e250.yaml",
+      "finished_at": "2026-07-26 13:09:50"
+    }
+  }
+}

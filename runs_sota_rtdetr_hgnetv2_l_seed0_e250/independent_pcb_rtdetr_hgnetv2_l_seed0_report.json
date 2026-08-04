@@ -1,0 +1,55 @@
+{
+  "status": "done",
+  "created_at": "2026-08-03 15:32:39",
+  "dataset": "pcb",
+  "model": "RT-DETR-HGNetv2-L",
+  "seed": 0,
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/pcb/rtdetr_hgnetv2_l_seed0/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 1,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 31996070,
+    "decoder_class": "RTDETRDecoder"
+  },
+  "test": {
+    "precision": 0.8258158358864794,
+    "recall": 0.9427148280332419,
+    "map50": 0.9438905027239543,
+    "map50_95": 0.4050705295195762,
+    "class_ap50": {
+      "missing_hole": 0.9682972923141359,
+      "mouse_bite": 0.8421847913188842,
+      "open_circuit": 0.9773370078740157,
+      "short": 0.9462449458719187,
+      "spurious_copper": 0.980586592178771,
+      "spur": 0.948692386786001
+    },
+    "class_ap50_95": {
+      "missing_hole": 0.460727805442509,
+      "mouse_bite": 0.2853048261229128,
+      "open_circuit": 0.5453419380226238,
+      "short": 0.3055426028386892,
+      "spurious_copper": 0.4650310347673261,
+      "spur": 0.3684749699233963
+    }
+  },
+  "benchmark": {
+    "fps": 39.3194944679498,
+    "infer_ms_per_image": 25.432676933705807,
+    "elapsed_seconds": 2.5432676933705807,
+    "images": 100,
+    "batch": 1,
+    "imgsz": 640,
+    "warmup_iterations": 20,
+    "measured_iterations": 100,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

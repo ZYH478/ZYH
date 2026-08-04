@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "status": "done",
+  "current": null,
+  "order": [
+    "msdgs_giis_k3",
+    "msdgs_p5stage_emsc"
+  ],
+  "protocol": {
+    "epochs": 250,
+    "imgsz": 640,
+    "batch": 32,
+    "seed": 0,
+    "cache": false
+  },
+  "started_at": "2026-07-30 02:54:12",
+  "steps": [
+    {
+      "name": "install_gsconv",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "/root/autodl-tmp/neu-det-yolo26/install_gsconv_modules.py"
+      ],
+      "started_at": "2026-07-30 02:54:12",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 02:54:14"
+    },
+    {
+      "name": "install_msdgs",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "/root/autodl-tmp/neu-det-yolo26/install_msdgs_module.py"
+      ],
+      "started_at": "2026-07-30 02:54:14",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 02:54:16"
+    },
+    {
+      "name": "install_emsc",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "/root/autodl-tmp/neu-det-yolo26/install_emsc_module.py"
+      ],
+      "started_at": "2026-07-30 02:54:16",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 02:54:18"
+    },
+    {
+      "name": "generate_giis",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "/root/autodl-tmp/neu-det-yolo26/make_giis_dataset.py"
+      ],
+      "started_at": "2026-07-30 02:54:18",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 02:56:16"
+    },
+    {
+      "name": "build_check",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "/root/autodl-tmp/neu-det-yolo26/build_check_giis_emsc.py"
+      ],
+      "started_at": "2026-07-30 02:56:16",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 02:56:24"
+    },
+    {
+      "name": "train_msdgs_giis_k3",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "-u",
+        "/root/autodl-tmp/neu-det-yolo26/train_giis_msdgs.py",
+        "--epochs",
+        "250",
+        "--batch",
+        "32",
+        "--imgsz",
+        "640",
+        "--seed",
+        "0",
+        "--force"
+      ],
+      "started_at": "2026-07-30 02:56:24",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 03:16:47"
+    },
+    {
+      "name": "train_msdgs_p5stage_emsc",
+      "argv": [
+        "/root/miniconda3/envs/yolo26/bin/python",
+        "-u",
+        "/root/autodl-tmp/neu-det-yolo26/train_emsc_msdgs.py",
+        "--epochs",
+        "250",
+        "--batch",
+        "32",
+        "--imgsz",
+        "640",
+        "--seed",
+        "0",
+        "--force"
+      ],
+      "started_at": "2026-07-30 03:16:47",
+      "status": "done",
+      "returncode": 0,
+      "finished_at": "2026-07-30 03:38:46"
+    }
+  ],
+  "updated_at": "2026-07-30 03:38:46",
+  "queue_pid": 4063,
+  "candidate_results": {
+    "msdgs_giis_k3": true,
+    "msdgs_p5stage_emsc": true
+  },
+  "finished_at": "2026-07-30 03:38:46"
+}

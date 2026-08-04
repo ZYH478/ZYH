@@ -1,0 +1,11 @@
+path: /root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/uwwt/UWWT-Dataset-1500
+train: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt/train.txt
+val: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt/val.txt
+test: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt/test.txt
+nc: 5
+names:
+- rubber char
+- wire char
+- wire broken
+- side shedding
+- wire stains

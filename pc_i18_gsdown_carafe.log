@@ -1,0 +1,21 @@
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+Ultralytics 8.4.93 🚀 Python-3.10.20 torch-2.3.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24081MiB)
+y26n_i18_gsdown_carafe_e250 summary (fused): 130 layers, 2,075,918 parameters, 0 gradients, 4.7 GFLOPs
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1452.4±609.5 MB/s, size: 34.0 KB)
+[K[34m[1mval: [0mScanning /root/autodl-tmp/neu-det-yolo26/dataset/valid/labels.cache... 299 images, 1 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 300/300 46.6Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 1/10 1.6s/it 0.5s<14.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 2/10 1.1s/it 1.1s<8.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 3/10 1.2it/s 1.7s<6.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 4/10 1.4it/s 2.2s<4.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 5/10 3.7it/s 2.3s<1.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 6/10 5.2it/s 2.4s<0.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 7/10 6.3it/s 2.6s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 8/10 7.1it/s 2.7s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 9/10 6.5it/s 2.9s<0.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 10/10 3.2it/s 3.1s
+                   all        300        665      0.715      0.699      0.717      0.398
+Speed: 2.0ms preprocess, 4.1ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1m/root/autodl-tmp/neu-det-yolo26/runs/pc_i18_gsdown_carafe[0m
+PER_CLASS_START
+class                  mAP50    mAP50-95
+all                   0.7171      0.3984
+crazing               0.4361      0.1663
+inclusion             0.7985      0.4311
+patches               0.8604      0.5429
+pitted_surface        0.7583      0.4746
+rolled-in_scale       0.5988      0.2613
+scratches             0.8503      0.5142
+PER_CLASS_END

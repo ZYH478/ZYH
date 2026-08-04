@@ -1,0 +1,45 @@
+{
+  "status": "done",
+  "phase": "done",
+  "finished_at": "2026-08-03 22:42:52",
+  "completed_new": [
+    {
+      "dataset": "neudet",
+      "seed": 1
+    },
+    {
+      "dataset": "neudet",
+      "seed": 2
+    },
+    {
+      "dataset": "neudet",
+      "seed": 3
+    },
+    {
+      "dataset": "aluminum",
+      "seed": 1
+    },
+    {
+      "dataset": "aluminum",
+      "seed": 2
+    },
+    {
+      "dataset": "aluminum",
+      "seed": 3
+    },
+    {
+      "dataset": "pcb",
+      "seed": 1
+    },
+    {
+      "dataset": "pcb",
+      "seed": 2
+    },
+    {
+      "dataset": "pcb",
+      "seed": 3
+    }
+  ],
+  "pending_new": [],
+  "aggregate_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/report.json"
+}

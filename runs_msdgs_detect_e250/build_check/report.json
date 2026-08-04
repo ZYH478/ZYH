@@ -1,0 +1,150 @@
+{
+  "equivalence_max_abs_error": 0.0,
+  "one2one_detach_gradient_check": {
+    "gate_alpha_for_check": 0.5,
+    "one2one_input_grad_max": 0.0,
+    "one2one_fusion_grad_max": 0.0,
+    "one2one_head_grad_max": 400.0,
+    "one2many_input_grad_max": 0.14971688389778137,
+    "one2many_fusion_grad_max": 0.05758555233478546
+  },
+  "cafm_batch_isolation_max_abs_error": 3.725290298461914e-08,
+  "candidates": {
+    "msdgs_p4p5_gate": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_detect_e250/msdgs_p4p5_gate.yaml",
+      "head": "MSDGSDetect",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "input_channels": [
+        64,
+        128,
+        256
+      ],
+      "box_widths": [
+        16,
+        16,
+        16
+      ],
+      "eval_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_params": 1811623,
+      "expected_fused_params": 1811623,
+      "gflops": 4.6782976,
+      "gflops_fused_inference": 4.109568,
+      "expected_gflops": 4.7067,
+      "gflops_note": "P4->P5 feature is computed once then shared by one2many/one2one; plan estimate counted it twice",
+      "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/build_check/msdgs_p4p5_gate_roundtrip.pt"
+    },
+    "msdgs_p5box32": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_detect_e250/msdgs_p5box32.yaml",
+      "head": "MSDGSDetect",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "input_channels": [
+        64,
+        128,
+        256
+      ],
+      "box_widths": [
+        16,
+        16,
+        32
+      ],
+      "eval_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_params": 1821190,
+      "expected_fused_params": 1821190,
+      "gflops": 4.7202816,
+      "gflops_fused_inference": 4.117504,
+      "expected_gflops": 4.7203,
+      "gflops_note": null,
+      "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/build_check/msdgs_p5box32_roundtrip.pt"
+    },
+    "msdgs_p4p5_gate_p5box32": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_detect_e250/msdgs_p4p5_gate_p5box32.yaml",
+      "head": "MSDGSDetect",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "input_channels": [
+        64,
+        128,
+        256
+      ],
+      "box_widths": [
+        16,
+        16,
+        32
+      ],
+      "eval_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_params": 1855495,
+      "expected_fused_params": 1855495,
+      "gflops": 4.7486464,
+      "gflops_fused_inference": 4.14464,
+      "expected_gflops": 4.777,
+      "gflops_note": "P4->P5 feature is computed once then shared by one2many/one2one; plan estimate counted it twice",
+      "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/build_check/msdgs_p4p5_gate_p5box32_roundtrip.pt"
+    },
+    "msdgs_p5cafm_gate": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_detect_e250/msdgs_p5cafm_gate.yaml",
+      "head": "MSDGSDetect",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "input_channels": [
+        64,
+        128,
+        256
+      ],
+      "box_widths": [
+        16,
+        16,
+        16
+      ],
+      "eval_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_params": 1954215,
+      "expected_fused_params": null,
+      "gflops": 4.7922687999999996,
+      "gflops_fused_inference": 4.2239488,
+      "expected_gflops": null,
+      "gflops_note": null,
+      "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/build_check/msdgs_p5cafm_gate_roundtrip.pt"
+    }
+  }
+}

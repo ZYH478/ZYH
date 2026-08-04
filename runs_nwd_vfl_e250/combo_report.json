@@ -1,0 +1,505 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-25 15:09:06",
+  "experiments": {
+    "y26n_gsdown_ctrl_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown 官方对照（CIoU+BCE，须复现 ~0.4077）",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_nwd_vfl_e250/y26n_gsdown_ctrl_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_nwd_vfl_e250/y26n_gsdown_ctrl_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.7203293339641667,
+        "map50_95": 0.3937200951105654,
+        "precision": 0.7521680150629922,
+        "recall": 0.6800650659477209,
+        "speed": {
+          "preprocess": 1.596998106688261,
+          "inference": 3.1310180077950163,
+          "loss": 0.00030546138683954876,
+          "postprocess": 0.06590076411763826
+        },
+        "infer_ms": 3.1310180077950163,
+        "fps_infer_only": 319.3849404603836,
+        "per_class": {
+          "crazing": {
+            "map50": 0.4353896791165176,
+            "map50_95": 0.1536524246045908
+          },
+          "inclusion": {
+            "map50": 0.8361473328055747,
+            "map50_95": 0.43740260450580537
+          },
+          "patches": {
+            "map50": 0.9108726571851073,
+            "map50_95": 0.5811752002226811
+          },
+          "pitted_surface": {
+            "map50": 0.7133396107919082,
+            "map50_95": 0.42065651598611087
+          },
+          "rolled-in_scale": {
+            "map50": 0.5347416204806672,
+            "map50_95": 0.2344954254585566
+          },
+          "scratches": {
+            "map50": 0.8914851034052256,
+            "map50_95": 0.5349383998856474
+          }
+        }
+      },
+      "test": {
+        "map50": 0.6973852119983291,
+        "map50_95": 0.3782568540132051,
+        "precision": 0.746132611885154,
+        "recall": 0.6609060940158498,
+        "speed": {
+          "preprocess": 2.0493511671206623,
+          "inference": 1.7374361052261944,
+          "loss": 0.00037161951081011204,
+          "postprocess": 0.25381114844693786
+        },
+        "infer_ms": 1.7374361052261944,
+        "fps_infer_only": 575.5607339987972,
+        "per_class": {
+          "crazing": {
+            "map50": 0.38188664728722715,
+            "map50_95": 0.1367100078742116
+          },
+          "inclusion": {
+            "map50": 0.7476497560337269,
+            "map50_95": 0.3973541857230114
+          },
+          "patches": {
+            "map50": 0.8887144002980574,
+            "map50_95": 0.5777566773529752
+          },
+          "pitted_surface": {
+            "map50": 0.7319995529373287,
+            "map50_95": 0.4168547710505184
+          },
+          "rolled-in_scale": {
+            "map50": 0.5160859652955112,
+            "map50_95": 0.23445025618074306
+          },
+          "scratches": {
+            "map50": 0.9179749501381228,
+            "map50_95": 0.506415225897771
+          }
+        }
+      },
+      "finished_at": "2026-07-25 15:30:47",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down"
+      ],
+      "patch": {},
+      "patch_active": {}
+    },
+    "y26n_gsdown_nwd_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown + NWD 标签分配（overlaps=0.5*CIoU+0.5*NWD）",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_nwd_vfl_e250/y26n_gsdown_nwd_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_nwd_vfl_e250/y26n_gsdown_nwd_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.7035712094952723,
+        "map50_95": 0.39168083845200846,
+        "precision": 0.6935628446898711,
+        "recall": 0.687829624146424,
+        "speed": {
+          "preprocess": 1.9398715409139793,
+          "inference": 1.6926078808804352,
+          "loss": 0.0003593849639097849,
+          "postprocess": 0.07597935696442921
+        },
+        "infer_ms": 1.6926078808804352,
+        "fps_infer_only": 590.8042915880995,
+        "per_class": {
+          "crazing": {
+            "map50": 0.39801509419147496,
+            "map50_95": 0.1645796327195586
+          },
+          "inclusion": {
+            "map50": 0.7774477253901358,
+            "map50_95": 0.4146738954953023
+          },
+          "patches": {
+            "map50": 0.9020411128862769,
+            "map50_95": 0.563656789553993
+          },
+          "pitted_surface": {
+            "map50": 0.721154465889677,
+            "map50_95": 0.4238848689895459
+          },
+          "rolled-in_scale": {
+            "map50": 0.555375499174571,
+            "map50_95": 0.2785914252564564
+          },
+          "scratches": {
+            "map50": 0.8673933594394971,
+            "map50_95": 0.5046984186971947
+          }
+        }
+      },
+      "test": {
+        "map50": 0.715739329445709,
+        "map50_95": 0.38851583879258367,
+        "precision": 0.6825582315509315,
+        "recall": 0.7123823334856363,
+        "speed": {
+          "preprocess": 1.8176464145897224,
+          "inference": 2.057666027525994,
+          "loss": 0.018929788550006904,
+          "postprocess": 0.4574327253079335
+        },
+        "infer_ms": 2.057666027525994,
+        "fps_infer_only": 485.9875152831949,
+        "per_class": {
+          "crazing": {
+            "map50": 0.43678658217325045,
+            "map50_95": 0.1533891700677074
+          },
+          "inclusion": {
+            "map50": 0.7436324789639319,
+            "map50_95": 0.39596841890524526
+          },
+          "patches": {
+            "map50": 0.9319354031197692,
+            "map50_95": 0.6173175078939377
+          },
+          "pitted_surface": {
+            "map50": 0.712528746387775,
+            "map50_95": 0.4172893512137376
+          },
+          "rolled-in_scale": {
+            "map50": 0.5640509552455902,
+            "map50_95": 0.2493454664321899
+          },
+          "scratches": {
+            "map50": 0.905501810783937,
+            "map50_95": 0.4977851182426841
+          }
+        }
+      },
+      "finished_at": "2026-07-25 15:53:09",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down",
+        "NWD"
+      ],
+      "patch": {
+        "nwd": true,
+        "nwd_ratio": 0.5,
+        "nwd_const": 0.1
+      },
+      "patch_active": {
+        "nwd": {
+          "ratio": 0.5,
+          "const": 0.1,
+          "norm": 640.0
+        }
+      }
+    },
+    "y26n_gsdown_vfl_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown + Varifocal 分类损失",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_nwd_vfl_e250/y26n_gsdown_vfl_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_nwd_vfl_e250/y26n_gsdown_vfl_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.544651147384176,
+        "map50_95": 0.3374099306702267,
+        "precision": 0.5611730568352921,
+        "recall": 0.510717058252567,
+        "speed": {
+          "preprocess": 2.004023753106594,
+          "inference": 2.559784334152937,
+          "loss": 0.00031400471925735474,
+          "postprocess": 0.06638833632071812
+        },
+        "infer_ms": 2.559784334152937,
+        "fps_infer_only": 390.6579107692336,
+        "per_class": {
+          "crazing": {
+            "map50": 0.26907594053708694,
+            "map50_95": 0.12718564950754246
+          },
+          "inclusion": {
+            "map50": 0.6108782271942466,
+            "map50_95": 0.3518313843844566
+          },
+          "patches": {
+            "map50": 0.7818513698836812,
+            "map50_95": 0.5533080929991631
+          },
+          "pitted_surface": {
+            "map50": 0.581546358170818,
+            "map50_95": 0.3626072392667256
+          },
+          "rolled-in_scale": {
+            "map50": 0.39369653174615976,
+            "map50_95": 0.219324596957656
+          },
+          "scratches": {
+            "map50": 0.6308584567730631,
+            "map50_95": 0.41020262090581683
+          }
+        }
+      },
+      "test": {
+        "map50": 0.5161662966634968,
+        "map50_95": 0.30943033807170955,
+        "precision": 0.5891213877915814,
+        "recall": 0.4523620368595636,
+        "speed": {
+          "preprocess": 1.9396561007934272,
+          "inference": 1.8461997056984183,
+          "loss": 0.0006560248674756309,
+          "postprocess": 0.0953809809824296
+        },
+        "infer_ms": 1.8461997056984183,
+        "fps_infer_only": 541.6532116831313,
+        "per_class": {
+          "crazing": {
+            "map50": 0.27162586193227234,
+            "map50_95": 0.10586898942408096
+          },
+          "inclusion": {
+            "map50": 0.5185248015891324,
+            "map50_95": 0.31108833290337007
+          },
+          "patches": {
+            "map50": 0.796773676850921,
+            "map50_95": 0.537414316257904
+          },
+          "pitted_surface": {
+            "map50": 0.5467944509250325,
+            "map50_95": 0.32580274605735465
+          },
+          "rolled-in_scale": {
+            "map50": 0.36509330680110824,
+            "map50_95": 0.19710605422734254
+          },
+          "scratches": {
+            "map50": 0.5981856818825141,
+            "map50_95": 0.3793015895602052
+          }
+        }
+      },
+      "finished_at": "2026-07-25 16:42:50",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down",
+        "VFL"
+      ],
+      "patch": {
+        "vfl": true,
+        "vfl_gamma": 2.0,
+        "vfl_alpha": 0.75
+      },
+      "patch_active": {
+        "vfl": {
+          "gamma": 2.0,
+          "alpha": 0.75
+        }
+      }
+    },
+    "y26n_gsdown_nwd_vfl_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown + NWD + VFL 组合",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_nwd_vfl_e250/y26n_gsdown_nwd_vfl_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_nwd_vfl_e250/y26n_gsdown_nwd_vfl_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.4916361332430235,
+        "map50_95": 0.2954750659192518,
+        "precision": 0.5810385620118638,
+        "recall": 0.44894072717892436,
+        "speed": {
+          "preprocess": 2.2913188487291336,
+          "inference": 2.549913916736841,
+          "loss": 0.0006847580273946127,
+          "postprocess": 0.1564118390281995
+        },
+        "infer_ms": 2.549913916736841,
+        "fps_infer_only": 392.1701016792415,
+        "per_class": {
+          "crazing": {
+            "map50": 0.15821208870961748,
+            "map50_95": 0.07356294033407237
+          },
+          "inclusion": {
+            "map50": 0.5646717126863974,
+            "map50_95": 0.30683044968744566
+          },
+          "patches": {
+            "map50": 0.7445766240379659,
+            "map50_95": 0.4989693290078767
+          },
+          "pitted_surface": {
+            "map50": 0.42291638841910234,
+            "map50_95": 0.2820514013691729
+          },
+          "rolled-in_scale": {
+            "map50": 0.39158444210541526,
+            "map50_95": 0.19631199286601136
+          },
+          "scratches": {
+            "map50": 0.6678555434996428,
+            "map50_95": 0.41512428225093184
+          }
+        }
+      },
+      "test": {
+        "map50": 0.48888602422213306,
+        "map50_95": 0.29853313347668314,
+        "precision": 0.6302385934330378,
+        "recall": 0.44812909797520195,
+        "speed": {
+          "preprocess": 2.806020246500953,
+          "inference": 4.524541925327435,
+          "loss": 0.0004951645897383674,
+          "postprocess": 0.10922689451820476
+        },
+        "infer_ms": 4.524541925327435,
+        "fps_infer_only": 221.0168491095662,
+        "per_class": {
+          "crazing": {
+            "map50": 0.12558407087300788,
+            "map50_95": 0.055359990077450585
+          },
+          "inclusion": {
+            "map50": 0.5614885386218716,
+            "map50_95": 0.32858114412662387
+          },
+          "patches": {
+            "map50": 0.7615234005857623,
+            "map50_95": 0.5145261962211031
+          },
+          "pitted_surface": {
+            "map50": 0.4617551966902733,
+            "map50_95": 0.28883012403098596
+          },
+          "rolled-in_scale": {
+            "map50": 0.3974552647395072,
+            "map50_95": 0.2181309104735362
+          },
+          "scratches": {
+            "map50": 0.6255096738223757,
+            "map50_95": 0.3857704359303999
+          }
+        }
+      },
+      "finished_at": "2026-07-25 17:09:10",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down",
+        "NWD",
+        "VFL"
+      ],
+      "patch": {
+        "nwd": true,
+        "nwd_ratio": 0.5,
+        "nwd_const": 0.1,
+        "vfl": true,
+        "vfl_gamma": 2.0,
+        "vfl_alpha": 0.75
+      },
+      "patch_active": {
+        "nwd": {
+          "ratio": 0.5,
+          "const": 0.1,
+          "norm": 640.0
+        },
+        "vfl": {
+          "gamma": 2.0,
+          "alpha": 0.75
+        }
+      }
+    }
+  },
+  "stage1_report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_sweep_e250/sweep_report.json",
+  "best_summary": {
+    "updated_at": "2026-07-25 17:09:10",
+    "baseline": "y26n_base_e250",
+    "ranked": [
+      {
+        "name": "y26n_gsdown_ctrl_e250",
+        "source": "nwd_vfl",
+        "val_map50": 0.7203293339641667,
+        "val_map50_95": 0.3937200951105654,
+        "test_map50": 0.6973852119983291,
+        "test_map50_95": 0.3782568540132051,
+        "delta_val_map50_95": -0.0053414896662289935,
+        "delta_val_map50": 0.00268887282894692,
+        "params": 1935814
+      },
+      {
+        "name": "y26n_gsdown_nwd_e250",
+        "source": "nwd_vfl",
+        "val_map50": 0.7035712094952723,
+        "val_map50_95": 0.39168083845200846,
+        "test_map50": 0.715739329445709,
+        "test_map50_95": 0.38851583879258367,
+        "delta_val_map50_95": -0.007380746324785914,
+        "delta_val_map50": -0.014069251639947433,
+        "params": 1935814
+      },
+      {
+        "name": "y26n_gsdown_vfl_e250",
+        "source": "nwd_vfl",
+        "val_map50": 0.544651147384176,
+        "val_map50_95": 0.3374099306702267,
+        "test_map50": 0.5161662966634968,
+        "test_map50_95": 0.30943033807170955,
+        "delta_val_map50_95": -0.0616516541065677,
+        "delta_val_map50": -0.17298931375104376,
+        "params": 1935814
+      },
+      {
+        "name": "y26n_gsdown_nwd_vfl_e250",
+        "source": "nwd_vfl",
+        "val_map50": 0.4916361332430235,
+        "val_map50_95": 0.2954750659192518,
+        "test_map50": 0.48888602422213306,
+        "test_map50_95": 0.29853313347668314,
+        "delta_val_map50_95": -0.10358651885754255,
+        "delta_val_map50": -0.2260043278921962,
+        "params": 1935814
+      }
+    ],
+    "best": {
+      "name": "y26n_gsdown_ctrl_e250",
+      "source": "nwd_vfl",
+      "val_map50": 0.7203293339641667,
+      "val_map50_95": 0.3937200951105654,
+      "test_map50": 0.6973852119983291,
+      "test_map50_95": 0.3782568540132051,
+      "delta_val_map50_95": -0.0053414896662289935,
+      "delta_val_map50": 0.00268887282894692,
+      "params": 1935814
+    }
+  },
+  "updated_at": "2026-07-25 17:09:10"
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-07-30 21:34:22",
+  "candidate": "sadgs_msdgs_13s7",
+  "protocol": {
+    "epochs": 250,
+    "imgsz": 640,
+    "batch": 32,
+    "seed": 0,
+    "cache": false,
+    "resume": false,
+    "init_weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+    "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+    "base": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+    "sadgs": {
+      "iso_dilations": [
+        1,
+        3
+      ],
+      "strip_k": 7
+    },
+    "final_eval": "independent subprocess reloads best.pt for val and test"
+  },
+  "baseline": {
+    "test_map50": 0.7324113100352823,
+    "test_map50_95": 0.3988372172746915,
+    "test_crazing_map50_95": 0.1770695825201802
+  },
+  "ideal": {
+    "test_map50": 0.738,
+    "test_map50_95": 0.402,
+    "test_crazing_map50_95": 0.187
+  },
+  "experiment": {
+    "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sadgs_msdgs_e250/sadgs_msdgs_13s7/weights/best.pt",
+    "evaluated_at": "2026-07-30 21:55:58",
+    "evaluator_pid": 9090,
+    "params_unfused": 1905916,
+    "params_fused": 1777798,
+    "gflops": null,
+    "val": {
+      "map50": 0.7309302307111908,
+      "map50_95": 0.39591963066761243,
+      "precision": 0.7825798848174316,
+      "recall": 0.6701560681573389,
+      "infer_ms": 2.3620931866268315,
+      "fps_infer_only": 423.35332308715647,
+      "per_class": {
+        "crazing": {
+          "map50": 0.4230098259022412,
+          "map50_95": 0.16417350184341029,
+          "precision": 0.6399799859737867,
+          "recall": 0.3673469387755102
+        },
+        "inclusion": {
+          "map50": 0.8206811091992676,
+          "map50_95": 0.42771276836628863,
+          "precision": 0.8130297253462309,
+          "recall": 0.7672955974842768
+        },
+        "patches": {
+          "map50": 0.869616792654341,
+          "map50_95": 0.5442912041876742,
+          "precision": 0.8377776603586243,
+          "recall": 0.7983193277310925
+        },
+        "pitted_surface": {
+          "map50": 0.762895772926665,
+          "map50_95": 0.4377675028285852,
+          "precision": 0.8334909114609264,
+          "recall": 0.7183098591549296
+        },
+        "rolled-in_scale": {
+          "map50": 0.6026036731379147,
+          "map50_95": 0.29779105651721804,
+          "precision": 0.6829291181862183,
+          "recall": 0.5324553834726425
+        },
+        "scratches": {
+          "map50": 0.9067742104467149,
+          "map50_95": 0.5037817502624982,
+          "precision": 0.8882719075788037,
+          "recall": 0.8372093023255814
+        }
+      }
+    },
+    "test": {
+      "map50": 0.7273591910906275,
+      "map50_95": 0.38525098963054766,
+      "precision": 0.7446203103350731,
+      "recall": 0.7022674175755833,
+      "infer_ms": 1.9588120107268012,
+      "fps_infer_only": 510.5135125391426,
+      "per_class": {
+        "crazing": {
+          "map50": 0.42380673759195053,
+          "map50_95": 0.14225556779044046,
+          "precision": 0.5680351376336769,
+          "recall": 0.3904761904761905
+        },
+        "inclusion": {
+          "map50": 0.7756851601714374,
+          "map50_95": 0.3986359853891551,
+          "precision": 0.7934690620758286,
+          "recall": 0.7443698096809512
+        },
+        "patches": {
+          "map50": 0.9192156009938759,
+          "map50_95": 0.5986999643296081,
+          "precision": 0.8182537216339077,
+          "recall": 0.9119496855345912
+        },
+        "pitted_surface": {
+          "map50": 0.7374267861290937,
+          "map50_95": 0.4426166040333193,
+          "precision": 0.8433814852275486,
+          "recall": 0.704225352112676
+        },
+        "rolled-in_scale": {
+          "map50": 0.590037098442946,
+          "map50_95": 0.2623080983389106,
+          "precision": 0.5748750937460259,
+          "recall": 0.5813953488372093
+        },
+        "scratches": {
+          "map50": 0.9179837632144621,
+          "map50_95": 0.46698971790185234,
+          "precision": 0.8697073616934514,
+          "recall": 0.8811881188118812
+        }
+      }
+    },
+    "status": "done",
+    "candidate": "sadgs_msdgs_13s7",
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_sadgs_msdgs_e250/sadgs_msdgs_13s7.yaml",
+    "gate": {
+      "owner_gate_pass": false,
+      "owner_checks": {
+        "test_map50_gt_msdgs": false,
+        "test_map50_95_ge_msdgs": false,
+        "test_crazing_map50_95_gt_msdgs": false
+      },
+      "ideal_gate_pass": false,
+      "ideal_checks": {
+        "test_map50_ge_0.738": false,
+        "test_map50_95_ge_0.402": false,
+        "test_crazing_map50_95_ge_0.187": false
+      },
+      "deltas_vs_msdgs": {
+        "map50": -0.005052118944654738,
+        "map50_95": -0.013586227644143856,
+        "crazing_map50_95": -0.034814014729739745
+      }
+    }
+  },
+  "finished_at": "2026-07-30 21:55:58"
+}

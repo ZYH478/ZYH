@@ -1,0 +1,54 @@
+{
+  "status": "done",
+  "created_at": "2026-08-03 17:55:08",
+  "dataset": "aluminum",
+  "model": "slf_yolo_slimasfneck_cglu_n",
+  "seed": 2,
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_slf_yolo_seed2_e250/aluminum/slf_yolo_seed2/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/SLF-YOLO/SLF-YOLO/new_cfg/yolov8-SlimAsfNeck-CGLU.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 2664888,
+    "end2end": false,
+    "reg_max": 16,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.9650468049227712,
+    "recall": 0.9689542483660131,
+    "map50": 0.9699025496803184,
+    "map50_95": 0.5750229923219686,
+    "class_ap50": {
+      "zhen_kong": 0.9087942013414612,
+      "ca_shang": 0.9808159973798124,
+      "zang_wu": 0.995,
+      "zhe_zhou": 0.995
+    },
+    "class_ap50_95": {
+      "zhen_kong": 0.37630921767567405,
+      "ca_shang": 0.5753591225555374,
+      "zang_wu": 0.6593328971445881,
+      "zhe_zhou": 0.6890907319120754
+    }
+  },
+  "benchmark": {
+    "fps": 1063.8370706828275,
+    "infer_ms_per_image": 0.9399935643887146,
+    "elapsed_seconds": 6.015958812087774,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

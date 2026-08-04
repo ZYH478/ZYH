@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "phase": "done",
+  "model": "SLF-YOLO",
+  "seeds": [1, 2, 3],
+  "datasets": ["neudet", "aluminum", "pcb"],
+  "current_seed": null,
+  "wait_for": ["train_sota_rtdetr_hgnetv2_l_seed0.py", "start_sota_rtdetr_hgnetv2_l_seed0_after_yolov8n.sh"],
+  "updated_at": "2026-08-03 19:44:30"
+}

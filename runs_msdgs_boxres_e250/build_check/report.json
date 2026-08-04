@@ -1,0 +1,81 @@
+{
+  "base_official_matched_tensors": 402,
+  "behavior_checks": {
+    "msdgs_p5box_res16": {
+      "equivalence_max_abs_error": 0.0,
+      "one2one_input_grad_max": 0.0,
+      "one2one_residual_final_grad_max": 5.465211868286133,
+      "one2many_input_grad_max": 0.11090993136167526,
+      "one2many_residual_final_grad_max": 5.379445552825928,
+      "missing_residual_state_items": 24
+    },
+    "msdgs_p4detail_boxres": {
+      "equivalence_max_abs_error": 0.0,
+      "one2one_input_grad_max": 0.0,
+      "one2one_residual_final_grad_max": 5.468635559082031,
+      "one2many_input_grad_max": 0.09608645737171173,
+      "one2many_residual_final_grad_max": 5.483370780944824,
+      "missing_residual_state_items": 24
+    }
+  },
+  "candidates": {
+    "msdgs_p5box_res16": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_boxres_e250/msdgs_p5box_res16.yaml",
+      "head": "MSDGSBoxResDetect",
+      "input_channels": [
+        64,
+        128,
+        256
+      ],
+      "box_widths": [
+        16,
+        16,
+        16
+      ],
+      "eval_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_shape": [
+        1,
+        300,
+        6
+      ],
+      "official_matched_tensors": 402,
+      "fused_params": 1816586,
+      "gflops_eval_graph": 4.712908799999999,
+      "gflops_fused_inference": 4.1138176,
+      "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_e250/build_check/msdgs_p5box_res16_roundtrip.pt"
+    },
+    "msdgs_p4detail_boxres": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_boxres_e250/msdgs_p4detail_boxres.yaml",
+      "head": "MSDGSBoxResDetect",
+      "input_channels": [
+        64,
+        128,
+        256
+      ],
+      "box_widths": [
+        16,
+        16,
+        16
+      ],
+      "eval_shape": [
+        1,
+        300,
+        6
+      ],
+      "fused_shape": [
+        1,
+        300,
+        6
+      ],
+      "official_matched_tensors": 402,
+      "fused_params": 1780730,
+      "gflops_eval_graph": 4.6560768,
+      "gflops_fused_inference": 4.085043199999999,
+      "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_e250/build_check/msdgs_p4detail_boxres_roundtrip.pt"
+    }
+  }
+}

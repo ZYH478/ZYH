@@ -1,0 +1,53 @@
+{
+  "status": "done",
+  "created_at": "2026-08-01 15:25:20",
+  "dataset": "aluminum",
+  "model": "msdgs",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_aluminum_multiseed_e250/seed3/msdgs/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 1776928,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.9476762461412274,
+    "recall": 0.9680421516824569,
+    "map50": 0.9786334597184243,
+    "map50_95": 0.5414068277671005,
+    "class_ap50": {
+      "zhen_kong": 0.965026280629939,
+      "ca_shang": 0.9653994059884339,
+      "zang_wu": 0.9947221873430437,
+      "zhe_zhou": 0.9893859649122805
+    },
+    "class_ap50_95": {
+      "zhen_kong": 0.37002110892338524,
+      "ca_shang": 0.5337092814200236,
+      "zang_wu": 0.6224931118173865,
+      "zhe_zhou": 0.6394038089076064
+    }
+  },
+  "benchmark": {
+    "fps": 2417.203222250136,
+    "infer_ms_per_image": 0.4137012522551231,
+    "elapsed_seconds": 2.647688014432788,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  },
+  "seed": 3
+}

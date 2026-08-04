@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_antialias",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_antialias_e250/msdgs_bb_p4_antialias.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_antialias_e250/msdgs_bb_p4_antialias/weights/best.pt",
+  "params_unfused": 1921820,
+  "finished_at": "2026-07-30 11:41:30"
+}

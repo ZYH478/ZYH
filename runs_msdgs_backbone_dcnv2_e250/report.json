@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-07-30 19:27:40",
+  "candidate": "msdgs_bb_p4_dcnv2",
+  "protocol": {
+    "epochs": 250,
+    "imgsz": 640,
+    "batch": 32,
+    "seed": 0,
+    "cache": false,
+    "resume": false,
+    "init_weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+    "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+    "final_eval": "independent subprocess reloads best.pt for val and test"
+  },
+  "baseline": {
+    "test_map50": 0.7324113100352823,
+    "test_map50_95": 0.3988372172746915,
+    "test_crazing_map50_95": 0.1770695825201802
+  },
+  "ideal": {
+    "test_map50": 0.738,
+    "test_map50_95": 0.402,
+    "test_crazing_map50_95": 0.187
+  },
+  "experiment": {
+    "status": "failed",
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_dcnv2_e250/msdgs_bb_p4_dcnv2.yaml",
+    "error": "RuntimeError('subprocess failed rc=-11: /root/miniconda3/envs/yolo26/bin/python /root/autodl-tmp/neu-det-yolo26/eval_msdgs_candidate.py --weights /root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250/msdgs_bb_p4_dcnv2/weights/best.pt --data /root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml --project /root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250 --name msdgs_bb_p4_dcnv2 --output /root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250/independent_seed0_report.json --imgsz 640 --batch 32')",
+    "failed_at": "2026-07-30 19:52:59"
+  }
+}

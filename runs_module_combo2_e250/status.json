@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "updated_at": "2026-07-24 17:27:39",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_combo2_e250/combo_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_module_combo2_e250/combo_results.csv",
+  "stage": "stage2_winner_combo"
+}

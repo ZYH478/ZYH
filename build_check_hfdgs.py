@@ -1,0 +1,172 @@
+#!/usr/bin/env python
+"""HFDGS build 检查（不训练）：验证前向数值、高频/全局支路机理、通道分配、参数量、end2end。
+
+检查项：
+1. HFDGS 单块前向：Kd 条 local 多尺度 + HF + [global]，通道按权重非对称分配、
+   各分支参数独立、梯度都能回传。
+2. HF 分支机理 sanity：对空间常数输入，x-avgpool(x)=0 => HF 残差为 0 => 输出==输入
+   （证明它只对高频/边缘响应，不动平滑区，与全局池化方向相反）。
+3. global 分支机理 sanity（若启用）：空间常数输入 -> 每位置输出一致（真全局）。
+4. gsdown neck 的 4 个 VoVGSCSP 全换成 HFDGS 后，整模型 build 通过：
+   end2end=True / reg_max=1 / nl=3 / 输出 [1,300,6]。
+5. fused params 对照（gsdown 1.936M / base 2.376M / msdgs 1.777M / gcdgs 1.778M）。
+
+远程用法：
+    source /root/miniconda3/etc/profile.d/conda.sh && conda activate yolo26
+    cd /root/autodl-tmp/neu-det-yolo26
+    python install_yolo26_exp_modules.py
+    python install_gsconv_modules.py
+    python install_hfdgs_module.py
+    python build_check_hfdgs.py
+"""
+from __future__ import annotations
+
+import os
+from pathlib import Path
+
+import torch
+import yaml
+from ultralytics import YOLO
+
+ROOT = Path(os.environ.get("YOLO26_EXP_ROOT", "/root/autodl-tmp/neu-det-yolo26"))
+GSDOWN_YAML = ROOT / "generated_models_module_stage3_e250" / "y26n_s3_vovgscsp_gsdown_e250.yaml"
+
+
+def build_doc(dilations, hf_frac, global_frac, pool_k=3, r=4) -> dict:
+    """把 gsdown head 里所有 VoVGSCSP 换成 HFDGS。backbone 一字不动。"""
+    doc = yaml.safe_load(GSDOWN_YAML.read_text(encoding="utf-8"))
+    n_swapped = 0
+    for block in doc.get("head", []):
+        if len(block) >= 4 and block[2] == "VoVGSCSP":
+            c2 = block[3][0]
+            # VoVGSCSP args=[c2] -> HFDGS args=[c2, shortcut, g, e, dils, hf_frac, global_frac, pool_k, r]
+            block[2] = "HFDGS"
+            block[3] = [c2, True, 1, 0.5, list(dilations), float(hf_frac), float(global_frac),
+                        int(pool_k), int(r)]
+            n_swapped += 1
+    assert n_swapped == 4, f"expected 4 VoVGSCSP in gsdown neck, got {n_swapped}"
+    print(f"swapped {n_swapped} VoVGSCSP -> HFDGS (dils={dilations}, hf={hf_frac}, "
+          f"gc={global_frac}, pool_k={pool_k})")
+    return doc
+
+
+def check_module():
+    from ultralytics.nn.modules import HFDGS
+
+    # c2=256, e=0.5 => c_=128；dilations=(1,3,5) 3 local + HF + global，等权 => 5 份
+    m = HFDGS(c1=128, c2=256, n=2, e=0.5, dilations=(1, 3, 5),
+              hf_frac=1.0, global_frac=1.0, pool_k=3, r=4).eval()
+    print("SPLITS", m.splits, "sum", sum(m.splits), "(c_ should be 128, Kd+HF+gc=5 parts)")
+    assert sum(m.splits) == 128, m.splits
+    assert len(m.splits) == 5, m.splits  # 3 local + HF + global
+
+    x = torch.randn(2, 128, 32, 32)
+    with torch.no_grad():
+        y = m(x)
+    assert y.shape == (2, 256, 32, 32), f"bad out shape {y.shape}"
+    print(f"MODULE_FWD_OK in{tuple(x.shape)} -> out{tuple(y.shape)}")
+
+    st = m.stages[0]
+    # local 分支 dilation 正确
+    dils = [st[k].dw.dilation for k in range(m.Kd)]
+    print("LOCAL_DILATIONS", dils)
+    assert dils == [(1, 1), (3, 3), (5, 5)], dils
+
+    # 参数独立：local dw + HF dw + global att 权重指针互不重叠
+    ptrs = {st[k].dw.weight.data_ptr() for k in range(m.Kd)}
+    hf_idx = m.Kd
+    gc_idx = m.Kd + 1
+    ptrs.add(st[hf_idx].dw.weight.data_ptr())
+    ptrs.add(st[gc_idx].att.weight.data_ptr())
+    assert len(ptrs) == m.Kd + 2, "branches share weights!"
+    print("BRANCH_INDEPENDENCE_OK", m.Kd, "local + HF + global disjoint weights")
+
+    # HF 分支机理 sanity：空间常数输入 => x-avgpool(x)=0 => 高频残差为 0 => 输出==输入
+    hf = st[hf_idx]
+    cc_hf = m.splits[hf_idx]
+    const = torch.randn(1, cc_hf, 1, 1).expand(1, cc_hf, 8, 8).contiguous()
+    with torch.no_grad():
+        ho = hf(const)
+    hf_resid = (ho - const).abs().max().item()
+    print(f"HF_BRANCH_CONST_RESID {hf_resid:.3e} (should ~0: no high-freq => identity)")
+    assert hf_resid < 1e-5, f"HF branch not identity on const input: {hf_resid}"
+
+    # HF 分支对高频输入应有非零响应（棋盘格）
+    hh = ww = 8
+    board = torch.zeros(1, cc_hf, hh, ww)
+    board[:, :, ::2, ::2] = 1.0
+    board[:, :, 1::2, 1::2] = 1.0
+    with torch.no_grad():
+        hb = hf(board)
+    hf_act = (hb - board).abs().max().item()
+    print(f"HF_BRANCH_HIGHFREQ_ACT {hf_act:.3e} (should >0: responds to edges)")
+    assert hf_act > 1e-4, f"HF branch dead on high-freq input: {hf_act}"
+
+    # global 分支机理 sanity：空间常数输入 -> 每位置输出一致（真全局）
+    gc = st[gc_idx]
+    cc_gc = m.splits[gc_idx]
+    cg = torch.randn(1, cc_gc, 1, 1).expand(1, cc_gc, 8, 8).contiguous()
+    with torch.no_grad():
+        go = gc(cg)
+    spatial_var = go.var(dim=(2, 3)).max().item()
+    print(f"GLOBAL_BRANCH_CONST_VAR {spatial_var:.3e} (should ~0: uniform in -> uniform out)")
+    assert spatial_var < 1e-6, f"global branch not spatially uniform: {spatial_var}"
+
+    # 梯度隔离：所有分支（local + HF + global）都拿到梯度
+    x2 = torch.randn(1, 128, 16, 16, requires_grad=True)
+    m(x2).sum().backward()
+    for k in range(m.Kd):
+        assert st[k].dw.weight.grad is not None, f"local branch {k} grad missing"
+    assert st[hf_idx].dw.weight.grad is not None, "HF branch grad missing"
+    assert st[gc_idx].att.weight.grad is not None, "global att grad missing"
+    print("GRAD_FLOW_OK all local + HF + global branches receive gradient")
+
+    # HF-only 变体（global_frac=0）：应只有 Kd+1 份，无 global
+    m2 = HFDGS(c1=128, c2=256, n=1, e=0.5, dilations=(1, 3, 5),
+               hf_frac=1.0, global_frac=0.0).eval()
+    assert len(m2.splits) == m2.Kd + 1 and not m2.has_gc, m2.splits
+    print("HF_ONLY_VARIANT_OK splits", m2.splits, "(no global)")
+
+
+def check_model(dilations, hf_frac, global_frac, tag, pool_k=3, r=4):
+    doc = build_doc(dilations, hf_frac, global_frac, pool_k, r)
+    gen = ROOT / "generated_models_hfdgs_e250"
+    gen.mkdir(parents=True, exist_ok=True)
+    cfg = gen / f"y26n_gsdown_hfdgs_{tag}_e250.yaml"
+    cfg.write_text("# generated by build_check_hfdgs.py\n"
+                   + yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    print(f"CFG {cfg}")
+
+    model = YOLO(str(cfg))
+    m = model.model
+    print("end2end", getattr(m, "end2end", None))
+    det = m.model[-1]
+    print("reg_max", getattr(det, "reg_max", None), "nl", getattr(det, "nl", None))
+
+    mf = model.model.fuse() if hasattr(model.model, "fuse") else model.model
+    params = int(sum(p.numel() for p in mf.parameters()))
+    print(f"FUSED_PARAMS {params} = {params/1e6:.3f}M "
+          f"(vs gsdown 1.936M, base 2.376M, msdgs 1.777M, gcdgs 1.778M)")
+
+    x = torch.randn(1, 3, 640, 640)
+    model.model.eval()
+    with torch.no_grad():
+        y = model.model(x)
+
+    def _shapes(o):
+        if isinstance(o, dict):
+            return {k: _shapes(v) for k, v in o.items()}
+        if isinstance(o, (list, tuple)):
+            return [_shapes(v) for v in o]
+        return tuple(o.shape) if hasattr(o, "shape") else type(o).__name__
+
+    print("FWD_OUT", _shapes(y))
+    print(f"BUILD_OK {tag}")
+
+
+if __name__ == "__main__":
+    check_module()
+    # 三候选：验证「crazing 走高频、rolled-in 走全局」的异质分工假设
+    check_model((1, 3, 5), 1.0, 0.0, "135hf")     # MSDGS(1,3,5) + HF，纯高频（最干净 HF 检验）
+    check_model((1, 3), 1.0, 0.0, "13hf")         # local(1,3) + HF
+    check_model((1, 3), 1.0, 1.0, "13hf_g")       # local(1,3) + HF + global（完整异质分工）

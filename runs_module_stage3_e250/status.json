@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "updated_at": "2026-07-24 23:58:04",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/combo_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/combo_results.csv",
+  "stage": "stage3_gsconv"
+}

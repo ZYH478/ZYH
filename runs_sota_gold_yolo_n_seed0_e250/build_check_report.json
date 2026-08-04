@@ -1,0 +1,97 @@
+{
+  "status": "pass",
+  "created_at": "2026-08-04 06:42:41",
+  "model": "Gold-YOLO-n",
+  "official_source": "/root/autodl-tmp/neu-det-yolo26/Gold-YOLO-src/Detection/Gold-YOLO",
+  "config": "/root/autodl-tmp/neu-det-yolo26/Gold-YOLO-src/Detection/Gold-YOLO/configs/gold_yolo-n.py",
+  "git_commit": "225ddd2",
+  "datasets": {
+    "neudet": {
+      "source_yaml": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+      "gold_yaml": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/neudet.yaml",
+      "names": [
+        "crazing",
+        "inclusion",
+        "patches",
+        "pitted_surface",
+        "rolled-in_scale",
+        "scratches"
+      ],
+      "split_counts": {
+        "train": 1200,
+        "val": 300,
+        "test": 299
+      },
+      "missing_labels": {
+        "train": 0,
+        "val": 1,
+        "test": 0
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/neudet/images/train",
+      "val": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/neudet/images/val",
+      "test": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/neudet/images/test"
+    },
+    "aluminum": {
+      "source_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+      "gold_yaml": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/aluminum.yaml",
+      "names": [
+        "zhen_kong",
+        "ca_shang",
+        "zang_wu",
+        "zhe_zhou"
+      ],
+      "split_counts": {
+        "train": 1000,
+        "val": 200,
+        "test": 200
+      },
+      "missing_labels": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/aluminum/images/train",
+      "val": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/aluminum/images/val",
+      "test": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/aluminum/images/test"
+    },
+    "pcb": {
+      "source_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "gold_yaml": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/pcb.yaml",
+      "names": [
+        "missing_hole",
+        "mouse_bite",
+        "open_circuit",
+        "short",
+        "spurious_copper",
+        "spur"
+      ],
+      "split_counts": {
+        "train": 891,
+        "val": 120,
+        "test": 60
+      },
+      "missing_labels": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/pcb/images/train",
+      "val": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/pcb/images/val",
+      "test": "/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/pcb/images/test"
+    }
+  },
+  "structure": {
+    "params_neudet_head_build": 6052602,
+    "fuse_ab": true
+  },
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 0,
+    "cache": false,
+    "workers": 8,
+    "base_training": true,
+    "self_distillation": false
+  }
+}

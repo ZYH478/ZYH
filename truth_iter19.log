@@ -1,0 +1,9 @@
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+Traceback (most recent call last):
+  File "/root/autodl-tmp/neu-det-yolo26/truth_iter19.py", line 70, in <module>
+    main()
+  File "/root/autodl-tmp/neu-det-yolo26/truth_iter19.py", line 36, in main
+    n_layers, params, grads, gflops = model.model.info(verbose=False)
+TypeError: cannot unpack non-iterable NoneType object

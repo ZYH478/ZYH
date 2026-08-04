@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "phase": "done",
+  "finished_at": "2026-08-01 22:38:19",
+  "pid": 2260,
+  "current": null,
+  "completed": [
+    "pcb/msdgs/seed1",
+    "pcb/msdgs/seed2",
+    "pcb/msdgs/seed3"
+  ],
+  "failures": [],
+  "pending": []
+}

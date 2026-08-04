@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "updated_at": "2026-07-27 17:17:43",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_vovgscsp_width_e250/width_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_vovgscsp_width_e250/width_results.csv",
+  "stage": "vovgscsp_width",
+  "e": 0.75
+}

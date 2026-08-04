@@ -1,0 +1,57 @@
+{
+  "status": "done",
+  "created_at": "2026-08-03 07:24:55",
+  "dataset": "neudet",
+  "model": "yolov8n",
+  "seed": 0,
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/neudet/yolov8n_seed0/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 3006818,
+    "end2end": false,
+    "reg_max": 16,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.751025361324713,
+    "recall": 0.6574452161297132,
+    "map50": 0.7164408495097584,
+    "map50_95": 0.38270200920957337,
+    "class_ap50": {
+      "crazing": 0.31798631522219467,
+      "inclusion": 0.7580976679405924,
+      "patches": 0.9173302348957363,
+      "pitted_surface": 0.7780465195870623,
+      "rolled-in_scale": 0.6028380313864375,
+      "scratches": 0.9243463280265269
+    },
+    "class_ap50_95": {
+      "crazing": 0.12152644878935279,
+      "inclusion": 0.3664717736403581,
+      "patches": 0.5683010116280501,
+      "pitted_surface": 0.44437633032792867,
+      "rolled-in_scale": 0.28882821148539894,
+      "scratches": 0.5067082793863515
+    }
+  },
+  "benchmark": {
+    "fps": 2237.982236525559,
+    "infer_ms_per_image": 0.44683107116725296,
+    "elapsed_seconds": 2.859718855470419,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

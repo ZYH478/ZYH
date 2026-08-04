@@ -1,0 +1,298 @@
+{
+  "status": "partial",
+  "created_at": "2026-08-04 06:42:36",
+  "models": [
+    "Gold-YOLO-n",
+    "yolo11n"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "datasets": [
+    "neudet",
+    "aluminum",
+    "pcb"
+  ],
+  "completed": 0,
+  "expected": 24,
+  "pending": [
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 0,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed0_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 0,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed0_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 0,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed0_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 1,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed1_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 1,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed1_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 1,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed1_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 2,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed2_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 2,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed2_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 2,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed2_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 3,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed3_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 3,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed3_e250"
+    },
+    {
+      "model": "Gold-YOLO-n",
+      "seed": 3,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed3_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 0,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed0_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 0,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed0_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 0,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed0_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 1,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed1_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 1,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed1_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 1,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed1_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 2,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed2_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 2,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed2_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 2,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed2_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 3,
+      "dataset": "neudet",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed3_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 3,
+      "dataset": "aluminum",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed3_e250"
+    },
+    {
+      "model": "yolo11n",
+      "seed": 3,
+      "dataset": "pcb",
+      "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed3_e250"
+    }
+  ],
+  "summary": {
+    "Gold-YOLO-n": {
+      "seed0": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed0_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      },
+      "seed1": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed1_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      },
+      "seed2": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed2_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      },
+      "seed3": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed3_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      }
+    },
+    "yolo11n": {
+      "seed0": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed0_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      },
+      "seed1": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed1_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      },
+      "seed2": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed2_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      },
+      "seed3": {
+        "status": "missing",
+        "project": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed3_e250",
+        "datasets": {
+          "neudet": {
+            "status": "pending"
+          },
+          "aluminum": {
+            "status": "pending"
+          },
+          "pcb": {
+            "status": "pending"
+          }
+        }
+      }
+    }
+  },
+  "protocol": {
+    "training": "250 epochs / imgsz640 / batch32 / deterministic per seed / cache=False where applicable",
+    "truth": "fresh-process evaluation reloads best checkpoint from disk for each model/seed/dataset",
+    "order": "Gold-YOLO-n seeds 0-3, then YOLOv11n seeds 0-3; each seed runs NEU-DET, Aluminum, PCB serially"
+  }
+}

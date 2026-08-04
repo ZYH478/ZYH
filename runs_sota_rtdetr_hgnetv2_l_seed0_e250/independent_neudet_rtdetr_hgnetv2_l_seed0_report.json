@@ -1,0 +1,55 @@
+{
+  "status": "done",
+  "created_at": "2026-08-03 11:48:27",
+  "dataset": "neudet",
+  "model": "RT-DETR-HGNetv2-L",
+  "seed": 0,
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/neudet/rtdetr_hgnetv2_l_seed0/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 1,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 31996070,
+    "decoder_class": "RTDETRDecoder"
+  },
+  "test": {
+    "precision": 0.6797475537450183,
+    "recall": 0.6752303029656647,
+    "map50": 0.6927716206076705,
+    "map50_95": 0.3904216149815689,
+    "class_ap50": {
+      "crazing": 0.32995332863125665,
+      "inclusion": 0.7038073019911563,
+      "patches": 0.9253796353793181,
+      "pitted_surface": 0.719708261092987,
+      "rolled-in_scale": 0.560776202078517,
+      "scratches": 0.917004994472788
+    },
+    "class_ap50_95": {
+      "crazing": 0.11822363327195531,
+      "inclusion": 0.3486575149808407,
+      "patches": 0.6007111523987597,
+      "pitted_surface": 0.45598381251156866,
+      "rolled-in_scale": 0.29427834596713476,
+      "scratches": 0.5246752307591548
+    }
+  },
+  "benchmark": {
+    "fps": 40.60128667812798,
+    "infer_ms_per_image": 24.629761315882206,
+    "elapsed_seconds": 2.4629761315882206,
+    "images": 100,
+    "batch": 1,
+    "imgsz": 640,
+    "warmup_iterations": 20,
+    "measured_iterations": 100,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

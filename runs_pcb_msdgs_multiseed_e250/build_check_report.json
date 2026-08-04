@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "created_at": "2026-08-01 21:28:32",
+  "dataset": "pcb",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+  "nc": 6,
+  "names": [
+    "missing_hole",
+    "mouse_bite",
+    "open_circuit",
+    "short",
+    "spurious_copper",
+    "spur"
+  ],
+  "split_counts": {
+    "train": 891,
+    "val": 120,
+    "test": 60
+  },
+  "seeds_to_train": [
+    1,
+    2,
+    3
+  ],
+  "seed0_anchor": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/independent_pcb_msdgs_report.json",
+  "structure": {
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+    "pretrained": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "msdgs_modules": 4,
+    "fused_params": 1777318,
+    "forward_type": "tuple"
+  },
+  "recipe": {
+    "epochs": 250,
+    "imgsz": 640,
+    "batch": 32,
+    "deterministic": true,
+    "cache": false,
+    "resume": false,
+    "patience": 0
+  },
+  "cuda": "NVIDIA GeForce RTX 4090"
+}

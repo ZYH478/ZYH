@@ -1,0 +1,47 @@
+{
+  "module_behavior": {
+    "module_equivalence_max_abs_error": 0.0,
+    "missing_residual_state_items": 67,
+    "project_grad_step1": 0.00032450066646561027,
+    "context_grad_step1": 0.0,
+    "main_grad_step1": 0.0011641518212854862,
+    "context_grad_step2": 2.1066870914410174e-08,
+    "reduce_grad_step2": 6.2029199554558545e-09,
+    "main_grad_step2": 0.0010427925735712051
+  },
+  "candidate": {
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_a2res_e250/msdgs_bb_p4_a2res.yaml",
+    "layer6": "C3k2A2Residual",
+    "layer8": "C3k2",
+    "layer10": "C2PSA",
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "detect_input_channels": [
+      64,
+      128,
+      256
+    ],
+    "eval_shape": [
+      1,
+      300,
+      6
+    ],
+    "fused_shape": [
+      1,
+      300,
+      6
+    ],
+    "layer6_equivalence_max_abs_error": 0.0,
+    "model_equivalence_max_abs_error": 0.0,
+    "main_path_state_items": 54,
+    "main_path_state_max_abs_error": 0.0,
+    "missing_residual_state_items": 67,
+    "official_matched_tensors": 402,
+    "baseline_matched_tensors": 402,
+    "params_unfused": 1948956,
+    "params_fused": 1820166,
+    "gflops_fused_inference": 4.2173952,
+    "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_a2res_e250/build_check/msdgs_bb_p4_a2res_roundtrip.pt"
+  }
+}

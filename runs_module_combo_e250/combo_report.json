@@ -1,0 +1,868 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-24 15:09:55",
+  "experiments": {
+    "y26n_s2_simam_p4_e250": {
+      "status": "done",
+      "note": "stage2 attention 位置/数量细化：SimAM at P4",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_module_combo_e250/y26n_s2_simam_p4_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_module_combo_e250/y26n_s2_simam_p4_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 2376006,
+      "gflops": null,
+      "val": {
+        "map50": 0.7035093035855923,
+        "map50_95": 0.39197095125492465,
+        "precision": 0.6922017363102487,
+        "recall": 0.6934697811675715,
+        "speed": {
+          "preprocess": 1.9848317342499893,
+          "inference": 2.640415709465742,
+          "loss": 0.00029185165961583454,
+          "postprocess": 0.4073121274511019
+        },
+        "infer_ms": 2.640415709465742,
+        "fps_infer_only": 378.72824207758504,
+        "per_class": {
+          "crazing": {
+            "map50": 0.4135523615750788,
+            "map50_95": 0.16874912957029603
+          },
+          "inclusion": {
+            "map50": 0.806327961391224,
+            "map50_95": 0.41261139454747103
+          },
+          "patches": {
+            "map50": 0.8464022850287625,
+            "map50_95": 0.5539828095942296
+          },
+          "pitted_surface": {
+            "map50": 0.7286990327677312,
+            "map50_95": 0.42745162284964494
+          },
+          "rolled-in_scale": {
+            "map50": 0.5686785741004012,
+            "map50_95": 0.2730536670960689
+          },
+          "scratches": {
+            "map50": 0.8573956066503557,
+            "map50_95": 0.5159770838718376
+          }
+        }
+      },
+      "test": {
+        "map50": 0.6992877656224977,
+        "map50_95": 0.38301146150893056,
+        "precision": 0.6799006877178627,
+        "recall": 0.6913145319879704,
+        "speed": {
+          "preprocess": 1.904557449712004,
+          "inference": 2.5186016532689033,
+          "loss": 0.000389417427838048,
+          "postprocess": 0.08903200859608858
+        },
+        "infer_ms": 2.5186016532689033,
+        "fps_infer_only": 397.0457172939976,
+        "per_class": {
+          "crazing": {
+            "map50": 0.3482424698169612,
+            "map50_95": 0.1277785796931283
+          },
+          "inclusion": {
+            "map50": 0.7390368826633875,
+            "map50_95": 0.3771044220640276
+          },
+          "patches": {
+            "map50": 0.9229176265356039,
+            "map50_95": 0.595611196103762
+          },
+          "pitted_surface": {
+            "map50": 0.7516517835189913,
+            "map50_95": 0.42970964706250153
+          },
+          "rolled-in_scale": {
+            "map50": 0.5186053109812181,
+            "map50_95": 0.25247348153891286
+          },
+          "scratches": {
+            "map50": 0.9152725202188239,
+            "map50_95": 0.5153914425912509
+          }
+        }
+      },
+      "finished_at": "2026-07-24 15:32:01",
+      "components": [
+        "SimAM",
+        "positions=P4"
+      ],
+      "source_reason": "winners: best_attn=y26n_simam_p3p4_e250"
+    }
+  },
+  "stage1_report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_sweep_e250/sweep_report.json",
+  "stage2_plan": {
+    "created_at": "2026-07-24 15:09:55",
+    "baseline": {
+      "name": "y26n_base_e250",
+      "val_map50_95": 0.3990615847767944,
+      "val_map50": 0.7176404611352197,
+      "test_map50_95": 0.4076801205438817,
+      "test_map50": 0.7450954743800923
+    },
+    "selection_policy": {
+      "primary": "only modules better than 250e baseline on val mAP50-95 or val mAP50",
+      "fallback": "if no winners, allow near-miss modules within -0.5pp mAP50-95 or mAP50 for limited synergy tests",
+      "max_variants": 10,
+      "reason": "winners"
+    },
+    "stage1_ranked": [
+      {
+        "name": "y26n_spd_p2_e250",
+        "note": "SPDConv 替换 backbone layer1 P2/4 downsample",
+        "status": "done",
+        "val_map50_95": 0.4066128369124697,
+        "val_map50": 0.7225962621955393,
+        "test_map50_95": 0.4179102339469736,
+        "test_map50": 0.7403967751335813,
+        "delta_val_map50_95": 0.007551252135675313,
+        "delta_val_map50": 0.004955801060319565,
+        "delta_test_map50_95": 0.010230113403091878,
+        "delta_test_map50": -0.004698699246511007,
+        "score": 0.013708889412046876,
+        "attrs": {
+          "family": "spd",
+          "spd_layers": [
+            1
+          ],
+          "spd_tag": "p2"
+        }
+      },
+      {
+        "name": "y26n_dysample_e250",
+        "note": "DySample 替换两处 nearest upsample",
+        "status": "done",
+        "val_map50_95": 0.4065362179830588,
+        "val_map50": 0.7142013088367527,
+        "test_map50_95": 0.4188219398297473,
+        "test_map50": 0.7462619465111989,
+        "delta_val_map50_95": 0.007474633206264403,
+        "delta_val_map50": -0.0034391522984670297,
+        "delta_test_map50_95": 0.011141819285865606,
+        "delta_test_map50": 0.001166472131106655,
+        "score": 0.011903176356031725,
+        "attrs": {
+          "family": "dysample",
+          "dysample": true
+        }
+      },
+      {
+        "name": "y26n_spd_p3_e250",
+        "note": "SPDConv 替换 backbone layer3 P3/8 downsample",
+        "status": "done",
+        "val_map50_95": 0.40568902318358385,
+        "val_map50": 0.7240150743411583,
+        "test_map50_95": 0.4084230252725341,
+        "test_map50": 0.731064048022905,
+        "delta_val_map50_95": 0.0066274384067894765,
+        "delta_val_map50": 0.006374613205938573,
+        "delta_test_map50_95": 0.0007429047286524049,
+        "delta_test_map50": -0.014031426357187238,
+        "score": 0.00674245078205366,
+        "attrs": {
+          "family": "spd",
+          "spd_layers": [
+            3
+          ],
+          "spd_tag": "p3"
+        }
+      },
+      {
+        "name": "y26n_simam_p3p4_e250",
+        "note": "SimAM 数量 sweep: P3+P4",
+        "status": "done",
+        "val_map50_95": 0.3947789086027786,
+        "val_map50": 0.7215046098134822,
+        "test_map50_95": 0.39661388470889475,
+        "test_map50": 0.7297147133257775,
+        "delta_val_map50_95": -0.004282676174015787,
+        "delta_val_map50": 0.003864148678262458,
+        "delta_test_map50_95": -0.011066235834986948,
+        "delta_test_map50": -0.01538076105431474,
+        "score": -0.011346286831067226,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4"
+          ]
+        }
+      },
+      {
+        "name": "y26n_p2_e250",
+        "note": "官方 P2 小目标头，P2/P3/P4/P5 Detect",
+        "status": "done",
+        "val_map50_95": 0.3965004878836577,
+        "val_map50": 0.7224115645403192,
+        "test_map50_95": 0.39531824149773914,
+        "test_map50": 0.7083532825519279,
+        "delta_val_map50_95": -0.0025610968931366607,
+        "delta_val_map50": 0.004771103405099453,
+        "delta_test_map50_95": -0.012361879046142554,
+        "delta_test_map50": -0.036742191828164406,
+        "score": -0.014182033419801038,
+        "attrs": {
+          "family": "p2head",
+          "p2head": true
+        }
+      },
+      {
+        "name": "y26n_a2c2fbb_simam_p3p4p5_e250",
+        "note": "旧最佳方向：backbone P4/P5 A2C2f + SimAM×3，按 250e 重跑",
+        "status": "done",
+        "val_map50_95": 0.40001235024718446,
+        "val_map50": 0.7200823578964206,
+        "test_map50_95": 0.38463117489574866,
+        "test_map50": 0.714583920661701,
+        "delta_val_map50_95": 0.0009507654703900803,
+        "delta_val_map50": 0.002441896761200879,
+        "delta_test_map50_95": -0.023048945648133035,
+        "delta_test_map50": -0.030511553718391315,
+        "score": -0.015699259392874348,
+        "attrs": {
+          "family": "a2c2fbb_attn",
+          "backbone": "a2c2f",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        }
+      },
+      {
+        "name": "y26n_simam_p3_e250",
+        "note": "SimAM 位置 sweep: P3 only",
+        "status": "done",
+        "val_map50_95": 0.3961837799032475,
+        "val_map50": 0.729491906339788,
+        "test_map50_95": 0.3754312860677802,
+        "test_map50": 0.7240354324970358,
+        "delta_val_map50_95": -0.0028778048735468853,
+        "delta_val_map50": 0.011851445204568267,
+        "delta_test_map50_95": -0.032248834476101496,
+        "delta_test_map50": -0.021060041883056435,
+        "score": -0.018473652406381613,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3"
+          ]
+        }
+      },
+      {
+        "name": "y26n_ema_p3p4p5_e250",
+        "note": "EMA 多尺度注意力 at Detect inputs",
+        "status": "done",
+        "val_map50_95": 0.39782325704508004,
+        "val_map50": 0.7284087521532984,
+        "test_map50_95": 0.3687713159732272,
+        "test_map50": 0.6776554511453244,
+        "delta_val_map50_95": -0.0012383277317143393,
+        "delta_val_map50": 0.010768291018078635,
+        "delta_test_map50_95": -0.03890880457065449,
+        "delta_test_map50": -0.06744002323476783,
+        "score": -0.029873418256763692,
+        "attrs": {
+          "family": "attn",
+          "attn": "EMA",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        }
+      },
+      {
+        "name": "y26n_ca_p3p4p5_e250",
+        "note": "Coordinate Attention at Detect inputs",
+        "status": "done",
+        "val_map50_95": 0.39275172676538617,
+        "val_map50": 0.7156318928100868,
+        "test_map50_95": 0.38032050847904125,
+        "test_map50": 0.7032967091648663,
+        "delta_val_map50_95": -0.006309858011408209,
+        "delta_val_map50": -0.0020085683251329645,
+        "delta_test_map50_95": -0.027359612064840444,
+        "delta_test_map50": -0.041798765215225964,
+        "score": -0.02915284441692681,
+        "attrs": {
+          "family": "attn",
+          "attn": "CoordAtt",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        }
+      },
+      {
+        "name": "y26n_lska_p4p5_e250",
+        "note": "LSKA 大核注意力 at high-level P4/P5",
+        "status": "done",
+        "val_map50_95": 0.3941044395455634,
+        "val_map50": 0.7144649363538121,
+        "test_map50_95": 0.3664294908293358,
+        "test_map50": 0.6872495893070978,
+        "delta_val_map50_95": -0.004957145231230975,
+        "delta_val_map50": -0.0031755247814075904,
+        "delta_test_map50_95": -0.041250629714545906,
+        "delta_test_map50": -0.057845885072994485,
+        "score": -0.038421847015665866,
+        "attrs": {
+          "family": "attn",
+          "attn": "LSKA",
+          "positions": [
+            "P4",
+            "P5"
+          ]
+        }
+      },
+      {
+        "name": "y26n_simam_p3p4p5_e250",
+        "note": "SimAM 数量 sweep: P3+P4+P5",
+        "status": "done",
+        "val_map50_95": 0.3886764315930347,
+        "val_map50": 0.7124418575718633,
+        "test_map50_95": 0.37477767784860827,
+        "test_map50": 0.6947394820305403,
+        "delta_val_map50_95": -0.010385153183759654,
+        "delta_val_map50": -0.005198603563356441,
+        "delta_test_map50_95": -0.032902442695273426,
+        "delta_test_map50": -0.050355992349552015,
+        "score": -0.03898701442664935,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        }
+      }
+    ],
+    "stage1_winners": [
+      {
+        "name": "y26n_spd_p2_e250",
+        "note": "SPDConv 替换 backbone layer1 P2/4 downsample",
+        "status": "done",
+        "val_map50_95": 0.4066128369124697,
+        "val_map50": 0.7225962621955393,
+        "test_map50_95": 0.4179102339469736,
+        "test_map50": 0.7403967751335813,
+        "delta_val_map50_95": 0.007551252135675313,
+        "delta_val_map50": 0.004955801060319565,
+        "delta_test_map50_95": 0.010230113403091878,
+        "delta_test_map50": -0.004698699246511007,
+        "score": 0.013708889412046876,
+        "attrs": {
+          "family": "spd",
+          "spd_layers": [
+            1
+          ],
+          "spd_tag": "p2"
+        }
+      },
+      {
+        "name": "y26n_dysample_e250",
+        "note": "DySample 替换两处 nearest upsample",
+        "status": "done",
+        "val_map50_95": 0.4065362179830588,
+        "val_map50": 0.7142013088367527,
+        "test_map50_95": 0.4188219398297473,
+        "test_map50": 0.7462619465111989,
+        "delta_val_map50_95": 0.007474633206264403,
+        "delta_val_map50": -0.0034391522984670297,
+        "delta_test_map50_95": 0.011141819285865606,
+        "delta_test_map50": 0.001166472131106655,
+        "score": 0.011903176356031725,
+        "attrs": {
+          "family": "dysample",
+          "dysample": true
+        }
+      },
+      {
+        "name": "y26n_spd_p3_e250",
+        "note": "SPDConv 替换 backbone layer3 P3/8 downsample",
+        "status": "done",
+        "val_map50_95": 0.40568902318358385,
+        "val_map50": 0.7240150743411583,
+        "test_map50_95": 0.4084230252725341,
+        "test_map50": 0.731064048022905,
+        "delta_val_map50_95": 0.0066274384067894765,
+        "delta_val_map50": 0.006374613205938573,
+        "delta_test_map50_95": 0.0007429047286524049,
+        "delta_test_map50": -0.014031426357187238,
+        "score": 0.00674245078205366,
+        "attrs": {
+          "family": "spd",
+          "spd_layers": [
+            3
+          ],
+          "spd_tag": "p3"
+        }
+      },
+      {
+        "name": "y26n_simam_p3p4_e250",
+        "note": "SimAM 数量 sweep: P3+P4",
+        "status": "done",
+        "val_map50_95": 0.3947789086027786,
+        "val_map50": 0.7215046098134822,
+        "test_map50_95": 0.39661388470889475,
+        "test_map50": 0.7297147133257775,
+        "delta_val_map50_95": -0.004282676174015787,
+        "delta_val_map50": 0.003864148678262458,
+        "delta_test_map50_95": -0.011066235834986948,
+        "delta_test_map50": -0.01538076105431474,
+        "score": -0.011346286831067226,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4"
+          ]
+        }
+      },
+      {
+        "name": "y26n_p2_e250",
+        "note": "官方 P2 小目标头，P2/P3/P4/P5 Detect",
+        "status": "done",
+        "val_map50_95": 0.3965004878836577,
+        "val_map50": 0.7224115645403192,
+        "test_map50_95": 0.39531824149773914,
+        "test_map50": 0.7083532825519279,
+        "delta_val_map50_95": -0.0025610968931366607,
+        "delta_val_map50": 0.004771103405099453,
+        "delta_test_map50_95": -0.012361879046142554,
+        "delta_test_map50": -0.036742191828164406,
+        "score": -0.014182033419801038,
+        "attrs": {
+          "family": "p2head",
+          "p2head": true
+        }
+      },
+      {
+        "name": "y26n_a2c2fbb_simam_p3p4p5_e250",
+        "note": "旧最佳方向：backbone P4/P5 A2C2f + SimAM×3，按 250e 重跑",
+        "status": "done",
+        "val_map50_95": 0.40001235024718446,
+        "val_map50": 0.7200823578964206,
+        "test_map50_95": 0.38463117489574866,
+        "test_map50": 0.714583920661701,
+        "delta_val_map50_95": 0.0009507654703900803,
+        "delta_val_map50": 0.002441896761200879,
+        "delta_test_map50_95": -0.023048945648133035,
+        "delta_test_map50": -0.030511553718391315,
+        "score": -0.015699259392874348,
+        "attrs": {
+          "family": "a2c2fbb_attn",
+          "backbone": "a2c2f",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        }
+      },
+      {
+        "name": "y26n_simam_p3_e250",
+        "note": "SimAM 位置 sweep: P3 only",
+        "status": "done",
+        "val_map50_95": 0.3961837799032475,
+        "val_map50": 0.729491906339788,
+        "test_map50_95": 0.3754312860677802,
+        "test_map50": 0.7240354324970358,
+        "delta_val_map50_95": -0.0028778048735468853,
+        "delta_val_map50": 0.011851445204568267,
+        "delta_test_map50_95": -0.032248834476101496,
+        "delta_test_map50": -0.021060041883056435,
+        "score": -0.018473652406381613,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3"
+          ]
+        }
+      },
+      {
+        "name": "y26n_ema_p3p4p5_e250",
+        "note": "EMA 多尺度注意力 at Detect inputs",
+        "status": "done",
+        "val_map50_95": 0.39782325704508004,
+        "val_map50": 0.7284087521532984,
+        "test_map50_95": 0.3687713159732272,
+        "test_map50": 0.6776554511453244,
+        "delta_val_map50_95": -0.0012383277317143393,
+        "delta_val_map50": 0.010768291018078635,
+        "delta_test_map50_95": -0.03890880457065449,
+        "delta_test_map50": -0.06744002323476783,
+        "score": -0.029873418256763692,
+        "attrs": {
+          "family": "attn",
+          "attn": "EMA",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        }
+      }
+    ],
+    "selected_candidates": [
+      {
+        "name": "y26n_s2_simam_p4_e250",
+        "note": "stage2 attention 位置/数量细化：SimAM at P4",
+        "components": [
+          "SimAM",
+          "positions=P4"
+        ],
+        "source_reason": "winners: best_attn=y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_simam_p5_e250",
+        "note": "stage2 attention 位置/数量细化：SimAM at P5",
+        "components": [
+          "SimAM",
+          "positions=P5"
+        ],
+        "source_reason": "winners: best_attn=y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_simam_p3p5_e250",
+        "note": "stage2 attention 位置/数量细化：SimAM at P3,P5",
+        "components": [
+          "SimAM",
+          "positions=P3+P5"
+        ],
+        "source_reason": "winners: best_attn=y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_simam_p4p5_e250",
+        "note": "stage2 attention 位置/数量细化：SimAM at P4,P5",
+        "components": [
+          "SimAM",
+          "positions=P4+P5"
+        ],
+        "source_reason": "winners: best_attn=y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_dysample_simam_p3p4_e250",
+        "note": "DySample + SimAM(P3+P4) 低成本组合",
+        "components": [
+          "DySample",
+          "SimAM",
+          "positions=P3+P4"
+        ],
+        "source_reason": "winners: y26n_dysample_e250 + y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_a2c2fbb_simam_p3p4_e250",
+        "note": "A2C2f backbone + SimAM(P3+P4)",
+        "components": [
+          "A2C2fBackbone",
+          "SimAM",
+          "positions=P3+P4"
+        ],
+        "source_reason": "winners: A2C2f history/stage1 + y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_a2c2fbb_dysample_simam_p3p4_e250",
+        "note": "A2C2f backbone + DySample + SimAM(P3+P4)",
+        "components": [
+          "A2C2fBackbone",
+          "DySample",
+          "SimAM",
+          "positions=P3+P4"
+        ],
+        "source_reason": "winners: A2C2f history/stage1 + DySample + y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_spd_p2_simam_p3p4_e250",
+        "note": "SPDConv(p2) + SimAM(P3+P4)",
+        "components": [
+          "SPDConv=p2",
+          "SimAM",
+          "positions=P3+P4"
+        ],
+        "source_reason": "winners: y26n_spd_p2_e250 + y26n_simam_p3p4_e250"
+      },
+      {
+        "name": "y26n_s2_spd_p2_dysample_e250",
+        "note": "SPDConv(p2) + DySample",
+        "components": [
+          "SPDConv=p2",
+          "DySample"
+        ],
+        "source_reason": "winners: y26n_spd_p2_e250 + y26n_dysample_e250"
+      },
+      {
+        "name": "y26n_s2_spd_p2_dysample_simam_p3p4_e250",
+        "note": "SPDConv(p2) + DySample + SimAM(P3+P4)",
+        "components": [
+          "SPDConv=p2",
+          "DySample",
+          "SimAM",
+          "positions=P3+P4"
+        ],
+        "source_reason": "strict winners combo: y26n_spd_p2_e250 + y26n_dysample_e250 + y26n_simam_p3p4_e250"
+      }
+    ]
+  },
+  "best_summary": {
+    "updated_at": "2026-07-24 15:32:01",
+    "best_by_val_map50_95": {
+      "name": "y26n_spd_p2_e250",
+      "note": "SPDConv 替换 backbone layer1 P2/4 downsample",
+      "status": "done",
+      "val_map50_95": 0.4066128369124697,
+      "val_map50": 0.7225962621955393,
+      "test_map50_95": 0.4179102339469736,
+      "test_map50": 0.7403967751335813,
+      "delta_val_map50_95": 0.007551252135675313,
+      "delta_val_map50": 0.004955801060319565,
+      "delta_test_map50_95": 0.010230113403091878,
+      "delta_test_map50": -0.004698699246511007,
+      "score": 0.013708889412046876,
+      "attrs": {
+        "family": "spd",
+        "spd_layers": [
+          1
+        ],
+        "spd_tag": "p2"
+      },
+      "source": "stage1"
+    },
+    "ranked_top10": [
+      {
+        "name": "y26n_spd_p2_e250",
+        "note": "SPDConv 替换 backbone layer1 P2/4 downsample",
+        "status": "done",
+        "val_map50_95": 0.4066128369124697,
+        "val_map50": 0.7225962621955393,
+        "test_map50_95": 0.4179102339469736,
+        "test_map50": 0.7403967751335813,
+        "delta_val_map50_95": 0.007551252135675313,
+        "delta_val_map50": 0.004955801060319565,
+        "delta_test_map50_95": 0.010230113403091878,
+        "delta_test_map50": -0.004698699246511007,
+        "score": 0.013708889412046876,
+        "attrs": {
+          "family": "spd",
+          "spd_layers": [
+            1
+          ],
+          "spd_tag": "p2"
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_dysample_e250",
+        "note": "DySample 替换两处 nearest upsample",
+        "status": "done",
+        "val_map50_95": 0.4065362179830588,
+        "val_map50": 0.7142013088367527,
+        "test_map50_95": 0.4188219398297473,
+        "test_map50": 0.7462619465111989,
+        "delta_val_map50_95": 0.007474633206264403,
+        "delta_val_map50": -0.0034391522984670297,
+        "delta_test_map50_95": 0.011141819285865606,
+        "delta_test_map50": 0.001166472131106655,
+        "score": 0.011903176356031725,
+        "attrs": {
+          "family": "dysample",
+          "dysample": true
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_spd_p3_e250",
+        "note": "SPDConv 替换 backbone layer3 P3/8 downsample",
+        "status": "done",
+        "val_map50_95": 0.40568902318358385,
+        "val_map50": 0.7240150743411583,
+        "test_map50_95": 0.4084230252725341,
+        "test_map50": 0.731064048022905,
+        "delta_val_map50_95": 0.0066274384067894765,
+        "delta_val_map50": 0.006374613205938573,
+        "delta_test_map50_95": 0.0007429047286524049,
+        "delta_test_map50": -0.014031426357187238,
+        "score": 0.00674245078205366,
+        "attrs": {
+          "family": "spd",
+          "spd_layers": [
+            3
+          ],
+          "spd_tag": "p3"
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_a2c2fbb_simam_p3p4p5_e250",
+        "note": "旧最佳方向：backbone P4/P5 A2C2f + SimAM×3，按 250e 重跑",
+        "status": "done",
+        "val_map50_95": 0.40001235024718446,
+        "val_map50": 0.7200823578964206,
+        "test_map50_95": 0.38463117489574866,
+        "test_map50": 0.714583920661701,
+        "delta_val_map50_95": 0.0009507654703900803,
+        "delta_val_map50": 0.002441896761200879,
+        "delta_test_map50_95": -0.023048945648133035,
+        "delta_test_map50": -0.030511553718391315,
+        "score": -0.015699259392874348,
+        "attrs": {
+          "family": "a2c2fbb_attn",
+          "backbone": "a2c2f",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_base_e250",
+        "source": "stage1",
+        "val_map50_95": 0.3990615847767944,
+        "val_map50": 0.7176404611352197,
+        "test_map50_95": 0.4076801205438817,
+        "test_map50": 0.7450954743800923,
+        "delta_val_map50_95": 0.0,
+        "delta_val_map50": 0.0,
+        "delta_test_map50_95": 0.0,
+        "delta_test_map50": 0.0,
+        "score": 0.0
+      },
+      {
+        "name": "y26n_ema_p3p4p5_e250",
+        "note": "EMA 多尺度注意力 at Detect inputs",
+        "status": "done",
+        "val_map50_95": 0.39782325704508004,
+        "val_map50": 0.7284087521532984,
+        "test_map50_95": 0.3687713159732272,
+        "test_map50": 0.6776554511453244,
+        "delta_val_map50_95": -0.0012383277317143393,
+        "delta_val_map50": 0.010768291018078635,
+        "delta_test_map50_95": -0.03890880457065449,
+        "delta_test_map50": -0.06744002323476783,
+        "score": -0.029873418256763692,
+        "attrs": {
+          "family": "attn",
+          "attn": "EMA",
+          "positions": [
+            "P3",
+            "P4",
+            "P5"
+          ]
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_p2_e250",
+        "note": "官方 P2 小目标头，P2/P3/P4/P5 Detect",
+        "status": "done",
+        "val_map50_95": 0.3965004878836577,
+        "val_map50": 0.7224115645403192,
+        "test_map50_95": 0.39531824149773914,
+        "test_map50": 0.7083532825519279,
+        "delta_val_map50_95": -0.0025610968931366607,
+        "delta_val_map50": 0.004771103405099453,
+        "delta_test_map50_95": -0.012361879046142554,
+        "delta_test_map50": -0.036742191828164406,
+        "score": -0.014182033419801038,
+        "attrs": {
+          "family": "p2head",
+          "p2head": true
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_simam_p3_e250",
+        "note": "SimAM 位置 sweep: P3 only",
+        "status": "done",
+        "val_map50_95": 0.3961837799032475,
+        "val_map50": 0.729491906339788,
+        "test_map50_95": 0.3754312860677802,
+        "test_map50": 0.7240354324970358,
+        "delta_val_map50_95": -0.0028778048735468853,
+        "delta_val_map50": 0.011851445204568267,
+        "delta_test_map50_95": -0.032248834476101496,
+        "delta_test_map50": -0.021060041883056435,
+        "score": -0.018473652406381613,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3"
+          ]
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_simam_p3p4_e250",
+        "note": "SimAM 数量 sweep: P3+P4",
+        "status": "done",
+        "val_map50_95": 0.3947789086027786,
+        "val_map50": 0.7215046098134822,
+        "test_map50_95": 0.39661388470889475,
+        "test_map50": 0.7297147133257775,
+        "delta_val_map50_95": -0.004282676174015787,
+        "delta_val_map50": 0.003864148678262458,
+        "delta_test_map50_95": -0.011066235834986948,
+        "delta_test_map50": -0.01538076105431474,
+        "score": -0.011346286831067226,
+        "attrs": {
+          "family": "attn",
+          "attn": "SimAM",
+          "positions": [
+            "P3",
+            "P4"
+          ]
+        },
+        "source": "stage1"
+      },
+      {
+        "name": "y26n_lska_p4p5_e250",
+        "note": "LSKA 大核注意力 at high-level P4/P5",
+        "status": "done",
+        "val_map50_95": 0.3941044395455634,
+        "val_map50": 0.7144649363538121,
+        "test_map50_95": 0.3664294908293358,
+        "test_map50": 0.6872495893070978,
+        "delta_val_map50_95": -0.004957145231230975,
+        "delta_val_map50": -0.0031755247814075904,
+        "delta_test_map50_95": -0.041250629714545906,
+        "delta_test_map50": -0.057845885072994485,
+        "score": -0.038421847015665866,
+        "attrs": {
+          "family": "attn",
+          "attn": "LSKA",
+          "positions": [
+            "P4",
+            "P5"
+          ]
+        },
+        "source": "stage1"
+      }
+    ]
+  },
+  "updated_at": "2026-07-24 15:32:01"
+}

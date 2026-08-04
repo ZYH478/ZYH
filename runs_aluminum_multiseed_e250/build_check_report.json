@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "created_at": "2026-08-01 13:39:13",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+  "nc": 4,
+  "names": {
+    "0": "zhen_kong",
+    "1": "ca_shang",
+    "2": "zang_wu",
+    "3": "zhe_zhou"
+  },
+  "seeds_to_train": [
+    1,
+    2,
+    3
+  ],
+  "seed0_anchor": {
+    "yolo26n": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/independent_aluminum_yolo26n_report.json",
+    "msdgs": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/independent_aluminum_msdgs_report.json"
+  },
+  "models": {
+    "yolo26n": {
+      "cfg": "yolo26n.yaml",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "msdgs_modules": 0,
+      "fused_params": 2408932,
+      "forward_type": "tuple"
+    },
+    "msdgs": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "msdgs_modules": 4,
+      "fused_params": 1777318,
+      "forward_type": "tuple"
+    }
+  },
+  "cuda": "NVIDIA GeForce RTX 4090"
+}

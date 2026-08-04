@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "experiments": {
+    "msdgs_dysnake_p4": {
+      "status": "done",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_dysnake_gsdown_e250/msdgs_dysnake_p4.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_dysnake_gsdown_e250/msdgs_dysnake_p4/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params_unfused": 1933248,
+      "val": {
+        "map50": 0.7072279028508573,
+        "map50_95": 0.38734073288195653,
+        "precision": 0.6700571243284427,
+        "recall": 0.6987275731645092,
+        "infer_ms": 2.947200226287047,
+        "fps_infer_only": 339.30507709678886,
+        "per_class": {
+          "crazing": {
+            "map50": 0.42699104021135165,
+            "map50_95": 0.14596804672788818
+          },
+          "inclusion": {
+            "map50": 0.7640630162481358,
+            "map50_95": 0.39633195943991
+          },
+          "patches": {
+            "map50": 0.8880522264694632,
+            "map50_95": 0.5976577041076172
+          },
+          "pitted_surface": {
+            "map50": 0.7210775996555763,
+            "map50_95": 0.3921993964488505
+          },
+          "rolled-in_scale": {
+            "map50": 0.5671467233919546,
+            "map50_95": 0.27065806376292645
+          },
+          "scratches": {
+            "map50": 0.8760368111286629,
+            "map50_95": 0.5212292268045468
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7332892272600207,
+        "map50_95": 0.3877644228315106,
+        "precision": 0.7201040427493238,
+        "recall": 0.703007327916153,
+        "infer_ms": 1.7977648268276234,
+        "fps_infer_only": 556.2462815365137,
+        "per_class": {
+          "crazing": {
+            "map50": 0.4479470247995442,
+            "map50_95": 0.1306664962194636
+          },
+          "inclusion": {
+            "map50": 0.7618401610894452,
+            "map50_95": 0.39625477703839873
+          },
+          "patches": {
+            "map50": 0.9207166049680299,
+            "map50_95": 0.5950894284681127
+          },
+          "pitted_surface": {
+            "map50": 0.7703354157471254,
+            "map50_95": 0.4197597032816719
+          },
+          "rolled-in_scale": {
+            "map50": 0.5908141300318743,
+            "map50_95": 0.2831320457403191
+          },
+          "scratches": {
+            "map50": 0.9080820269241046,
+            "map50_95": 0.5016840862410972
+          }
+        }
+      },
+      "finished_at": "2026-07-28 14:54:50"
+    }
+  },
+  "baseline": {
+    "gsdown": {
+      "test_map50": 0.7338,
+      "test_map50_95": 0.4018,
+      "crazing_map50": 0.4431
+    },
+    "msdgs135eq": {
+      "test_map50": 0.73241,
+      "test_map50_95": 0.39884,
+      "crazing_map50": 0.4712
+    }
+  }
+}

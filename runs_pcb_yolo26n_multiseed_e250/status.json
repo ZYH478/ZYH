@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "phase": "done",
+  "finished_at": "2026-08-02 00:26:38",
+  "pid": 8467,
+  "current": null,
+  "completed": [
+    "pcb/yolo26n/seed1",
+    "pcb/yolo26n/seed2",
+    "pcb/yolo26n/seed3"
+  ],
+  "failures": [],
+  "pending": []
+}

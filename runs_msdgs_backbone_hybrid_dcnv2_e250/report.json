@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-07-30 22:10:06",
+  "candidate": "msdgs_bb_p4_hybrid_dcnv2_r50",
+  "protocol": {
+    "epochs": 250,
+    "imgsz": 640,
+    "batch": 32,
+    "seed": 0,
+    "cache": false,
+    "resume": false,
+    "init_weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+    "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+    "base": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+    "hybrid": {
+      "deform_ratio": 0.5,
+      "regular_ratio": 0.5,
+      "offset_limit": 1.0,
+      "mask_span": 0.5
+    },
+    "final_eval": "independent subprocess reloads best.pt for val and test"
+  },
+  "baseline": {
+    "test_map50": 0.7324113100352823,
+    "test_map50_95": 0.3988372172746915,
+    "test_crazing_map50_95": 0.1770695825201802
+  },
+  "ideal": {
+    "test_map50": 0.738,
+    "test_map50_95": 0.402,
+    "test_crazing_map50_95": 0.187
+  },
+  "experiment": {
+    "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_hybrid_dcnv2_e250/msdgs_bb_p4_hybrid_dcnv2_r50/weights/best.pt",
+    "evaluated_at": "2026-07-30 22:34:30",
+    "evaluator_pid": 13208,
+    "params_unfused": 1921042,
+    "params_fused": 1792988,
+    "gflops": null,
+    "val": {
+      "map50": 0.724225084399314,
+      "map50_95": 0.39778909463003304,
+      "precision": 0.7409014609250851,
+      "recall": 0.654033751544486,
+      "infer_ms": 3.0603597996135554,
+      "fps_infer_only": 326.7589647878247,
+      "per_class": {
+        "crazing": {
+          "map50": 0.4572292323392539,
+          "map50_95": 0.17323736044161633,
+          "precision": 0.6222938793406196,
+          "recall": 0.3163265306122449
+        },
+        "inclusion": {
+          "map50": 0.7681396529678396,
+          "map50_95": 0.39456493342676785,
+          "precision": 0.77207110166165,
+          "recall": 0.6817381184750336
+        },
+        "patches": {
+          "map50": 0.8693997183581275,
+          "map50_95": 0.5590350386588282,
+          "precision": 0.8259803592777818,
+          "recall": 0.797732147114168
+        },
+        "pitted_surface": {
+          "map50": 0.7801264321769061,
+          "map50_95": 0.494180782809846,
+          "precision": 0.7911760001123012,
+          "recall": 0.6937523905077445
+        },
+        "rolled-in_scale": {
+          "map50": 0.604765065851294,
+          "map50_95": 0.2540639299344026,
+          "precision": 0.6300937233911488,
+          "recall": 0.5741882062786554
+        },
+        "scratches": {
+          "map50": 0.8656904047024633,
+          "map50_95": 0.5116525225087372,
+          "precision": 0.8037937017670087,
+          "recall": 0.8604651162790697
+        }
+      }
+    },
+    "test": {
+      "map50": 0.7020995905888182,
+      "map50_95": 0.3871609369353633,
+      "precision": 0.7092713926815929,
+      "recall": 0.6825012863797936,
+      "infer_ms": 2.8683594225541404,
+      "fps_infer_only": 348.6313438047267,
+      "per_class": {
+        "crazing": {
+          "map50": 0.3590577360074604,
+          "map50_95": 0.12401815844511041,
+          "precision": 0.5428454373414171,
+          "recall": 0.3333333333333333
+        },
+        "inclusion": {
+          "map50": 0.7232777998291156,
+          "map50_95": 0.38250393955195033,
+          "precision": 0.7300476715140707,
+          "recall": 0.6760955081606698
+        },
+        "patches": {
+          "map50": 0.9187779160425379,
+          "map50_95": 0.5984786575088716,
+          "precision": 0.8038787174807377,
+          "recall": 0.8930817610062893
+        },
+        "pitted_surface": {
+          "map50": 0.742979961581215,
+          "map50_95": 0.45052413873656016,
+          "precision": 0.7656097863204124,
+          "recall": 0.7183098591549296
+        },
+        "rolled-in_scale": {
+          "map50": 0.572804442841849,
+          "map50_95": 0.2697321129859945,
+          "precision": 0.5967371204601573,
+          "recall": 0.5930232558139535
+        },
+        "scratches": {
+          "map50": 0.8956996872307308,
+          "map50_95": 0.4977086143836925,
+          "precision": 0.8165096229727626,
+          "recall": 0.8811640008095853
+        }
+      }
+    },
+    "status": "done",
+    "candidate": "msdgs_bb_p4_hybrid_dcnv2_r50",
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_hybrid_dcnv2_e250/msdgs_bb_p4_hybrid_dcnv2_r50.yaml",
+    "gate": {
+      "owner_gate_pass": false,
+      "owner_checks": {
+        "test_map50_gt_msdgs": false,
+        "test_map50_95_ge_msdgs": false,
+        "test_crazing_map50_95_gt_msdgs": false
+      },
+      "ideal_gate_pass": false,
+      "ideal_checks": {
+        "test_map50_ge_0.738": false,
+        "test_map50_95_ge_0.402": false,
+        "test_crazing_map50_95_ge_0.187": false
+      },
+      "deltas_vs_msdgs": {
+        "map50": -0.030311719446464047,
+        "map50_95": -0.011676280339328216,
+        "crazing_map50_95": -0.0530514240750698
+      }
+    }
+  },
+  "finished_at": "2026-07-30 22:34:31"
+}

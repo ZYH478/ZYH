@@ -1,0 +1,174 @@
+{
+  "status": "done",
+  "created_at": "2026-08-03 15:32:40",
+  "model": "RT-DETR-HGNetv2-L",
+  "seed": 0,
+  "protocol": {
+    "training": "250 epochs / imgsz640 / batch8 / seed0 / deterministic=False / cache=False / resume=False / patience=0 / official rtdetr-l.pt",
+    "truth": "independent fresh Python process reloads best.pt and evaluates test split",
+    "fps": "RTX 4090 / fused FP32 / imgsz640 / batch1 / warmup20 / iterations100 / forward only"
+  },
+  "experiments": {
+    "neudet": {
+      "status": "done",
+      "created_at": "2026-08-03 11:48:27",
+      "dataset": "neudet",
+      "model": "RT-DETR-HGNetv2-L",
+      "seed": 0,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/neudet/rtdetr_hgnetv2_l_seed0/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 1,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 31996070,
+        "decoder_class": "RTDETRDecoder"
+      },
+      "test": {
+        "precision": 0.6797475537450183,
+        "recall": 0.6752303029656647,
+        "map50": 0.6927716206076705,
+        "map50_95": 0.3904216149815689,
+        "class_ap50": {
+          "crazing": 0.32995332863125665,
+          "inclusion": 0.7038073019911563,
+          "patches": 0.9253796353793181,
+          "pitted_surface": 0.719708261092987,
+          "rolled-in_scale": 0.560776202078517,
+          "scratches": 0.917004994472788
+        },
+        "class_ap50_95": {
+          "crazing": 0.11822363327195531,
+          "inclusion": 0.3486575149808407,
+          "patches": 0.6007111523987597,
+          "pitted_surface": 0.45598381251156866,
+          "rolled-in_scale": 0.29427834596713476,
+          "scratches": 0.5246752307591548
+        }
+      },
+      "benchmark": {
+        "fps": 40.60128667812798,
+        "infer_ms_per_image": 24.629761315882206,
+        "elapsed_seconds": 2.4629761315882206,
+        "images": 100,
+        "batch": 1,
+        "imgsz": 640,
+        "warmup_iterations": 20,
+        "measured_iterations": 100,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      }
+    },
+    "aluminum": {
+      "status": "done",
+      "created_at": "2026-08-03 13:46:35",
+      "dataset": "aluminum",
+      "model": "RT-DETR-HGNetv2-L",
+      "seed": 0,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/aluminum/rtdetr_hgnetv2_l_seed0/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 1,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 31991960,
+        "decoder_class": "RTDETRDecoder"
+      },
+      "test": {
+        "precision": 0.9597917872461783,
+        "recall": 0.9787581699346406,
+        "map50": 0.9673221834713346,
+        "map50_95": 0.5594792109819885,
+        "class_ap50": {
+          "zhen_kong": 0.9465974842654092,
+          "ca_shang": 0.9613119392751014,
+          "zang_wu": 0.995,
+          "zhe_zhou": 0.9663793103448277
+        },
+        "class_ap50_95": {
+          "zhen_kong": 0.3510642665372723,
+          "ca_shang": 0.5704915928882778,
+          "zang_wu": 0.6619696322428672,
+          "zhe_zhou": 0.6543913522595364
+        }
+      },
+      "benchmark": {
+        "fps": 38.93333658798563,
+        "infer_ms_per_image": 25.684929359704256,
+        "elapsed_seconds": 2.5684929359704256,
+        "images": 100,
+        "batch": 1,
+        "imgsz": 640,
+        "warmup_iterations": 20,
+        "measured_iterations": 100,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      }
+    },
+    "pcb": {
+      "status": "done",
+      "created_at": "2026-08-03 15:32:39",
+      "dataset": "pcb",
+      "model": "RT-DETR-HGNetv2-L",
+      "seed": 0,
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/pcb/rtdetr_hgnetv2_l_seed0/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 1,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 31996070,
+        "decoder_class": "RTDETRDecoder"
+      },
+      "test": {
+        "precision": 0.8258158358864794,
+        "recall": 0.9427148280332419,
+        "map50": 0.9438905027239543,
+        "map50_95": 0.4050705295195762,
+        "class_ap50": {
+          "missing_hole": 0.9682972923141359,
+          "mouse_bite": 0.8421847913188842,
+          "open_circuit": 0.9773370078740157,
+          "short": 0.9462449458719187,
+          "spurious_copper": 0.980586592178771,
+          "spur": 0.948692386786001
+        },
+        "class_ap50_95": {
+          "missing_hole": 0.460727805442509,
+          "mouse_bite": 0.2853048261229128,
+          "open_circuit": 0.5453419380226238,
+          "short": 0.3055426028386892,
+          "spurious_copper": 0.4650310347673261,
+          "spur": 0.3684749699233963
+        }
+      },
+      "benchmark": {
+        "fps": 39.3194944679498,
+        "infer_ms_per_image": 25.432676933705807,
+        "elapsed_seconds": 2.5432676933705807,
+        "images": 100,
+        "batch": 1,
+        "imgsz": 640,
+        "warmup_iterations": 20,
+        "measured_iterations": 100,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      }
+    }
+  }
+}

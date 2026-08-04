@@ -1,0 +1,276 @@
+{
+  "created_at": "2026-08-01 10:02:47",
+  "archives": {
+    "aluminum": {
+      "path": "/autodl-fs/data/aluminum_yolo26.zip",
+      "size": 85741269,
+      "sha256": "6080dd6ad427fae65dd58819053650edc8549a9392703e198f83712f6565695a"
+    },
+    "pcb": {
+      "path": "/autodl-fs/data/pcb_dataset.rar",
+      "size": 1756370751,
+      "sha256": "7d050e2e8558fd30a18c0d0ebab773bc812f02efbbf668524854574bc02d98e5"
+    }
+  },
+  "datasets": {
+    "aluminum": {
+      "root": "/root/autodl-tmp/neu-det-yolo26/generalization_aluminum_pcb/raw/aluminum_yolo26",
+      "data_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+      "names": [
+        "zhen_kong",
+        "ca_shang",
+        "zang_wu",
+        "zhe_zhou"
+      ],
+      "split_policy": "archive deterministic 1000/200/200 split; no generated variants in val/test",
+      "conversion_summary": {
+        "source": "C:\\Users\\YH\\Desktop\\aluminum_voc\\aluminum_voc",
+        "output": "C:\\Users\\YH\\Desktop\\aluminum_voc\\aluminum_yolo26",
+        "seed": 20260801,
+        "split_method": "deterministic random search with exact split sizes and class-distribution scoring",
+        "classes": [
+          "zhen_kong",
+          "ca_shang",
+          "zang_wu",
+          "zhe_zhou"
+        ],
+        "targets": {
+          "train": 1000,
+          "val": 200,
+          "test": 200
+        },
+        "total_images": 1400,
+        "total_objects": 3437,
+        "total_class_counts": {
+          "zhen_kong": 708,
+          "ca_shang": 1085,
+          "zang_wu": 1264,
+          "zhe_zhou": 380
+        },
+        "splits": {
+          "train": {
+            "images": 1000,
+            "labels": 1000,
+            "objects": 2455,
+            "class_counts": {
+              "zhen_kong": 504,
+              "ca_shang": 775,
+              "zang_wu": 905,
+              "zhe_zhou": 271
+            }
+          },
+          "val": {
+            "images": 200,
+            "labels": 200,
+            "objects": 493,
+            "class_counts": {
+              "zhen_kong": 102,
+              "ca_shang": 157,
+              "zang_wu": 181,
+              "zhe_zhou": 53
+            }
+          },
+          "test": {
+            "images": 200,
+            "labels": 200,
+            "objects": 489,
+            "class_counts": {
+              "zhen_kong": 102,
+              "ca_shang": 153,
+              "zang_wu": 178,
+              "zhe_zhou": 56
+            }
+          }
+        },
+        "checks": {
+          "all_image_label_basenames_match": true,
+          "unique_across_splits": true,
+          "errors": [],
+          "error_count": 0
+        },
+        "sha1_first_10_source_images": {
+          "1.jpg": "7ef979e171a47479718e221b1fafa361424c4294",
+          "2.jpg": "fb2845960f479166ff23a603b61c5a85087149f2",
+          "3.jpg": "d8569d89ad3fddd8c9b08b04c7017415a8014349",
+          "4.jpg": "74312457d815a0466b106c07535f4cc67580245c",
+          "5.jpg": "72fdc5bc01e304ab09d0243f0a1f9ae4244068a8",
+          "6.jpg": "9cc3560832815ea211e698076cacfd85971cff70",
+          "7.jpg": "0bb0c3198c147ab0bac72cbfca9d101ae5bb2a73",
+          "8.jpg": "3a56a8d88087500c8bfa37a5f08b0fa445f50bd0",
+          "9.jpg": "5c480dbc3e39ed7b941e747c4509acdd4b6c2221",
+          "10.jpg": "5f65d7021f352da90fc449a4f7609d8b29ccd8ad"
+        }
+      },
+      "train": {
+        "images": 1000,
+        "empty_labels": 0,
+        "instances": {
+          "zhen_kong": 504,
+          "ca_shang": 775,
+          "zang_wu": 905,
+          "zhe_zhou": 271
+        }
+      },
+      "val": {
+        "images": 200,
+        "empty_labels": 0,
+        "instances": {
+          "zhen_kong": 102,
+          "ca_shang": 157,
+          "zang_wu": 181,
+          "zhe_zhou": 53
+        }
+      },
+      "test": {
+        "images": 200,
+        "empty_labels": 0,
+        "instances": {
+          "zhen_kong": 102,
+          "ca_shang": 153,
+          "zang_wu": 178,
+          "zhe_zhou": 56
+        }
+      },
+      "path_overlap_count": 0,
+      "content_hash_overlap_count": 0,
+      "all_classes_in_test": true
+    },
+    "pcb": {
+      "root": "/root/autodl-tmp/neu-det-yolo26/generalization_aluminum_pcb/raw/pcb_dataset",
+      "data_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "names": [
+        "missing_hole",
+        "mouse_bite",
+        "open_circuit",
+        "short",
+        "spurious_copper",
+        "spur"
+      ],
+      "split_policy": "source-board-disjoint exhaustive 7/2/1 board split optimized for image/class balance; hflip variants train-only",
+      "raw_pair_audit": {
+        "train": {
+          "images": 1082,
+          "labels": 1095,
+          "missing_labels": [],
+          "orphan_labels_excluded": [
+            "01_missing_hole_01",
+            "01_mouse_bite_01",
+            "01_open_circuit_01",
+            "01_open_circuit_03",
+            "01_short_02",
+            "01_spur_01",
+            "01_spurious_copper_01",
+            "05_spur_05",
+            "05_spurious_copper_10",
+            "06_missing_hole_05",
+            "06_mouse_bite_04",
+            "06_open_circuit_07",
+            "06_short_02"
+          ]
+        },
+        "val": {
+          "images": 139,
+          "labels": 139,
+          "missing_labels": [],
+          "orphan_labels_excluded": []
+        }
+      },
+      "raw_original_images": 680,
+      "raw_hflip_images": 541,
+      "val_test_generated_variants": 0,
+      "board_split_optimization": {
+        "score": 0.2611632699495309,
+        "boards": {
+          "test": [
+            "08"
+          ],
+          "val": [
+            "07",
+            "12"
+          ],
+          "train": [
+            "01",
+            "04",
+            "05",
+            "06",
+            "09",
+            "10",
+            "11"
+          ]
+        },
+        "original_images": {
+          "test": 60,
+          "val": 120,
+          "train": 500
+        },
+        "original_instances": {
+          "train": {
+            "missing_hole": 338,
+            "mouse_bite": 334,
+            "open_circuit": 321,
+            "short": 334,
+            "spurious_copper": 345,
+            "spur": 329
+          },
+          "val": {
+            "missing_hole": 102,
+            "mouse_bite": 100,
+            "open_circuit": 100,
+            "short": 100,
+            "spurious_copper": 100,
+            "spur": 101
+          },
+          "test": {
+            "missing_hole": 49,
+            "mouse_bite": 50,
+            "open_circuit": 50,
+            "short": 49,
+            "spurious_copper": 50,
+            "spur": 50
+          }
+        }
+      },
+      "train": {
+        "images": 891,
+        "empty_labels": 0,
+        "instances": {
+          "missing_hole": 599,
+          "mouse_bite": 587,
+          "open_circuit": 582,
+          "short": 595,
+          "spurious_copper": 619,
+          "spur": 583
+        }
+      },
+      "val": {
+        "images": 120,
+        "empty_labels": 0,
+        "instances": {
+          "missing_hole": 102,
+          "mouse_bite": 100,
+          "open_circuit": 100,
+          "short": 100,
+          "spurious_copper": 100,
+          "spur": 101
+        }
+      },
+      "test": {
+        "images": 60,
+        "empty_labels": 0,
+        "instances": {
+          "missing_hole": 49,
+          "mouse_bite": 50,
+          "open_circuit": 50,
+          "short": 49,
+          "spurious_copper": 50,
+          "spur": 50
+        }
+      },
+      "path_overlap_count": 0,
+      "content_hash_overlap_count": 0,
+      "all_classes_in_test": true,
+      "source_group_overlap_count": 0
+    }
+  },
+  "gate_pass": true
+}

@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_dirres",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_dirres_e250/msdgs_bb_p4_dirres.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dirres_e250/msdgs_bb_p4_dirres/weights/best.pt",
+  "params_unfused": 1914719,
+  "finished_at": "2026-07-30 15:18:37"
+}

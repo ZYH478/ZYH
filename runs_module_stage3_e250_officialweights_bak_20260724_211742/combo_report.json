@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-24 20:14:03",
+  "experiments": {
+    "y26n_s3_gsconv_neck_e250": {
+      "status": "done",
+      "note": "赢家(SPD_P3+DySample) + neck C3k2->VoVGSCSP 降参",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_module_stage3_e250/y26n_s3_gsconv_neck_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/y26n_s3_gsconv_neck_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 2148518,
+      "gflops": null,
+      "val": {
+        "map50": 0.712404744495922,
+        "map50_95": 0.39044690394894105,
+        "precision": 0.7244581764719819,
+        "recall": 0.6646925378553683,
+        "speed": {
+          "preprocess": 1.8497726693749428,
+          "inference": 2.8922454950710135,
+          "loss": 0.0003788185616334279,
+          "postprocess": 0.09238915517926216
+        },
+        "infer_ms": 2.8922454950710135,
+        "fps_infer_only": 345.7521160303327,
+        "per_class": {
+          "crazing": {
+            "map50": 0.40635350377917556,
+            "map50_95": 0.15233246979558873
+          },
+          "inclusion": {
+            "map50": 0.7851310532381894,
+            "map50_95": 0.4192036629961377
+          },
+          "patches": {
+            "map50": 0.9021315294206244,
+            "map50_95": 0.5763652790845702
+          },
+          "pitted_surface": {
+            "map50": 0.7330531089016811,
+            "map50_95": 0.4179478388610677
+          },
+          "rolled-in_scale": {
+            "map50": 0.556042306568366,
+            "map50_95": 0.2555199866552193
+          },
+          "scratches": {
+            "map50": 0.8917169650674946,
+            "map50_95": 0.5213121863010624
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7080446801102749,
+        "map50_95": 0.38294717440990095,
+        "precision": 0.7471858509161642,
+        "recall": 0.6594508982546593,
+        "speed": {
+          "preprocess": 1.8947256984419647,
+          "inference": 2.408351605901351,
+          "loss": 0.005030985859325498,
+          "postprocess": 0.5542391655736145
+        },
+        "infer_ms": 2.408351605901351,
+        "fps_infer_only": 415.22176311367105,
+        "per_class": {
+          "crazing": {
+            "map50": 0.338855475066572,
+            "map50_95": 0.096942774773987
+          },
+          "inclusion": {
+            "map50": 0.7468157964299553,
+            "map50_95": 0.40083482374984225
+          },
+          "patches": {
+            "map50": 0.9356612068634911,
+            "map50_95": 0.612209630584631
+          },
+          "pitted_surface": {
+            "map50": 0.7702163034732831,
+            "map50_95": 0.4536303544324949
+          },
+          "rolled-in_scale": {
+            "map50": 0.5658197199520049,
+            "map50_95": 0.25884345656741903
+          },
+          "scratches": {
+            "map50": 0.8908995788763431,
+            "map50_95": 0.47522200635103173
+          }
+        }
+      },
+      "finished_at": "2026-07-24 20:37:42",
+      "components": [
+        "SPDConv=p3",
+        "DySample",
+        "VoVGSCSP_neck"
+      ]
+    }
+  },
+  "stage1_report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_sweep_e250/sweep_report.json",
+  "best_summary": {
+    "updated_at": "2026-07-24 20:37:42",
+    "baseline": "y26n_base_e250",
+    "ranked": [
+      {
+        "name": "y26n_s3_gsconv_neck_e250",
+        "source": "stage3",
+        "val_map50": 0.712404744495922,
+        "val_map50_95": 0.39044690394894105,
+        "test_map50": 0.7080446801102749,
+        "test_map50_95": 0.38294717440990095,
+        "delta_val_map50_95": -0.008614680827853327,
+        "delta_val_map50": -0.005235716639297783,
+        "params": 2148518
+      }
+    ],
+    "best": {
+      "name": "y26n_s3_gsconv_neck_e250",
+      "source": "stage3",
+      "val_map50": 0.712404744495922,
+      "val_map50_95": 0.39044690394894105,
+      "test_map50": 0.7080446801102749,
+      "test_map50_95": 0.38294717440990095,
+      "delta_val_map50_95": -0.008614680827853327,
+      "delta_val_map50": -0.005235716639297783,
+      "params": 2148518
+    }
+  },
+  "updated_at": "2026-07-24 20:37:42"
+}

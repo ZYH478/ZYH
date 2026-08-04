@@ -1,0 +1,12 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_dcnv2",
+  "current": null,
+  "pending": [],
+  "note": "multiseed run complete",
+  "updated_at": "2026-07-31 09:47:14",
+  "pid": 1560,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_multiseed_e250",
+  "report": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_multiseed_e250/report.json",
+  "failures": 0
+}

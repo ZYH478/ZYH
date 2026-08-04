@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "candidate": "msdgs_p4detail_boxres",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_boxres_e250/msdgs_p4detail_boxres.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_e250/msdgs_p4detail_boxres_seed0/weights/best.pt",
+  "params_unfused": 1912548,
+  "finished_at": "2026-07-30 08:04:43"
+}

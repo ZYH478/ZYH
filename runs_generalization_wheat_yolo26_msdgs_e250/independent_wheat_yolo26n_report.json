@@ -1,0 +1,68 @@
+{
+  "status": "done",
+  "created_at": "2026-08-01 12:33:19",
+  "dataset": "wheat",
+  "model": "yolo26n",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_wheat_yolo26_msdgs_e250/wheat/yolo26n/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_wheat_yolo26_msdgs_e250/datasets/wheat.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 2377176,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.5349085067575001,
+    "recall": 0.33618360005068065,
+    "map50": 0.32928331786777204,
+    "map50_95": 0.1800428078182015,
+    "class_ap50": {
+      "CrownAndRootRot": 0.1741601203569429,
+      "HealthyWheat": 0.19040765053973407,
+      "LeafRust": 0.7791666666666667,
+      "PowderyMildew": 0.46216884754192983,
+      "WheatLooseSmut": 0.7251167640969431,
+      "WheatAphids": 0.3783751233356626,
+      "WheatCystNematode": 0.09645604395604396,
+      "WheatRedSpider": 0.24326605714999644,
+      "WheatScab": 0.6311093053288176,
+      "WheatSharpEyespot": 0.0036538461538461542,
+      "WheatStalkRot": 0.14576881720430107,
+      "WheatTake-all": 0.12175057208237985
+    },
+    "class_ap50_95": {
+      "CrownAndRootRot": 0.058154854946674495,
+      "HealthyWheat": 0.06712710468364419,
+      "LeafRust": 0.60135,
+      "PowderyMildew": 0.31282733343039115,
+      "WheatLooseSmut": 0.36674849567323997,
+      "WheatAphids": 0.24394373895947644,
+      "WheatCystNematode": 0.04799803623053439,
+      "WheatRedSpider": 0.08939298738385909,
+      "WheatScab": 0.2439738417190694,
+      "WheatSharpEyespot": 0.0021923076923076926,
+      "WheatStalkRot": 0.0498335056850337,
+      "WheatTake-all": 0.07697148741418765
+    }
+  },
+  "benchmark": {
+    "fps": 2163.388622901052,
+    "infer_ms_per_image": 0.4622378011117689,
+    "elapsed_seconds": 2.958321927115321,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-08-04 07:10:35",
+  "error": "RuntimeError('model seed failed model=Gold-YOLO-n seed=0 rc=1')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_yolo11n_multiseed.py\", line 219, in main\n    run_task(task, seed)\n  File \"/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_yolo11n_multiseed.py\", line 202, in run_task\n    raise RuntimeError(f\"model seed failed model={task['model']} seed={seed} rc={rc}\")\nRuntimeError: model seed failed model=Gold-YOLO-n seed=0 rc=1\n",
+  "aggregate_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_yolo11n_multiseed_e250/report.json"
+}

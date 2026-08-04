@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "candidate": "msdgs_bb_p4_dcnv2",
+  "note": "RuntimeError('subprocess failed rc=-11: /root/miniconda3/envs/yolo26/bin/python /root/autodl-tmp/neu-det-yolo26/eval_msdgs_candidate.py --weights /root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250/msdgs_bb_p4_dcnv2/weights/best.pt --data /root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml --project /root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250 --name msdgs_bb_p4_dcnv2 --output /root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250/independent_seed0_report.json --imgsz 640 --batch 32')",
+  "updated_at": "2026-07-30 19:52:59",
+  "pid": 5792,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250/report.json"
+}

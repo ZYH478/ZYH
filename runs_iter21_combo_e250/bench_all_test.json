@@ -1,0 +1,119 @@
+{
+  "base": {
+    "weights": "runs_module_sweep_e250/y26n_base_e250/weights/best.pt",
+    "test_map50": 0.7451775942008353,
+    "test_map50_95": 0.40737584907377705,
+    "per_class_map50_95": {
+      "crazing": 0.14452052676264338,
+      "inclusion": 0.41340814637060763,
+      "patches": 0.6051431536607386,
+      "pitted_surface": 0.4829131534229479,
+      "rolled-in_scale": 0.2960586824899374,
+      "scratches": 0.5022114317357877
+    }
+  },
+  "winner_spd_p3_dysample": {
+    "weights": "runs_module_combo2_e250/y26n_s2_spd_p3_dysample_e250/weights/best.pt",
+    "test_map50": 0.7326161651040395,
+    "test_map50_95": 0.40832114203025804,
+    "per_class_map50_95": {
+      "crazing": 0.16693786794867682,
+      "inclusion": 0.4141751539781674,
+      "patches": 0.5872253490829141,
+      "pitted_surface": 0.4820821049255687,
+      "rolled-in_scale": 0.25718247472094863,
+      "scratches": 0.5423239015252724
+    }
+  },
+  "gsdown": {
+    "weights": "runs_module_stage3_e250/y26n_s3_vovgscsp_gsdown_e250/weights/best.pt",
+    "test_map50": 0.7337845021103004,
+    "test_map50_95": 0.4018577586227588,
+    "per_class_map50_95": {
+      "crazing": 0.1531854882035851,
+      "inclusion": 0.37874015712329234,
+      "patches": 0.5899523699991136,
+      "pitted_surface": 0.48679897135753747,
+      "rolled-in_scale": 0.28568414499248646,
+      "scratches": 0.5167854200605377
+    }
+  },
+  "dwr_deep_i19": {
+    "weights": "runs_iter19_backbone_e250/y26n_i19_dwr_deep_e250/weights/best.pt",
+    "test_map50": 0.723470275233366,
+    "test_map50_95": 0.40833524449728675,
+    "per_class_map50_95": {
+      "crazing": 0.1351017432845681,
+      "inclusion": 0.41016966397520604,
+      "patches": 0.6088430324096904,
+      "pitted_surface": 0.4483504699899493,
+      "rolled-in_scale": 0.3402225094372248,
+      "scratches": 0.5073240478870824
+    }
+  },
+  "gsdown_dwr_i20": {
+    "weights": "runs_gsdown_dwr_e250/y26n_gsdown_dwr_e250/weights/best.pt",
+    "test_map50": 0.6975251592702395,
+    "test_map50_95": 0.3808780485273667,
+    "per_class_map50_95": {
+      "crazing": 0.10555011350478968,
+      "inclusion": 0.38461684314323297,
+      "patches": 0.6008971225098088,
+      "pitted_surface": 0.4444450334976917,
+      "rolled-in_scale": 0.27691101221176345,
+      "scratches": 0.47284816629691306
+    }
+  },
+  "i21_gsdown_pki": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_gsdown_pki_e250/weights/best.pt",
+    "test_map50": 0.7249967475138884,
+    "test_map50_95": 0.3926177653322614,
+    "per_class_map50_95": {
+      "crazing": 0.13302448109895657,
+      "inclusion": 0.38977969192131445,
+      "patches": 0.5943243149788515,
+      "pitted_surface": 0.44950439498166633,
+      "rolled-in_scale": 0.2669296304754867,
+      "scratches": 0.5221440785372926
+    }
+  },
+  "i21_gsdown_pki_dwr": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_gsdown_pki_dwr_e250/weights/best.pt",
+    "test_map50": 0.6861275611980511,
+    "test_map50_95": 0.3733698866073222,
+    "per_class_map50_95": {
+      "crazing": 0.11554110310068048,
+      "inclusion": 0.3719664851379706,
+      "patches": 0.5836974458512427,
+      "pitted_surface": 0.407401036640482,
+      "rolled-in_scale": 0.2976109087433069,
+      "scratches": 0.4640023401702506
+    }
+  },
+  "i21_winner_dwr": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_winner_dwr_e250/weights/best.pt",
+    "test_map50": 0.7443604586077807,
+    "test_map50_95": 0.4159371767654376,
+    "per_class_map50_95": {
+      "crazing": 0.1594393547135397,
+      "inclusion": 0.41690167619828894,
+      "patches": 0.6179034549807636,
+      "pitted_surface": 0.48359044891333375,
+      "rolled-in_scale": 0.3108892578979138,
+      "scratches": 0.5068988678887859
+    }
+  },
+  "i21_winner_pki_dwr": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_winner_pki_dwr_e250/weights/best.pt",
+    "test_map50": 0.7520310635671393,
+    "test_map50_95": 0.4110954091517986,
+    "per_class_map50_95": {
+      "crazing": 0.1286716856240619,
+      "inclusion": 0.4068027169602231,
+      "patches": 0.6224171462189145,
+      "pitted_surface": 0.44740092981294294,
+      "rolled-in_scale": 0.3296482702716145,
+      "scratches": 0.5316317060230347
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "candidate": "sadgs_msdgs_13s7",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_sadgs_msdgs_e250/sadgs_msdgs_13s7.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sadgs_msdgs_e250/sadgs_msdgs_13s7/weights/best.pt",
+  "params_unfused": 1905916,
+  "finished_at": "2026-07-30 21:55:38"
+}

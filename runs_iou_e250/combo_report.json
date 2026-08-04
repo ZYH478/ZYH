@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-25 12:44:01",
+  "experiments": {
+    "y26n_gsdown_ciou_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown baseline CIoU (control, must reproduce ~0.4018)",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iou_e250/y26n_gsdown_ciou_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iou_e250/y26n_gsdown_ciou_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.7213112681461297,
+        "map50_95": 0.3988685317898492,
+        "precision": 0.7224457726795368,
+        "recall": 0.6907553922469466,
+        "speed": {
+          "preprocess": 1.747755507628123,
+          "inference": 2.4064693537851176,
+          "loss": 0.0003650970757007599,
+          "postprocess": 0.07347834606965382
+        },
+        "infer_ms": 2.4064693537851176,
+        "fps_infer_only": 415.54653435627904,
+        "per_class": {
+          "crazing": {
+            "map50": 0.43226835495576954,
+            "map50_95": 0.14519263282984027
+          },
+          "inclusion": {
+            "map50": 0.8080952273619222,
+            "map50_95": 0.41961826145679115
+          },
+          "patches": {
+            "map50": 0.9112833200429339,
+            "map50_95": 0.5776109431536238
+          },
+          "pitted_surface": {
+            "map50": 0.7729443599035236,
+            "map50_95": 0.47998048398948867
+          },
+          "rolled-in_scale": {
+            "map50": 0.5250563185259072,
+            "map50_95": 0.25136723447466686
+          },
+          "scratches": {
+            "map50": 0.8782200280867212,
+            "map50_95": 0.5194416348346852
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7358667146004679,
+        "map50_95": 0.39090810999330566,
+        "precision": 0.7013551335639633,
+        "recall": 0.7060452349456733,
+        "speed": {
+          "preprocess": 1.9793128314424917,
+          "inference": 2.9239819998725203,
+          "loss": 0.00038942365742048693,
+          "postprocess": 0.08841810816506479
+        },
+        "infer_ms": 2.9239819998725203,
+        "fps_infer_only": 341.9993693680734,
+        "per_class": {
+          "crazing": {
+            "map50": 0.4217739536982858,
+            "map50_95": 0.13755258255294409
+          },
+          "inclusion": {
+            "map50": 0.7653237563270374,
+            "map50_95": 0.40431763929724845
+          },
+          "patches": {
+            "map50": 0.9064078936027942,
+            "map50_95": 0.5748891891673112
+          },
+          "pitted_surface": {
+            "map50": 0.8189675103328762,
+            "map50_95": 0.46707121806118035
+          },
+          "rolled-in_scale": {
+            "map50": 0.6053056381793738,
+            "map50_95": 0.26739341184877014
+          },
+          "scratches": {
+            "map50": 0.8974215354624404,
+            "map50_95": 0.49422461903238035
+          }
+        }
+      },
+      "finished_at": "2026-07-25 13:10:41",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down",
+        "CIoU"
+      ],
+      "iou": "ciou"
+    },
+    "y26n_gsdown_focaler_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown + Focaler-CIoU (focus hard samples)",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iou_e250/y26n_gsdown_focaler_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iou_e250/y26n_gsdown_focaler_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.7296148068217075,
+        "map50_95": 0.4077452087959087,
+        "precision": 0.7403734294690706,
+        "recall": 0.6828964433694223,
+        "speed": {
+          "preprocess": 1.9855199630061786,
+          "inference": 1.6545868664979935,
+          "loss": 0.0004977236191431681,
+          "postprocess": 0.10273505002260208
+        },
+        "infer_ms": 1.6545868664979935,
+        "fps_infer_only": 604.380477234504,
+        "per_class": {
+          "crazing": {
+            "map50": 0.46316296913071137,
+            "map50_95": 0.18711638296801386
+          },
+          "inclusion": {
+            "map50": 0.7863930407178731,
+            "map50_95": 0.42497259022427974
+          },
+          "patches": {
+            "map50": 0.9115764524572603,
+            "map50_95": 0.5805816283880975
+          },
+          "pitted_surface": {
+            "map50": 0.6998700360820242,
+            "map50_95": 0.43048763834991466
+          },
+          "rolled-in_scale": {
+            "map50": 0.6248759909963087,
+            "map50_95": 0.2908576036653245
+          },
+          "scratches": {
+            "map50": 0.891810351546068,
+            "map50_95": 0.5324554091798225
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7283304601659745,
+        "map50_95": 0.38829476501260957,
+        "precision": 0.7663380585960673,
+        "recall": 0.6829019931925173,
+        "speed": {
+          "preprocess": 1.975152753667289,
+          "inference": 1.517711842688031,
+          "loss": 0.0003010445713598194,
+          "postprocess": 0.05972121272198731
+        },
+        "infer_ms": 1.517711842688031,
+        "fps_infer_only": 658.8866027617551,
+        "per_class": {
+          "crazing": {
+            "map50": 0.37997682078090694,
+            "map50_95": 0.12825260420650034
+          },
+          "inclusion": {
+            "map50": 0.7475817572501059,
+            "map50_95": 0.38931225507208145
+          },
+          "patches": {
+            "map50": 0.9106921790838106,
+            "map50_95": 0.596098706150598
+          },
+          "pitted_surface": {
+            "map50": 0.801586489788044,
+            "map50_95": 0.4462109664838513
+          },
+          "rolled-in_scale": {
+            "map50": 0.6431354697067471,
+            "map50_95": 0.29166507418671295
+          },
+          "scratches": {
+            "map50": 0.8870100443862325,
+            "map50_95": 0.4782289839759133
+          }
+        }
+      },
+      "finished_at": "2026-07-25 13:34:36",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down",
+        "FocalerCIoU"
+      ],
+      "iou": "focaler_ciou"
+    },
+    "y26n_gsdown_wiou_e250": {
+      "status": "done",
+      "note": "vovgscsp_gsdown + WIoU v3 (dynamic non-monotonic focusing)",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_iou_e250/y26n_gsdown_wiou_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_iou_e250/y26n_gsdown_wiou_e250/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params": 1935814,
+      "gflops": null,
+      "val": {
+        "map50": 0.7272460352957939,
+        "map50_95": 0.4008186602297524,
+        "precision": 0.7461676761136355,
+        "recall": 0.6618057531541061,
+        "speed": {
+          "preprocess": 1.9046495233972867,
+          "inference": 2.3741268925368786,
+          "loss": 0.0003544303278128306,
+          "postprocess": 0.07371654113133749
+        },
+        "infer_ms": 2.3741268925368786,
+        "fps_infer_only": 421.2074776388417,
+        "per_class": {
+          "crazing": {
+            "map50": 0.37743819483091934,
+            "map50_95": 0.1400787647035861
+          },
+          "inclusion": {
+            "map50": 0.8173002405688552,
+            "map50_95": 0.43535367633858274
+          },
+          "patches": {
+            "map50": 0.8771699754508977,
+            "map50_95": 0.5624818408730017
+          },
+          "pitted_surface": {
+            "map50": 0.7991937221274379,
+            "map50_95": 0.45560587980853695
+          },
+          "rolled-in_scale": {
+            "map50": 0.6229998864686752,
+            "map50_95": 0.286344168199547
+          },
+          "scratches": {
+            "map50": 0.8693741923279785,
+            "map50_95": 0.5250476314552597
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7239145462778579,
+        "map50_95": 0.3953226902130634,
+        "precision": 0.7550546837730475,
+        "recall": 0.67439553883895,
+        "speed": {
+          "preprocess": 1.8935506434544271,
+          "inference": 1.168978727581509,
+          "loss": 0.0004958000071471351,
+          "postprocess": 1.02136620510382
+        },
+        "infer_ms": 1.168978727581509,
+        "fps_infer_only": 855.4475598276217,
+        "per_class": {
+          "crazing": {
+            "map50": 0.3790123588572023,
+            "map50_95": 0.11380032516200567
+          },
+          "inclusion": {
+            "map50": 0.7836507405374491,
+            "map50_95": 0.41754552689915336
+          },
+          "patches": {
+            "map50": 0.9185464186328222,
+            "map50_95": 0.5854286618640608
+          },
+          "pitted_surface": {
+            "map50": 0.7470330510319466,
+            "map50_95": 0.46109833832689995
+          },
+          "rolled-in_scale": {
+            "map50": 0.6098663186445825,
+            "map50_95": 0.2778248867573243
+          },
+          "scratches": {
+            "map50": 0.9053783899631448,
+            "map50_95": 0.5162384022689361
+          }
+        }
+      },
+      "finished_at": "2026-07-25 14:01:13",
+      "components": [
+        "VoVGSCSP_neck",
+        "GSConv_down",
+        "WIoUv3"
+      ],
+      "iou": "wiou"
+    }
+  },
+  "stage1_report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_sweep_e250/sweep_report.json",
+  "best_summary": {
+    "updated_at": "2026-07-25 14:01:13",
+    "baseline": "y26n_base_e250",
+    "ranked": [
+      {
+        "name": "y26n_gsdown_focaler_e250",
+        "source": "iou",
+        "val_map50": 0.7296148068217075,
+        "val_map50_95": 0.4077452087959087,
+        "test_map50": 0.7283304601659745,
+        "test_map50_95": 0.38829476501260957,
+        "delta_val_map50_95": 0.008683624019114322,
+        "delta_val_map50": 0.011974345686487808,
+        "params": 1935814
+      },
+      {
+        "name": "y26n_gsdown_wiou_e250",
+        "source": "iou",
+        "val_map50": 0.7272460352957939,
+        "val_map50_95": 0.4008186602297524,
+        "test_map50": 0.7239145462778579,
+        "test_map50_95": 0.3953226902130634,
+        "delta_val_map50_95": 0.0017570754529580013,
+        "delta_val_map50": 0.00960557416057417,
+        "params": 1935814
+      },
+      {
+        "name": "y26n_gsdown_ciou_e250",
+        "source": "iou",
+        "val_map50": 0.7213112681461297,
+        "val_map50_95": 0.3988685317898492,
+        "test_map50": 0.7358667146004679,
+        "test_map50_95": 0.39090810999330566,
+        "delta_val_map50_95": -0.0001930529869451636,
+        "delta_val_map50": 0.0036708070109099378,
+        "params": 1935814
+      }
+    ],
+    "best": {
+      "name": "y26n_gsdown_focaler_e250",
+      "source": "iou",
+      "val_map50": 0.7296148068217075,
+      "val_map50_95": 0.4077452087959087,
+      "test_map50": 0.7283304601659745,
+      "test_map50_95": 0.38829476501260957,
+      "delta_val_map50_95": 0.008683624019114322,
+      "delta_val_map50": 0.011974345686487808,
+      "params": 1935814
+    }
+  },
+  "updated_at": "2026-07-25 14:01:13"
+}

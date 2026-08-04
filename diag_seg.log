@@ -1,0 +1,20 @@
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+STEP build cfg model
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+STEP build baseline
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+STEP load_state_dict
+STEP transfer
+transferred 2
+STEP baseline forward
+baseline fwd ok
+STEP candidate forward (deform on CPU)
+candidate fwd ok
+STEP isolate: run one DCNv2Unit at layer6 real size on CPU
+unit in_channels 32
+unit fwd ok (1, 32, 80, 80)
+STEP deepcopy
+deepcopy ok
+STEP fuse

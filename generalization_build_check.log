@@ -1,0 +1,14 @@
+WARNING ⚠️ torchvision==0.28 is incompatible with torch==2.3.
+Run 'pip install torchvision==0.18' to fix torchvision or 'pip install -U torch torchvision' to update both.
+For a full compatibility table see https://github.com/pytorch/vision#installation
+DATA_YAML_BUILD_OK gc10 nc=10
+DATA_YAML_BUILD_OK uwwt nc=5
+DATA_YAML_BUILD_OK steel_weld nc=8
+Transferred 708/708 items from pretrained weights
+YOLO26n summary (fused): 122 layers, 2,408,932 parameters, 19,644 gradients, 5.4 GFLOPs
+MODEL_BUILD_OK yolo26n end2end=True reg_max=1 nl=3 params=2408932 msdgs=0
+WARNING ⚠️ no model scale passed. Assuming scale='n'.
+Transferred 402/624 items from pretrained weights
+y26n_gsdown_msdgs_135eq_e250 summary: 128 layers, 1,777,318 parameters, 4,542 gradients, 4.1 GFLOPs
+MODEL_BUILD_OK msdgs end2end=True reg_max=1 nl=3 params=1777318 msdgs=4
+GENERALIZATION_BUILD_GATE_PASS /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/build_check_report.json

@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "started_at": "2026-07-31 14:23:38",
+  "dataset": "uwwt",
+  "model": "msdgs",
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml",
+  "pid": 31921,
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 0,
+    "device": 0,
+    "cache": false,
+    "resume": false,
+    "deterministic": true,
+    "pretrained": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt"
+  },
+  "finished_at": "2026-07-31 14:58:54",
+  "error": "RuntimeError('incomplete results.csv: expected 250, got 241')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/neu-det-yolo26/train_generalization_yolo26_msdgs.py\", line 164, in worker\n    raise RuntimeError(f\"incomplete results.csv: expected {epochs}, got {rows}\")\nRuntimeError: incomplete results.csv: expected 250, got 241\n"
+}

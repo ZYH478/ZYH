@@ -1,0 +1,309 @@
+{
+  "created_at": "2026-07-31 15:25:20",
+  "zip_files": {
+    "gc10": {
+      "path": "/root/autodl-fs/GC10-DET.v2i.yolov8.zip",
+      "size": 48658462,
+      "sha256": "7ce75fe52cb5aa96c2d6194ce6551da52f2478dee07484a4af989fb5b47e2a76"
+    },
+    "uwwt": {
+      "path": "/root/autodl-fs/UWWT-Dataset-1500.zip",
+      "size": 3559457398,
+      "sha256": "3f83e8a9c2c539d8dda7bb19cbbc58be4a0871e38b671fe53605478668886ba6"
+    },
+    "steel_weld": {
+      "path": "/root/autodl-fs/钢管焊缝缺陷检测数据集.zip",
+      "size": 405248459,
+      "sha256": "8029dd2ff2768e21f250c20522ff2c303ec99003d0b28dfb0846ae9692649da6"
+    }
+  },
+  "datasets": {
+    "gc10": {
+      "root": "/root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/gc10",
+      "data_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+      "names": [
+        "10_yaozhe",
+        "1_chongkong",
+        "2_hanfeng",
+        "3_yueyawan",
+        "4_shuiban",
+        "5_youban",
+        "6_siban",
+        "7_yiwu",
+        "8_yahen",
+        "9_zhehen"
+      ],
+      "split_policy": "archive train/valid/test",
+      "train": {
+        "images": 1606,
+        "empty_labels": 2,
+        "instances": {
+          "10_yaozhe": 92,
+          "1_chongkong": 220,
+          "2_hanfeng": 353,
+          "3_yueyawan": 183,
+          "4_shuiban": 249,
+          "5_youban": 387,
+          "6_siban": 616,
+          "7_yiwu": 273,
+          "8_yahen": 74,
+          "9_zhehen": 50
+        }
+      },
+      "val": {
+        "images": 459,
+        "empty_labels": 0,
+        "instances": {
+          "10_yaozhe": 35,
+          "1_chongkong": 66,
+          "2_hanfeng": 102,
+          "3_yueyawan": 55,
+          "4_shuiban": 64,
+          "5_youban": 135,
+          "6_siban": 185,
+          "7_yiwu": 44,
+          "8_yahen": 5,
+          "9_zhehen": 15
+        }
+      },
+      "test": {
+        "images": 229,
+        "empty_labels": 0,
+        "instances": {
+          "10_yaozhe": 16,
+          "1_chongkong": 43,
+          "2_hanfeng": 58,
+          "3_yueyawan": 27,
+          "4_shuiban": 41,
+          "5_youban": 47,
+          "6_siban": 83,
+          "7_yiwu": 30,
+          "8_yahen": 6,
+          "9_zhehen": 9
+        }
+      },
+      "image_overlap_count": 0,
+      "all_classes_in_test": true
+    },
+    "uwwt": {
+      "root": "/root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/uwwt/UWWT-Dataset-1500",
+      "data_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml",
+      "names": [
+        "rubber char",
+        "wire char",
+        "wire broken",
+        "side shedding",
+        "wire stains"
+      ],
+      "split_policy": "train all variants; val/test variant=orig only",
+      "manifest_rows": 1500,
+      "archive_variants": {
+        "train": {
+          "orig": 350,
+          "hflip": 350,
+          "affine": 350
+        },
+        "val": {
+          "orig": 100,
+          "hflip": 100,
+          "affine": 100
+        },
+        "test": {
+          "orig": 50,
+          "hflip": 50,
+          "affine": 50
+        }
+      },
+      "source_cross_split_count": 0,
+      "train": {
+        "images": 1050,
+        "empty_labels": 0,
+        "instances": {
+          "rubber char": 285,
+          "wire char": 459,
+          "wire broken": 489,
+          "side shedding": 270,
+          "wire stains": 111
+        }
+      },
+      "val": {
+        "images": 100,
+        "empty_labels": 0,
+        "instances": {
+          "rubber char": 19,
+          "wire char": 42,
+          "wire broken": 62,
+          "side shedding": 31,
+          "wire stains": 5
+        }
+      },
+      "test": {
+        "images": 50,
+        "empty_labels": 0,
+        "instances": {
+          "rubber char": 13,
+          "wire char": 28,
+          "wire broken": 20,
+          "side shedding": 15,
+          "wire stains": 3
+        }
+      },
+      "image_overlap_count": 0,
+      "all_classes_in_test": true
+    },
+    "steel_weld": {
+      "root": "/root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/steel_weld/钢管焊缝缺陷检测数据集",
+      "data_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld.yaml",
+      "names": [
+        "air-hole",
+        "bite-edge",
+        "broken-arc",
+        "crack",
+        "hollow-bead",
+        "overlap",
+        "slag-inclusion",
+        "unfused"
+      ],
+      "split_policy": "deterministic 7:2:1 target; source-group isolation except limited-source classes; guarded contiguous blocks",
+      "archive_images": 3408,
+      "retained_images": 3400,
+      "source_groups": 25,
+      "regular_group_assignments": {
+        "air-hole1": "test",
+        "air-hole10": "train",
+        "air-hole11": "val",
+        "air-hole13": "train",
+        "air-hole14": "val",
+        "air-hole15": "test",
+        "air-hole2": "train",
+        "air-hole3": "train",
+        "air-hole7": "train",
+        "broken-arc1": "test",
+        "broken-arc2": "val",
+        "broken-arc3(air-hole)": "train",
+        "unfused": "train",
+        "unfused2": "test",
+        "unfused3": "train",
+        "unfused4": "val",
+        "unfused5": "train",
+        "unfused6": "train"
+      },
+      "limited_source_exceptions": {
+        "bite-edge2": {
+          "reason": "class has one source group",
+          "counts": {
+            "train": 23,
+            "val": 6,
+            "test": 4
+          },
+          "gap_frames": [
+            "bite-edge2-23.jpg",
+            "bite-edge2-30.jpg"
+          ]
+        },
+        "crack": {
+          "reason": "class has one source group",
+          "counts": {
+            "train": 81,
+            "val": 23,
+            "test": 13
+          },
+          "gap_frames": [
+            "crack082.jpg",
+            "crack106.jpg"
+          ]
+        },
+        "overlap": {
+          "reason": "class has one source group",
+          "counts": {
+            "train": 151,
+            "val": 43,
+            "test": 23
+          },
+          "gap_frames": [
+            "overlap151.jpg",
+            "overlap195.jpg"
+          ]
+        },
+        "air-hole12(hollow-bead)": {
+          "reason": "hollow-bead has two source groups",
+          "counts": {
+            "val": 157,
+            "test": 79
+          },
+          "gap_frames": [
+            "air-hole12(hollow-bead)-157.jpg"
+          ],
+          "paired_train_group": "air-hole4(hollow-bead)"
+        },
+        "slag-inclusion2": {
+          "reason": "slag-inclusion has two source groups",
+          "counts": {
+            "val": 14,
+            "test": 8
+          },
+          "gap_frames": [
+            "slag-inclusion2-14.jpg"
+          ],
+          "paired_train_group": "air-hole9(slag-inclusion)"
+        }
+      },
+      "dropped_gap_frames": [
+        "bite-edge2-23.jpg",
+        "bite-edge2-30.jpg",
+        "crack082.jpg",
+        "crack106.jpg",
+        "overlap151.jpg",
+        "overlap195.jpg",
+        "air-hole12(hollow-bead)-157.jpg",
+        "slag-inclusion2-14.jpg"
+      ],
+      "unexpected_regular_group_cross_split_count": 0,
+      "train": {
+        "images": 2290,
+        "empty_labels": 8,
+        "instances": {
+          "air-hole": 4019,
+          "bite-edge": 23,
+          "broken-arc": 211,
+          "crack": 81,
+          "hollow-bead": 123,
+          "overlap": 151,
+          "slag-inclusion": 97,
+          "unfused": 280
+        }
+      },
+      "val": {
+        "images": 738,
+        "empty_labels": 0,
+        "instances": {
+          "air-hole": 889,
+          "bite-edge": 6,
+          "broken-arc": 167,
+          "crack": 23,
+          "hollow-bead": 40,
+          "overlap": 43,
+          "slag-inclusion": 14,
+          "unfused": 80
+        }
+      },
+      "test": {
+        "images": 372,
+        "empty_labels": 0,
+        "instances": {
+          "air-hole": 283,
+          "bite-edge": 4,
+          "broken-arc": 80,
+          "crack": 13,
+          "hollow-bead": 65,
+          "overlap": 27,
+          "slag-inclusion": 8,
+          "unfused": 48
+        }
+      },
+      "image_overlap_count": 0,
+      "all_classes_in_test": true
+    }
+  },
+  "gate_pass": true
+}

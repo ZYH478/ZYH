@@ -1,0 +1,16 @@
+path: /root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/gc10
+train: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10/train.txt
+val: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10/val.txt
+test: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10/test.txt
+nc: 10
+names:
+- 10_yaozhe
+- 1_chongkong
+- 2_hanfeng
+- 3_yueyawan
+- 4_shuiban
+- 5_youban
+- 6_siban
+- 7_yiwu
+- 8_yahen
+- 9_zhehen

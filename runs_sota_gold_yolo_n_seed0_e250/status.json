@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "phase": "failed",
+  "updated_at": "2026-08-04 07:10:34",
+  "error": "RuntimeError('training worker failed: dataset=neudet')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py\", line 381, in orchestrate\n    raise RuntimeError(f\"training worker failed: dataset={dataset}\")\nRuntimeError: training worker failed: dataset=neudet\n",
+  "model": "Gold-YOLO-n"
+}

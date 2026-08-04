@@ -1,0 +1,12 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_stable_dcnv2",
+  "current": null,
+  "pending": [],
+  "note": "seed0/seed3 run complete",
+  "updated_at": "2026-07-31 12:05:17",
+  "pid": 18220,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_stable_dcnv2_e250",
+  "report": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_stable_dcnv2_e250/report.json",
+  "failures": 0
+}

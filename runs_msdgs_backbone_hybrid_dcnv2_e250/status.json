@@ -1,0 +1,11 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_hybrid_dcnv2_r50",
+  "note": "seed0 train and independent eval complete",
+  "updated_at": "2026-07-30 22:34:31",
+  "pid": 11401,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_hybrid_dcnv2_e250",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_hybrid_dcnv2_e250/report.json",
+  "owner_gate_pass": false,
+  "ideal_gate_pass": false
+}

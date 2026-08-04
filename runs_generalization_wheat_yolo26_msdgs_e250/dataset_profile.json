@@ -1,0 +1,107 @@
+{
+  "gate_pass": true,
+  "created_at": "2026-08-01 12:20:59",
+  "archive": "/root/autodl-fs/zzy_wheat_yolo_599_200_100.zip",
+  "archive_sha256": "f655b1f6cb6dcdfc464ff91594adb89e737ec5ad774e930a89e6a5008de44e77",
+  "source_root": "/root/autodl-tmp/neu-det-yolo26/generalization_wheat_stage/raw/zzy_wheat_yolo_599_200_100",
+  "original_data_yaml": {
+    "path": "C:/Users/YH/Desktop/zzy_wheat_yolo_599_200_100",
+    "train": "images/train",
+    "val": "images/val",
+    "test": "images/test",
+    "nc": 12,
+    "names": {
+      "0": "CrownAndRootRot",
+      "1": "HealthyWheat",
+      "2": "LeafRust",
+      "3": "PowderyMildew",
+      "4": "WheatLooseSmut",
+      "5": "WheatAphids",
+      "6": "WheatCystNematode",
+      "7": "WheatRedSpider",
+      "8": "WheatScab",
+      "9": "WheatSharpEyespot",
+      "10": "WheatStalkRot",
+      "11": "WheatTake-all"
+    }
+  },
+  "prepared_yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_wheat_yolo26_msdgs_e250/datasets/wheat.yaml",
+  "label_format": "YOLO segmentation polygons; detection loader converts polygons to xywh boxes without changing uploaded labels",
+  "field_count_min": 9,
+  "field_count_max": 171,
+  "field_count_distinct": 50,
+  "path_overlap_count": 0,
+  "content_hash_overlap_count": 0,
+  "all_classes_in_test": true,
+  "splits": {
+    "train": {
+      "images": 599,
+      "labels": 599,
+      "bad_images": 0,
+      "empty_labels": 0,
+      "instances": {
+        "CrownAndRootRot": 180,
+        "HealthyWheat": 191,
+        "LeafRust": 88,
+        "PowderyMildew": 220,
+        "WheatLooseSmut": 115,
+        "WheatAphids": 116,
+        "WheatCystNematode": 68,
+        "WheatRedSpider": 123,
+        "WheatScab": 198,
+        "WheatSharpEyespot": 71,
+        "WheatStalkRot": 94,
+        "WheatTake-all": 79
+      }
+    },
+    "val": {
+      "images": 200,
+      "labels": 200,
+      "bad_images": 0,
+      "empty_labels": 0,
+      "instances": {
+        "CrownAndRootRot": 58,
+        "HealthyWheat": 62,
+        "LeafRust": 29,
+        "PowderyMildew": 68,
+        "WheatLooseSmut": 37,
+        "WheatAphids": 37,
+        "WheatCystNematode": 23,
+        "WheatRedSpider": 40,
+        "WheatScab": 69,
+        "WheatSharpEyespot": 23,
+        "WheatStalkRot": 29,
+        "WheatTake-all": 26
+      }
+    },
+    "test": {
+      "images": 100,
+      "labels": 100,
+      "bad_images": 0,
+      "empty_labels": 0,
+      "instances": {
+        "CrownAndRootRot": 30,
+        "HealthyWheat": 29,
+        "LeafRust": 14,
+        "PowderyMildew": 35,
+        "WheatLooseSmut": 19,
+        "WheatAphids": 20,
+        "WheatCystNematode": 12,
+        "WheatRedSpider": 19,
+        "WheatScab": 33,
+        "WheatSharpEyespot": 11,
+        "WheatStalkRot": 13,
+        "WheatTake-all": 12
+      }
+    }
+  },
+  "loader_smoke": {
+    "status": "pass",
+    "sampled_images": 12,
+    "item_bbox_shape": [
+      3,
+      4
+    ],
+    "polygon_converted_to_xywh_detection_boxes": true
+  }
+}

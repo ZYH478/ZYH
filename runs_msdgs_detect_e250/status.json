@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "note": "all conditional stages finished",
+  "updated_at": "2026-07-29 15:21:49",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/report.json",
+  "report_md": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_detect_e250/report.md"
+}

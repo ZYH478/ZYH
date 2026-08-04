@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-08-02 09:47:43",
+  "phase": "done",
+  "status": "done",
+  "map50_mean_yolo26n": 0.6924976003458914,
+  "map50_mean_msdgs": 0.6936539305403495,
+  "map50_mean_delta": 0.001156330194458044,
+  "map50_95_mean_delta": -0.0020742597552170644,
+  "params_reduction_pct": 25.197242767905472,
+  "fps_gain_pct": 10.92562055019652
+}

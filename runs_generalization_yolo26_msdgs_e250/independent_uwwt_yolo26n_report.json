@@ -1,0 +1,54 @@
+{
+  "status": "done",
+  "created_at": "2026-07-31 17:01:08",
+  "dataset": "uwwt",
+  "model": "yolo26n",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/uwwt/yolo26n/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 2375811,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.7990640382989354,
+    "recall": 0.7174594134659358,
+    "map50": 0.7521583938792493,
+    "map50_95": 0.40909334758170246,
+    "class_ap50": {
+      "rubber char": 0.8442074592074591,
+      "wire char": 0.7463393389939881,
+      "wire broken": 0.547803137651822,
+      "side shedding": 0.627442033542977,
+      "wire stains": 0.995
+    },
+    "class_ap50_95": {
+      "rubber char": 0.5524676289981602,
+      "wire char": 0.3822034401098198,
+      "wire broken": 0.2347458554907489,
+      "side shedding": 0.39351647997644995,
+      "wire stains": 0.4825333333333333
+    }
+  },
+  "benchmark": {
+    "fps": 2135.39454951381,
+    "infer_ms_per_image": 0.4682975332252682,
+    "elapsed_seconds": 2.997104212641716,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

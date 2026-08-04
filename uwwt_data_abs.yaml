@@ -1,0 +1,11 @@
+path: /root/autodl-tmp/neu-det-yolo26/UWWT-Dataset-1500
+train: images/train
+val: images/val
+test: images/test
+nc: 5
+names:
+- rubber char
+- wire char
+- wire broken
+- side shedding
+- wire stains

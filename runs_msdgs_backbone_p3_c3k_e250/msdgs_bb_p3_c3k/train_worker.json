@@ -1,0 +1,23 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p3_c3k",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_p3_c3k_e250/msdgs_bb_p3_c3k.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_p3_c3k_e250/msdgs_bb_p3_c3k/weights/best.pt",
+  "params_unfused": 1907644,
+  "structure": {
+    "layer2_inner": "Bottleneck",
+    "layer4_inner": "C3k",
+    "layer6_inner": "C3k",
+    "layer8_inner": "C3k",
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "detect_input_channels": [
+      64,
+      128,
+      256
+    ]
+  },
+  "finished_at": "2026-07-30 20:55:56"
+}

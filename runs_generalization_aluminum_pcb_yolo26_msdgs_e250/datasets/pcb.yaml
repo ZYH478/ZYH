@@ -1,0 +1,12 @@
+path: /root/autodl-tmp/neu-det-yolo26/generalization_aluminum_pcb/raw/pcb_dataset
+train: /root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb/train.txt
+val: /root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb/val.txt
+test: /root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb/test.txt
+nc: 6
+names:
+- missing_hole
+- mouse_bite
+- open_circuit
+- short
+- spurious_copper
+- spur

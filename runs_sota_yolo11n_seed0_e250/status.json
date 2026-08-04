@@ -1,0 +1,28 @@
+{
+  "status": "paused",
+  "phase": "paused_by_owner",
+  "model": "yolo11n",
+  "seed": 0,
+  "datasets": [
+    "neudet",
+    "aluminum",
+    "pcb"
+  ],
+  "wait_for": [
+    "train_sota_rtdetr_hgnetv2_l_seed0.py",
+    "train_sota_yolov8n_seed0.py",
+    "train_sota_slf_yolo_seed0.py",
+    "start_sota_slf_yolo_seeds1_3_after_current.sh --queue-worker",
+    "train_sota_slf_yolo_seed1.py",
+    "train_sota_slf_yolo_seed2.py",
+    "train_sota_slf_yolo_seed3.py",
+    "start_sota_gold_yolo_n_seed0_after_queue.sh",
+    "train_sota_gold_yolo_n_seed0.py"
+  ],
+  "updated_at": "2026-08-03 19:47:27",
+  "launcher_pid": 37413,
+  "paused_at": "2026-08-03 22:46:38",
+  "paused_reason": "owner requested pause before continuing remote SOTA training",
+  "previous_status": "running",
+  "previous_phase": "launching"
+}

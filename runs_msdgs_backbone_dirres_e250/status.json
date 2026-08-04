@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_dirres",
+  "note": "seed0 train and independent eval complete",
+  "updated_at": "2026-07-30 15:18:58",
+  "pid": 2597,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dirres_e250",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dirres_e250/report.json",
+  "owner_gate_pass": false
+}

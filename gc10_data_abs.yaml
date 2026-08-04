@@ -1,0 +1,22 @@
+train: train/images
+val: valid/images
+test: test/images
+nc: 10
+names:
+- 10_yaozhe
+- 1_chongkong
+- 2_hanfeng
+- 3_yueyawan
+- 4_shuiban
+- 5_youban
+- 6_siban
+- 7_yiwu
+- 8_yahen
+- 9_zhehen
+roboflow:
+  workspace: just-habit
+  project: gc10-det-fihrg
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/just-habit/gc10-det-fihrg/dataset/2
+path: /root/autodl-tmp/neu-det-yolo26/GC10-DET

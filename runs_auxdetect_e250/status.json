@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "updated_at": "2026-07-25 09:55:16",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_auxdetect_e250/combo_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_auxdetect_e250/combo_results.csv",
+  "stage": "auxdetect"
+}

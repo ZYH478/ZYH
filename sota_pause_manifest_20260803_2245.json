@@ -1,0 +1,10 @@
+{
+  "status": "paused",
+  "created_at": "2026-08-03 22:46:38",
+  "scope": "remote SOTA training and queue launchers",
+  "killed_pids": [],
+  "paused_status_files": [
+    "/root/autodl-tmp/neu-det-yolo26/runs_sota_gold_yolo_n_seed0_e250/status.json",
+    "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolo11n_seed0_e250/status.json"
+  ]
+}

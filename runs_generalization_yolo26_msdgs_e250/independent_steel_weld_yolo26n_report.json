@@ -1,0 +1,60 @@
+{
+  "status": "done",
+  "created_at": "2026-07-31 18:15:18",
+  "dataset": "steel_weld",
+  "model": "yolo26n",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/steel_weld/yolo26n/weights/best.pt",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld.yaml",
+  "protocol": {
+    "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "rect": false
+  },
+  "structure": {
+    "fused_params": 2376396,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3
+  },
+  "test": {
+    "precision": 0.8356549866259163,
+    "recall": 0.3954065624972224,
+    "map50": 0.42769053793181244,
+    "map50_95": 0.22854453330401192,
+    "class_ap50": {
+      "air-hole": 0.5009977351850271,
+      "bite-edge": 0.602228260869565,
+      "broken-arc": 0.11677663762663765,
+      "crack": 0.5983333333333333,
+      "hollow-bead": 0.9178936827381685,
+      "overlap": 0.6774369747899159,
+      "slag-inclusion": 0.0,
+      "unfused": 0.007857678911852014
+    },
+    "class_ap50_95": {
+      "air-hole": 0.20867061233299727,
+      "bite-edge": 0.3518210756634669,
+      "broken-arc": 0.08013654287872375,
+      "crack": 0.19000252525252526,
+      "hollow-bead": 0.6227327905276927,
+      "overlap": 0.37281748153806976,
+      "slag-inclusion": 0.0,
+      "unfused": 0.0021752382386195893
+    }
+  },
+  "benchmark": {
+    "fps": 2121.3619382432994,
+    "infer_ms_per_image": 0.47139527770923445,
+    "elapsed_seconds": 3.016929777339101,
+    "images": 6400,
+    "batch": 32,
+    "imgsz": 640,
+    "warmup_iterations": 50,
+    "measured_iterations": 200,
+    "dtype": "float32",
+    "scope": "fused model forward only; excludes preprocess and postprocess",
+    "device": "NVIDIA GeForce RTX 4090"
+  }
+}

@@ -1,0 +1,18 @@
+path: /root/autodl-tmp/neu-det-yolo26/generalization_wheat_stage/raw/zzy_wheat_yolo_599_200_100
+train: /root/autodl-tmp/neu-det-yolo26/runs_generalization_wheat_yolo26_msdgs_e250/datasets/train.txt
+val: /root/autodl-tmp/neu-det-yolo26/runs_generalization_wheat_yolo26_msdgs_e250/datasets/val.txt
+test: /root/autodl-tmp/neu-det-yolo26/runs_generalization_wheat_yolo26_msdgs_e250/datasets/test.txt
+nc: 12
+names:
+- CrownAndRootRot
+- HealthyWheat
+- LeafRust
+- PowderyMildew
+- WheatLooseSmut
+- WheatAphids
+- WheatCystNematode
+- WheatRedSpider
+- WheatScab
+- WheatSharpEyespot
+- WheatStalkRot
+- WheatTake-all

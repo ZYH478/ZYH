@@ -1,0 +1,9 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "updated_at": "2026-07-25 22:05:01",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_iter18_struct_e250/combo_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_iter18_struct_e250/combo_results.csv",
+  "stage": "iter18_struct"
+}

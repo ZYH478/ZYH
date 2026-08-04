@@ -1,0 +1,13 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_hybrid_dcnv2_r50",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_hybrid_dcnv2_e250/msdgs_bb_p4_hybrid_dcnv2_r50.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_hybrid_dcnv2_e250/msdgs_bb_p4_hybrid_dcnv2_r50/weights/best.pt",
+  "params_unfused": 1921042,
+  "hybrid_units": 2,
+  "deform_ratio": 0.5,
+  "offset_limit": 1.0,
+  "mask_span": 0.5,
+  "finished_at": "2026-07-30 22:34:11"
+}

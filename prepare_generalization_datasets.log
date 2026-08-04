@@ -1,0 +1,11 @@
+EXTRACT_START /root/autodl-fs/GC10-DET.v2i.yolov8.zip -> /root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/gc10
+EXTRACT_DONE GC10-DET.v2i.yolov8.zip
+EXTRACT_START /root/autodl-fs/UWWT-Dataset-1500.zip -> /root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/uwwt
+EXTRACT_DONE UWWT-Dataset-1500.zip
+EXTRACT_START /root/autodl-fs/钢管焊缝缺陷检测数据集.zip -> /root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/steel_weld
+EXTRACT_DONE 钢管焊缝缺陷检测数据集.zip
+DATASET_GATE_OK gc10 counts={'train': 1606, 'val': 459, 'test': 229} yaml=/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml
+DATASET_GATE_OK uwwt counts={'train': 1050, 'val': 100, 'test': 50} yaml=/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml
+STEEL_GROUP_OPT score=1.998411 assignments={'air-hole1': 'test', 'air-hole10': 'train', 'air-hole11': 'val', 'air-hole13': 'train', 'air-hole14': 'val', 'air-hole15': 'test', 'air-hole2': 'train', 'air-hole3': 'train', 'air-hole7': 'train', 'broken-arc1': 'test', 'broken-arc2': 'val', 'broken-arc3(air-hole)': 'train', 'unfused': 'train', 'unfused2': 'test', 'unfused3': 'train', 'unfused4': 'val', 'unfused5': 'train', 'unfused6': 'train'}
+DATASET_GATE_OK steel_weld counts={'train': 2290, 'val': 738, 'test': 372} yaml=/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld.yaml
+GENERALIZATION_DATA_GATE_PASS /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/dataset_profile.json

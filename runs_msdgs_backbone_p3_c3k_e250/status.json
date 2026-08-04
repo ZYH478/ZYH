@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p3_c3k",
+  "note": "seed0 fresh train and independent val/test complete",
+  "updated_at": "2026-07-30 20:56:15",
+  "pid": 1552,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_p3_c3k_e250",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_p3_c3k_e250/report.json",
+  "resume": false,
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_p3_c3k_e250/msdgs_bb_p3_c3k/weights/best.pt",
+  "independent_report": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_p3_c3k_e250/independent_seed0_report.json",
+  "owner_gate_pass": false,
+  "ideal_gate_pass": false
+}

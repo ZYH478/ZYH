@@ -1,0 +1,15 @@
+{
+  "status": "done",
+  "phase": "done",
+  "finished_at": "2026-08-01 11:24:01",
+  "pid": 3108,
+  "current": null,
+  "completed": [
+    "aluminum/yolo26n",
+    "aluminum/msdgs",
+    "pcb/yolo26n",
+    "pcb/msdgs"
+  ],
+  "failures": [],
+  "pending": []
+}

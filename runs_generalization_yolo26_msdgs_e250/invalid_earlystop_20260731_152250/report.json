@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-07-31 14:58:56",
+  "wording": "同一目标数据集重新训练后的迁移性与鲁棒性验证，不是 zero-shot 泛化。",
+  "protocol": {
+    "training": "250 epochs / imgsz640 / batch32 / seed0 / deterministic=True / cache=False / resume=False / yolo26n.pt initialization",
+    "truth": "independent fresh Python process reloads best.pt and evaluates test split",
+    "fps": "RTX 4090 / fused / imgsz640 / batch32 / fixed warmup and iterations / forward only"
+  },
+  "experiments": {
+    "gc10": {},
+    "uwwt": {},
+    "steel_weld": {}
+  },
+  "completed": 0,
+  "expected": 6,
+  "status": "partial"
+}

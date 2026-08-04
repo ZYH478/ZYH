@@ -1,0 +1,137 @@
+{
+  "base": {
+    "weights": "runs_module_sweep_e250/y26n_base_e250/weights/best.pt",
+    "fused_params": 2376006,
+    "val_map50": 0.7171855898332794,
+    "val_map50_95": 0.3987734013684274,
+    "per_class_map50_95": {
+      "crazing": 0.1857017232091021,
+      "inclusion": 0.41530228653387063,
+      "patches": 0.5875043166323994,
+      "pitted_surface": 0.4204911116729394,
+      "rolled-in_scale": 0.24838476484711586,
+      "scratches": 0.535256205315137
+    },
+    "fps": 166.6
+  },
+  "winner_spd_p3_dysample": {
+    "weights": "runs_module_combo2_e250/y26n_s2_spd_p3_dysample_e250/weights/best.pt",
+    "fused_params": 2498950,
+    "val_map50": 0.7528288620609428,
+    "val_map50_95": 0.42474655385681537,
+    "per_class_map50_95": {
+      "crazing": 0.1882766675868001,
+      "inclusion": 0.46173548158393174,
+      "patches": 0.5980029397012173,
+      "pitted_surface": 0.45386825886723614,
+      "rolled-in_scale": 0.2846161775817574,
+      "scratches": 0.5619797978199497
+    },
+    "fps": 143.7
+  },
+  "gsdown": {
+    "weights": "runs_module_stage3_e250/y26n_s3_vovgscsp_gsdown_e250/weights/best.pt",
+    "fused_params": 1935814,
+    "val_map50": 0.7471734525834773,
+    "val_map50_95": 0.4075820619502985,
+    "per_class_map50_95": {
+      "crazing": 0.16474556208958227,
+      "inclusion": 0.41778281900173886,
+      "patches": 0.5701693233865445,
+      "pitted_surface": 0.4756121537282752,
+      "rolled-in_scale": 0.2841422700508943,
+      "scratches": 0.5330402434447555
+    },
+    "fps": 168.9
+  },
+  "dwr_deep_i19": {
+    "weights": "runs_iter19_backbone_e250/y26n_i19_dwr_deep_e250/weights/best.pt",
+    "fused_params": 2217350,
+    "val_map50": 0.746520547421809,
+    "val_map50_95": 0.42360505849538,
+    "per_class_map50_95": {
+      "crazing": 0.202868247211357,
+      "inclusion": 0.41953619478384485,
+      "patches": 0.5694512506314008,
+      "pitted_surface": 0.49263282603114156,
+      "rolled-in_scale": 0.29799917578655283,
+      "scratches": 0.5591426565279833
+    },
+    "fps": 163.9
+  },
+  "gsdown_dwr_i20": {
+    "weights": "runs_gsdown_dwr_e250/y26n_gsdown_dwr_e250/weights/best.pt",
+    "fused_params": 1777158,
+    "val_map50": 0.7039826794961384,
+    "val_map50_95": 0.3897527460914917,
+    "per_class_map50_95": {
+      "crazing": 0.13663495346514948,
+      "inclusion": 0.4130013896467445,
+      "patches": 0.5803181865140415,
+      "pitted_surface": 0.42939851864719303,
+      "rolled-in_scale": 0.2866197270650503,
+      "scratches": 0.49254370121077073
+    },
+    "fps": 173.7
+  },
+  "i21_gsdown_pki": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_gsdown_pki_e250/weights/best.pt",
+    "fused_params": 1936126,
+    "val_map50": 0.7190703134323804,
+    "val_map50_95": 0.3935179819740744,
+    "per_class_map50_95": {
+      "crazing": 0.1940516562267063,
+      "inclusion": 0.40728780591686087,
+      "patches": 0.5665478937849244,
+      "pitted_surface": 0.40475459799389285,
+      "rolled-in_scale": 0.2786591653407372,
+      "scratches": 0.5098067725813247
+    },
+    "fps": 161.9
+  },
+  "i21_gsdown_pki_dwr": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_gsdown_pki_dwr_e250/weights/best.pt",
+    "fused_params": 2098750,
+    "val_map50": 0.7246013599511444,
+    "val_map50_95": 0.39488950015464935,
+    "per_class_map50_95": {
+      "crazing": 0.18009447194643874,
+      "inclusion": 0.41657467537443454,
+      "patches": 0.5685783716910923,
+      "pitted_surface": 0.40487057089832323,
+      "rolled-in_scale": 0.2733816795041782,
+      "scratches": 0.5258372315134292
+    },
+    "fps": 158.8
+  },
+  "i21_winner_dwr": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_winner_dwr_e250/weights/best.pt",
+    "fused_params": 2340294,
+    "val_map50": 0.7194573812775152,
+    "val_map50_95": 0.4086157921135971,
+    "per_class_map50_95": {
+      "crazing": 0.1780999852056248,
+      "inclusion": 0.4366954592723432,
+      "patches": 0.5939840235801256,
+      "pitted_surface": 0.450190978317835,
+      "rolled-in_scale": 0.2589520309681099,
+      "scratches": 0.5337722753375442
+    },
+    "fps": 139.1
+  },
+  "i21_winner_pki_dwr": {
+    "weights": "runs_iter21_combo_e250/y26n_i21_winner_pki_dwr_e250/weights/best.pt",
+    "fused_params": 2340606,
+    "val_map50": 0.7348782702788966,
+    "val_map50_95": 0.41635213837653684,
+    "per_class_map50_95": {
+      "crazing": 0.19019061242832785,
+      "inclusion": 0.44244274783887344,
+      "patches": 0.6036174577545612,
+      "pitted_surface": 0.46511159798466706,
+      "rolled-in_scale": 0.2722463607133069,
+      "scratches": 0.5245040535394847
+    },
+    "fps": 131.3
+  }
+}

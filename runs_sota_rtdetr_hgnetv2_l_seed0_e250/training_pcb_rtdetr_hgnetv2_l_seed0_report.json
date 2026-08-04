@@ -1,0 +1,28 @@
+{
+  "status": "done",
+  "started_at": "2026-08-03 13:46:38",
+  "pid": 43334,
+  "dataset": "pcb",
+  "model": "RT-DETR-HGNetv2-L",
+  "seed": 0,
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+  "recipe": {
+    "epochs": 250,
+    "batch": 8,
+    "imgsz": 640,
+    "seed": 0,
+    "device": 0,
+    "workers": 8,
+    "cache": false,
+    "resume": false,
+    "deterministic": false,
+    "patience": 0,
+    "pretrained": "/root/autodl-tmp/neu-det-yolo26/rtdetr-l.pt"
+  },
+  "finished_at": "2026-08-03 15:32:26",
+  "run_dir": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/pcb/rtdetr_hgnetv2_l_seed0",
+  "best": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/pcb/rtdetr_hgnetv2_l_seed0/weights/best.pt",
+  "last": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/pcb/rtdetr_hgnetv2_l_seed0/weights/last.pt",
+  "results_csv": "/root/autodl-tmp/neu-det-yolo26/runs_sota_rtdetr_hgnetv2_l_seed0_e250/pcb/rtdetr_hgnetv2_l_seed0/results.csv",
+  "completed_epochs": 250
+}

@@ -1,0 +1,165 @@
+{
+  "dataset": "UWWT-Dataset-1500",
+  "recipe": "official 250e/batch32/seed0 from yolo26n.pt",
+  "experiments": {
+    "uwwt_base": {
+      "status": "done",
+      "model": "yolo26n.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_uwwt_e250/uwwt_base/weights/best.pt",
+      "fused_params": 2375811,
+      "val": {
+        "precision": 0.8519175247513255,
+        "recall": 0.7323994061661498,
+        "map50": 0.7421208346728514,
+        "map50_95": 0.36371698488864995,
+        "class_ap50": {
+          "rubber char": 0.7758155907636861,
+          "wire char": 0.8167446350822871,
+          "wire broken": 0.48580640161131217,
+          "side shedding": 0.6372375459069718,
+          "wire stains": 0.995
+        },
+        "class_ap50_95": {
+          "rubber char": 0.33888920737579814,
+          "wire char": 0.3695774317307058,
+          "wire broken": 0.2370701671527554,
+          "side shedding": 0.320756604142476,
+          "wire stains": 0.552291514041514
+        }
+      },
+      "test": {
+        "precision": 0.8310083606987302,
+        "recall": 0.8187865619631411,
+        "map50": 0.7908571928323515,
+        "map50_95": 0.4186272574900887,
+        "class_ap50": {
+          "rubber char": 0.9164842814842815,
+          "wire char": 0.743261632732553,
+          "wire broken": 0.5541674615295331,
+          "side shedding": 0.7453725884153892,
+          "wire stains": 0.995
+        },
+        "class_ap50_95": {
+          "rubber char": 0.5260808640396973,
+          "wire char": 0.4163114629103573,
+          "wire broken": 0.2301054242997988,
+          "side shedding": 0.4619163139783679,
+          "wire stains": 0.45872222222222214
+        }
+      },
+      "finished_at": "2026-07-26 15:04:17"
+    },
+    "uwwt_gsdown": {
+      "status": "done",
+      "model": "/root/autodl-tmp/neu-det-yolo26/generated_models_module_stage3_e250/y26n_s3_vovgscsp_gsdown_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_uwwt_e250/uwwt_gsdown/weights/best.pt",
+      "fused_params": 1935619,
+      "val": {
+        "precision": 0.8038033631904117,
+        "recall": 0.7364368053729252,
+        "map50": 0.7601252598788838,
+        "map50_95": 0.34815391023748554,
+        "class_ap50": {
+          "rubber char": 0.8881267345635866,
+          "wire char": 0.8076336524553351,
+          "wire broken": 0.5102542326569183,
+          "side shedding": 0.629337169914657,
+          "wire stains": 0.9652745098039215
+        },
+        "class_ap50_95": {
+          "rubber char": 0.34759317933201406,
+          "wire char": 0.35069107404975186,
+          "wire broken": 0.25205630103103166,
+          "side shedding": 0.2762739391960431,
+          "wire stains": 0.5141550575785869
+        }
+      },
+      "test": {
+        "precision": 0.8248660570097875,
+        "recall": 0.6827903978980588,
+        "map50": 0.7407777818646654,
+        "map50_95": 0.36718854734417256,
+        "class_ap50": {
+          "rubber char": 0.8698208286674132,
+          "wire char": 0.7289268937563353,
+          "wire broken": 0.5856907387537564,
+          "side shedding": 0.5244504481458219,
+          "wire stains": 0.995
+        },
+        "class_ap50_95": {
+          "rubber char": 0.492309027861703,
+          "wire char": 0.3685157228453838,
+          "wire broken": 0.2119128463198122,
+          "side shedding": 0.2248813301701543,
+          "wire stains": 0.5383238095238094
+        }
+      },
+      "finished_at": "2026-07-26 15:40:27"
+    },
+    "uwwt_winner": {
+      "status": "failed",
+      "model": "/root/autodl-tmp/neu-det-yolo26/generated_models_module_combo2_e250/y26n_s2_spd_p3_dysample_e250.yaml",
+      "error": "RuntimeError('The size of tensor a (16) must match the size of tensor b (21) at non-singleton dimension 4')",
+      "at": "2026-07-26 15:41:02"
+    },
+    "uwwt_dwr_deep": {
+      "status": "done",
+      "model": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter19_backbone_e250/y26n_i19_dwr_deep_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_uwwt_e250/uwwt_dwr_deep/weights/best.pt",
+      "fused_params": 2217155,
+      "val": {
+        "precision": 0.6966939380371127,
+        "recall": 0.7237401875297355,
+        "map50": 0.7154008562165249,
+        "map50_95": 0.3470883264004675,
+        "class_ap50": {
+          "rubber char": 0.7884981619148665,
+          "wire char": 0.7414689516687047,
+          "wire broken": 0.40571185424221345,
+          "side shedding": 0.6634681703996974,
+          "wire stains": 0.9778571428571428
+        },
+        "class_ap50_95": {
+          "rubber char": 0.327493806802817,
+          "wire char": 0.33453996148126974,
+          "wire broken": 0.17014025322521464,
+          "side shedding": 0.3398162190334172,
+          "wire stains": 0.5634513914596189
+        }
+      },
+      "test": {
+        "precision": 0.7361205197971679,
+        "recall": 0.7154822954822955,
+        "map50": 0.7195248305467506,
+        "map50_95": 0.3905024527491132,
+        "class_ap50": {
+          "rubber char": 0.8484630969327298,
+          "wire char": 0.629536586164795,
+          "wire broken": 0.5235119325455206,
+          "side shedding": 0.6121125370907078,
+          "wire stains": 0.984
+        },
+        "class_ap50_95": {
+          "rubber char": 0.5272782547898073,
+          "wire char": 0.33226463937361117,
+          "wire broken": 0.21265824754582177,
+          "side shedding": 0.3503539791791826,
+          "wire stains": 0.5299571428571428
+        }
+      },
+      "finished_at": "2026-07-26 16:01:17"
+    },
+    "uwwt_winner_dwr": {
+      "status": "failed",
+      "model": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter21_combo_e250/y26n_i21_winner_dwr_e250.yaml",
+      "error": "RuntimeError('The size of tensor a (16) must match the size of tensor b (21) at non-singleton dimension 4')",
+      "at": "2026-07-26 16:01:42"
+    },
+    "uwwt_winner_pki_dwr": {
+      "status": "failed",
+      "model": "/root/autodl-tmp/neu-det-yolo26/generated_models_iter21_combo_e250/y26n_i21_winner_pki_dwr_e250.yaml",
+      "error": "RuntimeError('The size of tensor a (16) must match the size of tensor b (21) at non-singleton dimension 4')",
+      "at": "2026-07-26 16:02:12"
+    }
+  }
+}

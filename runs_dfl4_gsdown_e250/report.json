@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "experiments": {
+    "msdgs_dfl4": {
+      "status": "done",
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_dfl4_gsdown_e250/msdgs_dfl4.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_dfl4_gsdown_e250/msdgs_dfl4/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "params_unfused": 1906664,
+      "params_fused": 1777934,
+      "val": {
+        "map50": 0.24441049194077355,
+        "map50_95": 0.10129190561811656,
+        "precision": 0.4132592467525415,
+        "recall": 0.2565067867040319,
+        "infer_ms": 2.9754513440032797,
+        "fps_infer_only": 336.08346579600385,
+        "per_class": {
+          "crazing": {
+            "map50": 0.062025640537246435,
+            "map50_95": 0.013484431165364066,
+            "precision": 0.32282784475456683,
+            "recall": 0.07142857142857142
+          },
+          "inclusion": {
+            "map50": 0.5305576394104607,
+            "map50_95": 0.20729211097090797,
+            "precision": 0.6947716511928861,
+            "recall": 0.5345911949685535
+          },
+          "patches": {
+            "map50": 0.5172870655748882,
+            "map50_95": 0.25276661374324966,
+            "precision": 0.669528266066632,
+            "recall": 0.5210084033613446
+          },
+          "pitted_surface": {
+            "map50": 0.006002332737740719,
+            "map50_95": 0.004287636932558936,
+            "precision": 0.16762310265318475,
+            "recall": 0.007082666309289497
+          },
+          "rolled-in_scale": {
+            "map50": 0.24488859981702657,
+            "map50_95": 0.08662568949071062,
+            "precision": 0.3450980648493009,
+            "recall": 0.2808988764044944
+          },
+          "scratches": {
+            "map50": 0.10570167356727876,
+            "map50_95": 0.04329495140590817,
+            "precision": 0.2797065509986782,
+            "recall": 0.12403100775193798
+          }
+        }
+      },
+      "test": {
+        "map50": 0.2371903016690965,
+        "map50_95": 0.10287082631175978,
+        "precision": 0.5716536610669528,
+        "recall": 0.22890051295137667,
+        "infer_ms": 2.585423325366001,
+        "fps_infer_only": 386.78385477103126,
+        "per_class": {
+          "crazing": {
+            "map50": 0.015831837507583046,
+            "map50_95": 0.0029773794032604784,
+            "precision": 0.16117167652978923,
+            "recall": 0.02857142857142857
+          },
+          "inclusion": {
+            "map50": 0.45703394621062454,
+            "map50_95": 0.18763471604772247,
+            "precision": 0.6801451285747974,
+            "recall": 0.4125
+          },
+          "patches": {
+            "map50": 0.5962292215690359,
+            "map50_95": 0.28328381150568205,
+            "precision": 0.7411235264955672,
+            "recall": 0.5723270440251572
+          },
+          "pitted_surface": {
+            "map50": 0.006467015392579762,
+            "map50_95": 0.0028397352660388077,
+            "precision": 1.0,
+            "recall": 0.0
+          },
+          "rolled-in_scale": {
+            "map50": 0.28596126301857755,
+            "map50_95": 0.11824789848817048,
+            "precision": 0.5187909053739275,
+            "recall": 0.29069767441860467
+          },
+          "scratches": {
+            "map50": 0.0616185263161784,
+            "map50_95": 0.022241417159684397,
+            "precision": 0.32869072942763583,
+            "recall": 0.06930693069306931
+          }
+        }
+      },
+      "finished_at": "2026-07-28 22:37:31"
+    },
+    "msdgs_bh32_dfl4": {
+      "status": "failed",
+      "error": "TypeError('list indices must be integers or slices, not list')",
+      "failed_at": "2026-07-28 22:37:31"
+    }
+  },
+  "baseline": {
+    "gsdown": {
+      "test_map50": 0.7338,
+      "test_map50_95": 0.4018,
+      "fused_params": 1935814,
+      "crazing_map50": 0.4432,
+      "inclusion_map50": 0.7403,
+      "inclusion_recall": 0.7016,
+      "rolled_map50": 0.6023,
+      "rolled_recall": 0.593,
+      "scratches_map50": 0.924,
+      "pitted_map50": 0.7852
+    },
+    "msdgs135eq": {
+      "test_map50": 0.732411,
+      "test_map50_95": 0.398837,
+      "fused_params": 1777318
+    }
+  }
+}

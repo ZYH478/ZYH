@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 381, in <module>
+    raise SystemExit(main())
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 378, in main
+    return orchestrate(args.only)
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 343, in orchestrate
+    build_check()
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 181, in build_check
+    datasets = prepare_data()
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 160, in prepare_data
+    return {dataset: materialize_dataset(dataset) for dataset in SOURCE_DATASETS}
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 160, in <dictcomp>
+    return {dataset: materialize_dataset(dataset) for dataset in SOURCE_DATASETS}
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 143, in materialize_dataset
+    raise FileNotFoundError(f"missing label for {image}: {label}")
+FileNotFoundError: missing label for /root/autodl-tmp/neu-det-yolo26/dataset/valid/images/scratches_226_jpg.rf.2875b65a3b5afe0b391626889b0fe0c7.jpg: /root/autodl-tmp/neu-det-yolo26/dataset/valid/labels/scratches_226_jpg.rf.2875b65a3b5afe0b391626889b0fe0c7.txt
+[2026-08-03 22:44:55] DATA_GATE_PASS neudet counts={'train': 1200, 'val': 300, 'test': 299} missing_labels={'train': 0, 'val': 1, 'test': 0} yaml=/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/neudet.yaml
+[2026-08-03 22:44:55] DATA_GATE_PASS aluminum counts={'train': 1000, 'val': 200, 'test': 200} missing_labels={'train': 0, 'val': 0, 'test': 0} yaml=/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/aluminum.yaml
+[2026-08-03 22:44:56] DATA_GATE_PASS pcb counts={'train': 891, 'val': 120, 'test': 60} missing_labels={'train': 0, 'val': 0, 'test': 0} yaml=/root/autodl-tmp/neu-det-yolo26/gold_yolo_data/pcb.yaml
+Traceback (most recent call last):
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 389, in <module>
+    raise SystemExit(main())
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 386, in main
+    return orchestrate(args.only)
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 351, in orchestrate
+    build_check()
+  File "/root/autodl-tmp/neu-det-yolo26/train_sota_gold_yolo_n_seed0.py", line 192, in build_check
+    from yolov6.utils.config import Config
+ModuleNotFoundError: No module named 'yolov6'

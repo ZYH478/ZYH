@@ -1,0 +1,535 @@
+{
+  "status": "done",
+  "created_at": "2026-08-01 22:38:19",
+  "dataset": "pcb",
+  "model": "msdgs",
+  "protocol": "250e/imgsz640/batch32/deterministic/cacheFalse/resumeFalse/patience0/yolo26n.pt; independent fresh-process test evaluation",
+  "seed0_source": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/independent_pcb_msdgs_report.json",
+  "new_seeds": [
+    1,
+    2,
+    3
+  ],
+  "experiments": {
+    "0": {
+      "status": "done",
+      "created_at": "2026-08-01 11:24:00",
+      "dataset": "pcb",
+      "model": "msdgs",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/pcb/msdgs/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 32,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 1777318,
+        "end2end": true,
+        "reg_max": 1,
+        "nl": 3
+      },
+      "test": {
+        "precision": 0.7792072736005924,
+        "recall": 0.7624244101494936,
+        "map50": 0.8232569472303584,
+        "map50_95": 0.3708445006377998,
+        "class_ap50": {
+          "missing_hole": 0.8872505747363294,
+          "mouse_bite": 0.7758118106378138,
+          "open_circuit": 0.9407451942851033,
+          "short": 0.7824652164277685,
+          "spurious_copper": 0.9367054735119953,
+          "spur": 0.6165634137831395
+        },
+        "class_ap50_95": {
+          "missing_hole": 0.4720349532109238,
+          "mouse_bite": 0.2995080992411125,
+          "open_circuit": 0.4193275476305337,
+          "short": 0.2874716489251936,
+          "spurious_copper": 0.49378113182748484,
+          "spur": 0.2529436229915502
+        }
+      },
+      "benchmark": {
+        "fps": 2409.420215887126,
+        "infer_ms_per_image": 0.41503760672640055,
+        "elapsed_seconds": 2.6562406830489635,
+        "images": 6400,
+        "batch": 32,
+        "imgsz": 640,
+        "warmup_iterations": 50,
+        "measured_iterations": 200,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      },
+      "seed": 0
+    },
+    "1": {
+      "status": "done",
+      "created_at": "2026-08-01 21:52:35",
+      "dataset": "pcb",
+      "model": "msdgs",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_msdgs_multiseed_e250/seed1/msdgs/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 32,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 1777318,
+        "end2end": true,
+        "reg_max": 1,
+        "nl": 3
+      },
+      "test": {
+        "precision": 0.7995964680486539,
+        "recall": 0.779688325639937,
+        "map50": 0.833249780594226,
+        "map50_95": 0.3582238499427351,
+        "class_ap50": {
+          "missing_hole": 0.7448011524182208,
+          "mouse_bite": 0.78432551301034,
+          "open_circuit": 0.9449345795419972,
+          "short": 0.9508608695652174,
+          "spurious_copper": 0.9158100732505123,
+          "spur": 0.6587664957790671
+        },
+        "class_ap50_95": {
+          "missing_hole": 0.3869797285206728,
+          "mouse_bite": 0.2648981073191069,
+          "open_circuit": 0.41751833125541554,
+          "short": 0.36057352619762,
+          "spurious_copper": 0.4557263492847105,
+          "spur": 0.2636470570788852
+        }
+      },
+      "benchmark": {
+        "fps": 2409.1328110089826,
+        "infer_ms_per_image": 0.41508711990900343,
+        "elapsed_seconds": 2.6565575674176216,
+        "images": 6400,
+        "batch": 32,
+        "imgsz": 640,
+        "warmup_iterations": 50,
+        "measured_iterations": 200,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      },
+      "seed": 1
+    },
+    "2": {
+      "status": "done",
+      "created_at": "2026-08-01 22:15:28",
+      "dataset": "pcb",
+      "model": "msdgs",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_msdgs_multiseed_e250/seed2/msdgs/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 32,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 1777318,
+        "end2end": true,
+        "reg_max": 1,
+        "nl": 3
+      },
+      "test": {
+        "precision": 0.7517145434527311,
+        "recall": 0.7474069386674126,
+        "map50": 0.8267048899302707,
+        "map50_95": 0.36772345840039955,
+        "class_ap50": {
+          "missing_hole": 0.8834325123032444,
+          "mouse_bite": 0.7265754910751121,
+          "open_circuit": 0.8550878843885408,
+          "short": 0.9159592978337178,
+          "spurious_copper": 0.9071660607976598,
+          "spur": 0.6720080931833501
+        },
+        "class_ap50_95": {
+          "missing_hole": 0.46933294845725193,
+          "mouse_bite": 0.24484924715653628,
+          "open_circuit": 0.39447134952242796,
+          "short": 0.3801466053796473,
+          "spurious_copper": 0.4613757850678402,
+          "spur": 0.25616481481869363
+        }
+      },
+      "benchmark": {
+        "fps": 2416.8344623039698,
+        "infer_ms_per_image": 0.41376437467988575,
+        "elapsed_seconds": 2.648091997951269,
+        "images": 6400,
+        "batch": 32,
+        "imgsz": 640,
+        "warmup_iterations": 50,
+        "measured_iterations": 200,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      },
+      "seed": 2
+    },
+    "3": {
+      "status": "done",
+      "created_at": "2026-08-01 22:38:18",
+      "dataset": "pcb",
+      "model": "msdgs",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_msdgs_multiseed_e250/seed3/msdgs/weights/best.pt",
+      "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+      "protocol": {
+        "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+        "imgsz": 640,
+        "batch": 32,
+        "device": 0,
+        "rect": false
+      },
+      "structure": {
+        "fused_params": 1777318,
+        "end2end": true,
+        "reg_max": 1,
+        "nl": 3
+      },
+      "test": {
+        "precision": 0.7721670621858866,
+        "recall": 0.7441741098254089,
+        "map50": 0.8029383187828376,
+        "map50_95": 0.34629950747498855,
+        "class_ap50": {
+          "missing_hole": 0.8127398145288984,
+          "mouse_bite": 0.6112595545914541,
+          "open_circuit": 0.93235664102352,
+          "short": 0.9348686683632763,
+          "spurious_copper": 0.8373889558356655,
+          "spur": 0.6890162783542111
+        },
+        "class_ap50_95": {
+          "missing_hole": 0.4139333882945513,
+          "mouse_bite": 0.20347586779464547,
+          "open_circuit": 0.41867210723690096,
+          "short": 0.3951790064265352,
+          "spurious_copper": 0.37461912546112164,
+          "spur": 0.2719175496361766
+        }
+      },
+      "benchmark": {
+        "fps": 2406.920183027303,
+        "infer_ms_per_image": 0.41546870023012156,
+        "elapsed_seconds": 2.6589996814727783,
+        "images": 6400,
+        "batch": 32,
+        "imgsz": 640,
+        "warmup_iterations": 50,
+        "measured_iterations": 200,
+        "dtype": "float32",
+        "scope": "fused model forward only; excludes preprocess and postprocess",
+        "device": "NVIDIA GeForce RTX 4090"
+      },
+      "seed": 3
+    }
+  },
+  "statistics": {
+    "test_map50": {
+      "values": [
+        0.8232569472303584,
+        0.833249780594226,
+        0.8267048899302707,
+        0.8029383187828376
+      ],
+      "mean": 0.8215374841344232,
+      "std_population": 0.011322162736588507,
+      "min": 0.8029383187828376,
+      "max": 0.833249780594226,
+      "range": 0.03031146181138844
+    },
+    "test_map50_95": {
+      "values": [
+        0.3708445006377998,
+        0.3582238499427351,
+        0.36772345840039955,
+        0.34629950747498855
+      ],
+      "mean": 0.36077282911398073,
+      "std_population": 0.009561957812630395,
+      "min": 0.34629950747498855,
+      "max": 0.3708445006377998,
+      "range": 0.024544993162811224
+    },
+    "precision": {
+      "values": [
+        0.7792072736005924,
+        0.7995964680486539,
+        0.7517145434527311,
+        0.7721670621858866
+      ],
+      "mean": 0.775671336821966,
+      "std_population": 0.01711083459666685,
+      "min": 0.7517145434527311,
+      "max": 0.7995964680486539,
+      "range": 0.047881924595922776
+    },
+    "recall": {
+      "values": [
+        0.7624244101494936,
+        0.779688325639937,
+        0.7474069386674126,
+        0.7441741098254089
+      ],
+      "mean": 0.758423446070563,
+      "std_population": 0.014076663626832898,
+      "min": 0.7441741098254089,
+      "max": 0.779688325639937,
+      "range": 0.03551421581452807
+    },
+    "fps": {
+      "values": [
+        2409.420215887126,
+        2409.1328110089826,
+        2416.8344623039698,
+        2406.920183027303
+      ],
+      "mean": 2410.5769180568454,
+      "std_population": 3.740052678643753,
+      "min": 2406.920183027303,
+      "max": 2416.8344623039698,
+      "range": 9.914279276666548
+    },
+    "fused_params": 1777318,
+    "class_ap50": {
+      "missing_hole": {
+        "values": [
+          0.8872505747363294,
+          0.7448011524182208,
+          0.8834325123032444,
+          0.8127398145288984
+        ],
+        "mean": 0.8320560134966732,
+        "std_population": 0.05846475550372734,
+        "min": 0.7448011524182208,
+        "max": 0.8872505747363294,
+        "range": 0.14244942231810864
+      },
+      "mouse_bite": {
+        "values": [
+          0.7758118106378138,
+          0.78432551301034,
+          0.7265754910751121,
+          0.6112595545914541
+        ],
+        "mean": 0.72449309232868,
+        "std_population": 0.06899220946336308,
+        "min": 0.6112595545914541,
+        "max": 0.78432551301034,
+        "range": 0.17306595841888595
+      },
+      "open_circuit": {
+        "values": [
+          0.9407451942851033,
+          0.9449345795419972,
+          0.8550878843885408,
+          0.93235664102352
+        ],
+        "mean": 0.9182810748097903,
+        "std_population": 0.036764612258815894,
+        "min": 0.8550878843885408,
+        "max": 0.9449345795419972,
+        "range": 0.08984669515345645
+      },
+      "short": {
+        "values": [
+          0.7824652164277685,
+          0.9508608695652174,
+          0.9159592978337178,
+          0.9348686683632763
+        ],
+        "mean": 0.896038513047495,
+        "std_population": 0.0667251884740226,
+        "min": 0.7824652164277685,
+        "max": 0.9508608695652174,
+        "range": 0.16839565313744898
+      },
+      "spurious_copper": {
+        "values": [
+          0.9367054735119953,
+          0.9158100732505123,
+          0.9071660607976598,
+          0.8373889558356655
+        ],
+        "mean": 0.8992676408489583,
+        "std_population": 0.037304825696301995,
+        "min": 0.8373889558356655,
+        "max": 0.9367054735119953,
+        "range": 0.09931651767632976
+      },
+      "spur": {
+        "values": [
+          0.6165634137831395,
+          0.6587664957790671,
+          0.6720080931833501,
+          0.6890162783542111
+        ],
+        "mean": 0.6590885702749419,
+        "std_population": 0.02679120401219407,
+        "min": 0.6165634137831395,
+        "max": 0.6890162783542111,
+        "range": 0.07245286457107158
+      }
+    },
+    "class_ap50_95": {
+      "missing_hole": {
+        "values": [
+          0.4720349532109238,
+          0.3869797285206728,
+          0.46933294845725193,
+          0.4139333882945513
+        ],
+        "mean": 0.43557025462085,
+        "std_population": 0.03639638357539683,
+        "min": 0.3869797285206728,
+        "max": 0.4720349532109238,
+        "range": 0.08505522469025101
+      },
+      "mouse_bite": {
+        "values": [
+          0.2995080992411125,
+          0.2648981073191069,
+          0.24484924715653628,
+          0.20347586779464547
+        ],
+        "mean": 0.2531828303778503,
+        "std_population": 0.03472574328800811,
+        "min": 0.20347586779464547,
+        "max": 0.2995080992411125,
+        "range": 0.09603223144646703
+      },
+      "open_circuit": {
+        "values": [
+          0.4193275476305337,
+          0.41751833125541554,
+          0.39447134952242796,
+          0.41867210723690096
+        ],
+        "mean": 0.41249733391131954,
+        "std_population": 0.010427441831418135,
+        "min": 0.39447134952242796,
+        "max": 0.4193275476305337,
+        "range": 0.024856198108105743
+      },
+      "short": {
+        "values": [
+          0.2874716489251936,
+          0.36057352619762,
+          0.3801466053796473,
+          0.3951790064265352
+        ],
+        "mean": 0.355842696732249,
+        "std_population": 0.04133704803675194,
+        "min": 0.2874716489251936,
+        "max": 0.3951790064265352,
+        "range": 0.10770735750134158
+      },
+      "spurious_copper": {
+        "values": [
+          0.49378113182748484,
+          0.4557263492847105,
+          0.4613757850678402,
+          0.37461912546112164
+        ],
+        "mean": 0.4463755979102893,
+        "std_population": 0.043899653046323525,
+        "min": 0.37461912546112164,
+        "max": 0.49378113182748484,
+        "range": 0.1191620063663632
+      },
+      "spur": {
+        "values": [
+          0.2529436229915502,
+          0.2636470570788852,
+          0.25616481481869363,
+          0.2719175496361766
+        ],
+        "mean": 0.2611682611313264,
+        "std_population": 0.007320703180770922,
+        "min": 0.2529436229915502,
+        "max": 0.2719175496361766,
+        "range": 0.018973926644626382
+      }
+    }
+  },
+  "relative_to_seed0": {
+    "1": {
+      "map50_delta": 0.009992833363867692,
+      "map50_95_delta": -0.012620650695064684,
+      "class_ap50_delta": {
+        "missing_hole": -0.14244942231810864,
+        "mouse_bite": 0.008513702372526244,
+        "open_circuit": 0.0041893852568939405,
+        "short": 0.16839565313744898,
+        "spurious_copper": -0.020895400261482955,
+        "spur": 0.042203081995927594
+      },
+      "class_ap50_95_delta": {
+        "missing_hole": -0.08505522469025101,
+        "mouse_bite": -0.03460999192200559,
+        "open_circuit": -0.0018092163751181611,
+        "short": 0.0731018772724264,
+        "spurious_copper": -0.038054782542774335,
+        "spur": 0.010703434087334984
+      }
+    },
+    "2": {
+      "map50_delta": 0.003447942699912332,
+      "map50_95_delta": -0.003121042237400229,
+      "class_ap50_delta": {
+        "missing_hole": -0.0038180624330850232,
+        "mouse_bite": -0.04923631956270169,
+        "open_circuit": -0.0856573098965625,
+        "short": 0.13349408140594932,
+        "spurious_copper": -0.029539412714335467,
+        "spur": 0.055444679400210584
+      },
+      "class_ap50_95_delta": {
+        "missing_hole": -0.0027020047536718828,
+        "mouse_bite": -0.054658852084576215,
+        "open_circuit": -0.024856198108105743,
+        "short": 0.09267495645445367,
+        "spurious_copper": -0.032405346759644627,
+        "spur": 0.0032211918271434214
+      }
+    },
+    "3": {
+      "map50_delta": -0.020318628447520748,
+      "map50_95_delta": -0.024544993162811224,
+      "class_ap50_delta": {
+        "missing_hole": -0.07451076020743097,
+        "mouse_bite": -0.1645522560463597,
+        "open_circuit": -0.008388553261583276,
+        "short": 0.15240345193550786,
+        "spurious_copper": -0.09931651767632976,
+        "spur": 0.07245286457107158
+      },
+      "class_ap50_95_delta": {
+        "missing_hole": -0.05810156491637253,
+        "mouse_bite": -0.09603223144646703,
+        "open_circuit": -0.0006554403936327446,
+        "short": 0.10770735750134158,
+        "spurious_copper": -0.1191620063663632,
+        "spur": 0.018973926644626382
+      }
+    }
+  },
+  "completed_total": 4,
+  "expected_total": 4
+}

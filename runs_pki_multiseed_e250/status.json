@@ -1,0 +1,12 @@
+{
+  "status": "done",
+  "candidate": "msdgs_pki_l4",
+  "current": null,
+  "pending": [],
+  "note": "multiseed run complete",
+  "updated_at": "2026-07-31 20:09:21",
+  "pid": 52588,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_pki_multiseed_e250",
+  "report": "/root/autodl-tmp/neu-det-yolo26/runs_pki_multiseed_e250/report.json",
+  "failures": 0
+}

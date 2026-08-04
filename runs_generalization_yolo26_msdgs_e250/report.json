@@ -1,0 +1,376 @@
+{
+  "created_at": "2026-07-31 18:50:57",
+  "wording": "同一目标数据集重新训练后的迁移性与鲁棒性验证，不是 zero-shot 泛化。",
+  "protocol": {
+    "training": "250 epochs / imgsz640 / batch32 / seed0 / deterministic=True / cache=False / resume=False / patience=0 / yolo26n.pt initialization",
+    "truth": "independent fresh Python process reloads best.pt and evaluates test split",
+    "fps": "RTX 4090 / fused / imgsz640 / batch32 / fixed warmup and iterations / forward only"
+  },
+  "experiments": {
+    "gc10": {
+      "yolo26n": {
+        "status": "done",
+        "created_at": "2026-07-31 15:56:54",
+        "dataset": "gc10",
+        "model": "yolo26n",
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/yolo26n/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 2376786,
+          "end2end": true,
+          "reg_max": 1,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.661245679689499,
+          "recall": 0.6486594354076572,
+          "map50": 0.6606594062295952,
+          "map50_95": 0.33009412557385753,
+          "class_ap50": {
+            "10_yaozhe": 0.766264637002342,
+            "1_chongkong": 0.8637267471140071,
+            "2_hanfeng": 0.9458714034262615,
+            "3_yueyawan": 0.9691684981684981,
+            "4_shuiban": 0.5681343308699263,
+            "5_youban": 0.6416553865461849,
+            "6_siban": 0.6104234818636585,
+            "7_yiwu": 0.30307607303156847,
+            "8_yahen": 0.5152735042735042,
+            "9_zhehen": 0.42300000000000004
+          },
+          "class_ap50_95": {
+            "10_yaozhe": 0.37349676788945213,
+            "1_chongkong": 0.45712411782372586,
+            "2_hanfeng": 0.5084891336161741,
+            "3_yueyawan": 0.6133939647075619,
+            "4_shuiban": 0.29068431783326754,
+            "5_youban": 0.31848689692181364,
+            "6_siban": 0.2696453562730774,
+            "7_yiwu": 0.12847149968930083,
+            "8_yahen": 0.231272163947164,
+            "9_zhehen": 0.10987703703703704
+          }
+        },
+        "benchmark": {
+          "fps": 2125.85079894338,
+          "infer_ms_per_image": 0.47039989847689867,
+          "elapsed_seconds": 3.0105593502521515,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        }
+      },
+      "msdgs": {
+        "status": "done",
+        "created_at": "2026-07-31 16:23:48",
+        "dataset": "gc10",
+        "model": "msdgs",
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/msdgs/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 1778098,
+          "end2end": true,
+          "reg_max": 1,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.6329418634799399,
+          "recall": 0.6029813254162686,
+          "map50": 0.6085712534108287,
+          "map50_95": 0.30564839685358347,
+          "class_ap50": {
+            "10_yaozhe": 0.8712500000000001,
+            "1_chongkong": 0.8919612943750876,
+            "2_hanfeng": 0.9645873344254737,
+            "3_yueyawan": 0.979474358974359,
+            "4_shuiban": 0.5592809632763012,
+            "5_youban": 0.6526356836602358,
+            "6_siban": 0.5479636533550005,
+            "7_yiwu": 0.33809191602179983,
+            "8_yahen": 0.13762250243382318,
+            "9_zhehen": 0.14284482758620692
+          },
+          "class_ap50_95": {
+            "10_yaozhe": 0.40061819157645073,
+            "1_chongkong": 0.4482967901443005,
+            "2_hanfeng": 0.5380822510605731,
+            "3_yueyawan": 0.6145698414375123,
+            "4_shuiban": 0.2808835297890165,
+            "5_youban": 0.32145229758785765,
+            "6_siban": 0.21281237842745337,
+            "7_yiwu": 0.12519339519151873,
+            "8_yahen": 0.0487846174381633,
+            "9_zhehen": 0.06579067588298874
+          }
+        },
+        "benchmark": {
+          "fps": 2368.5830309705384,
+          "infer_ms_per_image": 0.4221933480584994,
+          "elapsed_seconds": 2.702037427574396,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        }
+      }
+    },
+    "uwwt": {
+      "yolo26n": {
+        "status": "done",
+        "created_at": "2026-07-31 17:01:08",
+        "dataset": "uwwt",
+        "model": "yolo26n",
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/uwwt/yolo26n/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 2375811,
+          "end2end": true,
+          "reg_max": 1,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.7990640382989354,
+          "recall": 0.7174594134659358,
+          "map50": 0.7521583938792493,
+          "map50_95": 0.40909334758170246,
+          "class_ap50": {
+            "rubber char": 0.8442074592074591,
+            "wire char": 0.7463393389939881,
+            "wire broken": 0.547803137651822,
+            "side shedding": 0.627442033542977,
+            "wire stains": 0.995
+          },
+          "class_ap50_95": {
+            "rubber char": 0.5524676289981602,
+            "wire char": 0.3822034401098198,
+            "wire broken": 0.2347458554907489,
+            "side shedding": 0.39351647997644995,
+            "wire stains": 0.4825333333333333
+          }
+        },
+        "benchmark": {
+          "fps": 2135.39454951381,
+          "infer_ms_per_image": 0.4682975332252682,
+          "elapsed_seconds": 2.997104212641716,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        }
+      },
+      "msdgs": {
+        "status": "done",
+        "created_at": "2026-07-31 17:37:39",
+        "dataset": "uwwt",
+        "model": "msdgs",
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/uwwt/msdgs/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 1777123,
+          "end2end": true,
+          "reg_max": 1,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.7236727037115992,
+          "recall": 0.7390424324347304,
+          "map50": 0.7368488920126233,
+          "map50_95": 0.3845487220458702,
+          "class_ap50": {
+            "rubber char": 0.9135714285714286,
+            "wire char": 0.7306066965873279,
+            "wire broken": 0.544748153086178,
+            "side shedding": 0.5003181818181818,
+            "wire stains": 0.995
+          },
+          "class_ap50_95": {
+            "rubber char": 0.5264591078855785,
+            "wire char": 0.35399966759713536,
+            "wire broken": 0.20558580877261123,
+            "side shedding": 0.23869902597402595,
+            "wire stains": 0.5980000000000001
+          }
+        },
+        "benchmark": {
+          "fps": 2373.5665633624053,
+          "infer_ms_per_image": 0.42130691232159734,
+          "elapsed_seconds": 2.696364238858223,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        }
+      }
+    },
+    "steel_weld": {
+      "yolo26n": {
+        "status": "done",
+        "created_at": "2026-07-31 18:15:18",
+        "dataset": "steel_weld",
+        "model": "yolo26n",
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/steel_weld/yolo26n/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 2376396,
+          "end2end": true,
+          "reg_max": 1,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.8356549866259163,
+          "recall": 0.3954065624972224,
+          "map50": 0.42769053793181244,
+          "map50_95": 0.22854453330401192,
+          "class_ap50": {
+            "air-hole": 0.5009977351850271,
+            "bite-edge": 0.602228260869565,
+            "broken-arc": 0.11677663762663765,
+            "crack": 0.5983333333333333,
+            "hollow-bead": 0.9178936827381685,
+            "overlap": 0.6774369747899159,
+            "slag-inclusion": 0.0,
+            "unfused": 0.007857678911852014
+          },
+          "class_ap50_95": {
+            "air-hole": 0.20867061233299727,
+            "bite-edge": 0.3518210756634669,
+            "broken-arc": 0.08013654287872375,
+            "crack": 0.19000252525252526,
+            "hollow-bead": 0.6227327905276927,
+            "overlap": 0.37281748153806976,
+            "slag-inclusion": 0.0,
+            "unfused": 0.0021752382386195893
+          }
+        },
+        "benchmark": {
+          "fps": 2121.3619382432994,
+          "infer_ms_per_image": 0.47139527770923445,
+          "elapsed_seconds": 3.016929777339101,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        }
+      },
+      "msdgs": {
+        "status": "done",
+        "created_at": "2026-07-31 18:50:56",
+        "dataset": "steel_weld",
+        "model": "msdgs",
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/steel_weld/msdgs/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 1777708,
+          "end2end": true,
+          "reg_max": 1,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.7984425760214877,
+          "recall": 0.3991504058599359,
+          "map50": 0.4419273091335588,
+          "map50_95": 0.2334255031388735,
+          "class_ap50": {
+            "air-hole": 0.5601269704085474,
+            "bite-edge": 0.995,
+            "broken-arc": 0.005644328832734631,
+            "crack": 0.4693778801843318,
+            "hollow-bead": 0.9323630179826936,
+            "overlap": 0.5707470588235294,
+            "slag-inclusion": 0.0,
+            "unfused": 0.002159216836633928
+          },
+          "class_ap50_95": {
+            "air-hole": 0.2150956287223901,
+            "bite-edge": 0.5329259259259259,
+            "broken-arc": 0.0021651311986456917,
+            "crack": 0.12060153260717779,
+            "hollow-bead": 0.6744706898525805,
+            "overlap": 0.32159341721578627,
+            "slag-inclusion": 0.0,
+            "unfused": 0.0005516995884817033
+          }
+        },
+        "benchmark": {
+          "fps": 2354.481630968423,
+          "infer_ms_per_image": 0.4247219374519773,
+          "elapsed_seconds": 2.7182203996926546,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        }
+      }
+    }
+  },
+  "completed": 6,
+  "expected": 6,
+  "status": "done"
+}

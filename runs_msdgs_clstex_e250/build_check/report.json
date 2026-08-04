@@ -1,0 +1,52 @@
+{
+  "behavior": {
+    "equivalence_max_abs_error": 0.0,
+    "p3_cls_logit_error": 0.0,
+    "p4_cls_logit_error": 0.0,
+    "box_state_items": 84,
+    "box_state_max_abs_error": 0.0,
+    "cls_state_items": 156,
+    "cls_state_max_abs_error": 0.0,
+    "missing_texture_state_items": 14,
+    "one2one_input_grad_max": 0.0,
+    "one2one_texture_grad_max": 2.499999761581421,
+    "one2many_texture_grad_from_one2one": 0.0,
+    "one2many_p4_input_grad_max": 0.10661730915307999,
+    "one2many_texture_grad_max": 2.499999761581421,
+    "one2one_texture_grad_from_one2many": 0.0
+  },
+  "candidate": {
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_clstex_e250/msdgs_p5cls_p4tex.yaml",
+    "head": "MSDGSClsTexDetect",
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "input_channels": [
+      64,
+      128,
+      256
+    ],
+    "box_widths": [
+      16,
+      16,
+      16
+    ],
+    "official_matched_tensors": 402,
+    "baseline_matched_tensors": 402,
+    "eval_shape": [
+      1,
+      300,
+      6
+    ],
+    "fused_shape": [
+      1,
+      300,
+      6
+    ],
+    "params_unfused": 1909800,
+    "params_fused": 1779500,
+    "gflops_eval_graph": 4.6546432,
+    "gflops_fused_inference": 4.0847872,
+    "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_clstex_e250/build_check/msdgs_p5cls_p4tex_roundtrip.pt"
+  }
+}

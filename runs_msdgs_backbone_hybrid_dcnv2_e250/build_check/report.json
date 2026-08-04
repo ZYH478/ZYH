@@ -1,0 +1,71 @@
+{
+  "module_behavior": {
+    "hybrid_units": 4,
+    "regular_channels": 32,
+    "deform_channels": 32,
+    "deform_ratio": 0.5,
+    "offset_limit": 1.0,
+    "mask_span": 0.5,
+    "init_offset_max_abs": 0.0,
+    "init_mask_dev_from_one": 0.0,
+    "observed_offset_bound": 1.0,
+    "observed_mask_min": 0.5,
+    "observed_mask_max": 1.5,
+    "regular_grad_step1": 0.0009399295086041093,
+    "deform_grad_step1": 0.0009723237599246204,
+    "outer_cv1_grad_step1": 0.001572005683556199,
+    "offset_grad_step2": 0.0008981681894510984
+  },
+  "candidate": {
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_hybrid_dcnv2_e250/msdgs_bb_p4_hybrid_dcnv2_r50.yaml",
+    "changed_backbone_indices": [
+      6
+    ],
+    "layer6": "C3k2HybridDCNv2",
+    "layer8": "C3k2",
+    "layer10": "C2PSA",
+    "hybrid_units_layer6": 2,
+    "regular_channels_per_unit": [
+      16,
+      16
+    ],
+    "deform_channels_per_unit": [
+      16,
+      16
+    ],
+    "deform_ratio": 0.5,
+    "offset_limit": 1.0,
+    "mask_span": 0.5,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "detect_input_channels": [
+      64,
+      128,
+      256
+    ],
+    "eval_shape": [
+      1,
+      300,
+      6
+    ],
+    "fused_shape": [
+      1,
+      300,
+      6
+    ],
+    "equivalence_device": "cuda",
+    "layer6_equivalence_max_abs_error": 0.000988394021987915,
+    "layer6_equivalence_mean_abs_error": 1.375442479911726e-07,
+    "layer6_equivalence_relative_error": 0.00022648314809677397,
+    "raw_head_equivalence_max_abs_error": 0.0020170211791992188,
+    "raw_head_equivalence_mean_abs_error": 1.8036752998769344e-05,
+    "raw_head_equivalence_relative_error": 0.0002201576786990732,
+    "missing_hybrid_state_items": 8,
+    "transferred_units": 2,
+    "params_unfused": 1921042,
+    "params_fused": 1792988,
+    "gflops_fused_inference": 4.103526400000001,
+    "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_hybrid_dcnv2_e250/build_check/msdgs_bb_p4_hybrid_dcnv2_r50_roundtrip.pt"
+  }
+}

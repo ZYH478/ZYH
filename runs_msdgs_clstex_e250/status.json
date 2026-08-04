@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "candidate": "msdgs_p5cls_p4tex",
+  "note": "seed0 train and independent eval complete",
+  "updated_at": "2026-07-30 10:02:02",
+  "pid": 15574,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_clstex_e250",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_clstex_e250/report.json",
+  "owner_gate_pass": false
+}

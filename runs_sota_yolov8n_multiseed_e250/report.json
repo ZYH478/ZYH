@@ -1,0 +1,1112 @@
+{
+  "status": "done",
+  "created_at": "2026-08-03 22:42:52",
+  "model": "yolov8n",
+  "seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "protocol": {
+    "training": "250 epochs / imgsz640 / batch32 / deterministic=True / cache=False / resume=False / patience=0 / official yolov8n.pt",
+    "seed0_source": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250",
+    "new_seeds": [
+      1,
+      2,
+      3
+    ],
+    "truth": "independent fresh Python process reloads best.pt and evaluates test split",
+    "fps": "RTX 4090 / fused FP32 / imgsz640 / batch32 / warmup50 / iterations200 / forward only"
+  },
+  "completed": 12,
+  "expected": 12,
+  "experiments": {
+    "neudet": {
+      "seed0": {
+        "status": "done",
+        "created_at": "2026-08-03 07:24:55",
+        "dataset": "neudet",
+        "model": "yolov8n",
+        "seed": 0,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/neudet/yolov8n_seed0/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.751025361324713,
+          "recall": 0.6574452161297132,
+          "map50": 0.7164408495097584,
+          "map50_95": 0.38270200920957337,
+          "class_ap50": {
+            "crazing": 0.31798631522219467,
+            "inclusion": 0.7580976679405924,
+            "patches": 0.9173302348957363,
+            "pitted_surface": 0.7780465195870623,
+            "rolled-in_scale": 0.6028380313864375,
+            "scratches": 0.9243463280265269
+          },
+          "class_ap50_95": {
+            "crazing": 0.12152644878935279,
+            "inclusion": 0.3664717736403581,
+            "patches": 0.5683010116280501,
+            "pitted_surface": 0.44437633032792867,
+            "rolled-in_scale": 0.28882821148539894,
+            "scratches": 0.5067082793863515
+          }
+        },
+        "benchmark": {
+          "fps": 2237.982236525559,
+          "infer_ms_per_image": 0.44683107116725296,
+          "elapsed_seconds": 2.859718855470419,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/independent_neudet_yolov8n_seed0_report.json"
+      },
+      "seed1": {
+        "status": "done",
+        "created_at": "2026-08-03 20:19:15",
+        "dataset": "neudet",
+        "model": "yolov8n",
+        "seed": 1,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/neudet/yolov8n_seed1/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.6783425158405748,
+          "recall": 0.6885505882220734,
+          "map50": 0.7176315908480975,
+          "map50_95": 0.3840627569398181,
+          "class_ap50": {
+            "crazing": 0.32092614487961363,
+            "inclusion": 0.7375502603355182,
+            "patches": 0.9081502291970137,
+            "pitted_surface": 0.797240482682516,
+            "rolled-in_scale": 0.6447555338404789,
+            "scratches": 0.8971668941534438
+          },
+          "class_ap50_95": {
+            "crazing": 0.1130673334489783,
+            "inclusion": 0.3682097307325889,
+            "patches": 0.5677347987526999,
+            "pitted_surface": 0.4501516411526854,
+            "rolled-in_scale": 0.298946798992219,
+            "scratches": 0.5062662385597374
+          }
+        },
+        "benchmark": {
+          "fps": 2236.08454293944,
+          "infer_ms_per_image": 0.447210282436572,
+          "elapsed_seconds": 2.862145807594061,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_neudet_yolov8n_seed1_report.json"
+      },
+      "seed2": {
+        "status": "done",
+        "created_at": "2026-08-03 20:36:10",
+        "dataset": "neudet",
+        "model": "yolov8n",
+        "seed": 2,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/neudet/yolov8n_seed2/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.6683492142069749,
+          "recall": 0.7032468531435804,
+          "map50": 0.7200628567224711,
+          "map50_95": 0.3832776647749712,
+          "class_ap50": {
+            "crazing": 0.35019950123144583,
+            "inclusion": 0.7858013502768398,
+            "patches": 0.9355644651816087,
+            "pitted_surface": 0.770613014335919,
+            "rolled-in_scale": 0.5769479291159575,
+            "scratches": 0.9012508801930549
+          },
+          "class_ap50_95": {
+            "crazing": 0.12288509793353113,
+            "inclusion": 0.387100520003799,
+            "patches": 0.5797049086278236,
+            "pitted_surface": 0.4312924470334202,
+            "rolled-in_scale": 0.25634407377306595,
+            "scratches": 0.5223389412781871
+          }
+        },
+        "benchmark": {
+          "fps": 2236.0615668161445,
+          "infer_ms_per_image": 0.44721487764036283,
+          "elapsed_seconds": 2.862175216898322,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_neudet_yolov8n_seed2_report.json"
+      },
+      "seed3": {
+        "status": "done",
+        "created_at": "2026-08-03 20:53:04",
+        "dataset": "neudet",
+        "model": "yolov8n",
+        "seed": 3,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/neudet/yolov8n_seed3/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.6631513684571717,
+          "recall": 0.6715738681138664,
+          "map50": 0.7002592419725641,
+          "map50_95": 0.3801004112038423,
+          "class_ap50": {
+            "crazing": 0.27424432194590465,
+            "inclusion": 0.7718694953728447,
+            "patches": 0.9225538589918026,
+            "pitted_surface": 0.7337905768841113,
+            "rolled-in_scale": 0.6034769928943071,
+            "scratches": 0.895620205746414
+          },
+          "class_ap50_95": {
+            "crazing": 0.07893395612743649,
+            "inclusion": 0.38654842273179657,
+            "patches": 0.5951651044364198,
+            "pitted_surface": 0.41704812823534576,
+            "rolled-in_scale": 0.2930433737556428,
+            "scratches": 0.5098634819364125
+          }
+        },
+        "benchmark": {
+          "fps": 2238.953533821159,
+          "infer_ms_per_image": 0.446637228014879,
+          "elapsed_seconds": 2.858478259295225,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_neudet_yolov8n_seed3_report.json"
+      }
+    },
+    "aluminum": {
+      "seed0": {
+        "status": "done",
+        "created_at": "2026-08-03 07:37:00",
+        "dataset": "aluminum",
+        "model": "yolov8n",
+        "seed": 0,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/aluminum/yolov8n_seed0/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006428,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.9756498028461642,
+          "recall": 0.9866870665971335,
+          "map50": 0.9881812558000407,
+          "map50_95": 0.5683339163412178,
+          "class_ap50": {
+            "zhen_kong": 0.9839744245524294,
+            "ca_shang": 0.9787505986477332,
+            "zang_wu": 0.995,
+            "zhe_zhou": 0.995
+          },
+          "class_ap50_95": {
+            "zhen_kong": 0.381756193152398,
+            "ca_shang": 0.5669853609329212,
+            "zang_wu": 0.6637571265124518,
+            "zhe_zhou": 0.6608369847670998
+          }
+        },
+        "benchmark": {
+          "fps": 2243.0326148852128,
+          "infer_ms_per_image": 0.44582499307580287,
+          "elapsed_seconds": 2.8532799556851387,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/independent_aluminum_yolov8n_seed0_report.json"
+      },
+      "seed1": {
+        "status": "done",
+        "created_at": "2026-08-03 21:06:19",
+        "dataset": "aluminum",
+        "model": "yolov8n",
+        "seed": 1,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/aluminum/yolov8n_seed1/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006428,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.9821195312578864,
+          "recall": 0.982843137254902,
+          "map50": 0.9904752258023055,
+          "map50_95": 0.5812681505127186,
+          "class_ap50": {
+            "zhen_kong": 0.9911764705882355,
+            "ca_shang": 0.9807244326209864,
+            "zang_wu": 0.995,
+            "zhe_zhou": 0.995
+          },
+          "class_ap50_95": {
+            "zhen_kong": 0.3946714563206148,
+            "ca_shang": 0.5820927161018811,
+            "zang_wu": 0.6669849939501143,
+            "zhe_zhou": 0.6813234356782647
+          }
+        },
+        "benchmark": {
+          "fps": 2244.720677153188,
+          "infer_ms_per_image": 0.4454897262621671,
+          "elapsed_seconds": 2.8511342480778694,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_aluminum_yolov8n_seed1_report.json"
+      },
+      "seed2": {
+        "status": "done",
+        "created_at": "2026-08-03 21:20:18",
+        "dataset": "aluminum",
+        "model": "yolov8n",
+        "seed": 2,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/aluminum/yolov8n_seed2/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006428,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.9798285959319464,
+          "recall": 0.9847371963072048,
+          "map50": 0.984739707944692,
+          "map50_95": 0.5684718035868486,
+          "class_ap50": {
+            "zhen_kong": 0.9765927072583418,
+            "ca_shang": 0.9723661245204263,
+            "zang_wu": 0.995,
+            "zhe_zhou": 0.995
+          },
+          "class_ap50_95": {
+            "zhen_kong": 0.38639422575836957,
+            "ca_shang": 0.56861568047042,
+            "zang_wu": 0.6587523766087595,
+            "zhe_zhou": 0.6601249315098449
+          }
+        },
+        "benchmark": {
+          "fps": 2242.9668066402633,
+          "infer_ms_per_image": 0.4458380735013634,
+          "elapsed_seconds": 2.8533636704087257,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_aluminum_yolov8n_seed2_report.json"
+      },
+      "seed3": {
+        "status": "done",
+        "created_at": "2026-08-03 21:34:06",
+        "dataset": "aluminum",
+        "model": "yolov8n",
+        "seed": 3,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/aluminum/yolov8n_seed3/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/aluminum.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006428,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.9486841408437173,
+          "recall": 0.975458199662103,
+          "map50": 0.9797933424121281,
+          "map50_95": 0.5819176379959743,
+          "class_ap50": {
+            "zhen_kong": 0.9564389056396252,
+            "ca_shang": 0.9744962194947805,
+            "zang_wu": 0.995,
+            "zhe_zhou": 0.9932382445141066
+          },
+          "class_ap50_95": {
+            "zhen_kong": 0.3646758960503202,
+            "ca_shang": 0.5893673907640126,
+            "zang_wu": 0.6815304466854649,
+            "zhe_zhou": 0.6920968184840992
+          }
+        },
+        "benchmark": {
+          "fps": 2242.070818686002,
+          "infer_ms_per_image": 0.44601624162169173,
+          "elapsed_seconds": 2.854503946378827,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_aluminum_yolov8n_seed3_report.json"
+      }
+    },
+    "pcb": {
+      "seed0": {
+        "status": "done",
+        "created_at": "2026-08-03 07:59:48",
+        "dataset": "pcb",
+        "model": "yolov8n",
+        "seed": 0,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/pcb/yolov8n_seed0/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.9307188812274122,
+          "recall": 0.6960997178015154,
+          "map50": 0.7984508690042743,
+          "map50_95": 0.33716400221121096,
+          "class_ap50": {
+            "missing_hole": 0.8988567257554441,
+            "mouse_bite": 0.6406521454722165,
+            "open_circuit": 0.8731160855553787,
+            "short": 0.8525845486205583,
+            "spurious_copper": 0.7812870761652004,
+            "spur": 0.7442086324568483
+          },
+          "class_ap50_95": {
+            "missing_hole": 0.4410573424536274,
+            "mouse_bite": 0.21447311691943732,
+            "open_circuit": 0.39914149639673424,
+            "short": 0.3241104802400595,
+            "spurious_copper": 0.34894919005642105,
+            "spur": 0.29525238720098623
+          }
+        },
+        "benchmark": {
+          "fps": 2241.8787968469646,
+          "infer_ms_per_image": 0.44605444389162585,
+          "elapsed_seconds": 2.8547484409064054,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_seed0_e250/independent_pcb_yolov8n_seed0_report.json"
+      },
+      "seed1": {
+        "status": "done",
+        "created_at": "2026-08-03 21:57:00",
+        "dataset": "pcb",
+        "model": "yolov8n",
+        "seed": 1,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/pcb/yolov8n_seed1/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.6544882377097615,
+          "recall": 0.819016979425336,
+          "map50": 0.8063676301366023,
+          "map50_95": 0.3498300556198573,
+          "class_ap50": {
+            "missing_hole": 0.8659613773982155,
+            "mouse_bite": 0.6842991190806884,
+            "open_circuit": 0.6848935813696876,
+            "short": 0.876480347566208,
+            "spurious_copper": 0.9341649888447949,
+            "spur": 0.7924063665600191
+          },
+          "class_ap50_95": {
+            "missing_hole": 0.3978848503971318,
+            "mouse_bite": 0.21612407323461497,
+            "open_circuit": 0.32267329236482445,
+            "short": 0.3819602987525997,
+            "spurious_copper": 0.48422515734636173,
+            "spur": 0.29611266162361155
+          }
+        },
+        "benchmark": {
+          "fps": 2240.880352019314,
+          "infer_ms_per_image": 0.4462531875469722,
+          "elapsed_seconds": 2.856020400300622,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_pcb_yolov8n_seed1_report.json"
+      },
+      "seed2": {
+        "status": "done",
+        "created_at": "2026-08-03 22:19:52",
+        "dataset": "pcb",
+        "model": "yolov8n",
+        "seed": 2,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/pcb/yolov8n_seed2/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.8662079022363992,
+          "recall": 0.7791429689141162,
+          "map50": 0.850168143695878,
+          "map50_95": 0.3859407319799554,
+          "class_ap50": {
+            "missing_hole": 0.7765502173821036,
+            "mouse_bite": 0.7934677207904732,
+            "open_circuit": 0.8972849982435085,
+            "short": 0.910371254884933,
+            "spurious_copper": 0.9179032044131252,
+            "spur": 0.8054314664611246
+          },
+          "class_ap50_95": {
+            "missing_hole": 0.41991322254887375,
+            "mouse_bite": 0.28424941597715414,
+            "open_circuit": 0.40870519309635805,
+            "short": 0.3919211244915832,
+            "spurious_copper": 0.4745662582299495,
+            "spur": 0.3362891775358138
+          }
+        },
+        "benchmark": {
+          "fps": 2242.9696544829926,
+          "infer_ms_per_image": 0.445837507431861,
+          "elapsed_seconds": 2.8533600475639105,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_pcb_yolov8n_seed2_report.json"
+      },
+      "seed3": {
+        "status": "done",
+        "created_at": "2026-08-03 22:42:52",
+        "dataset": "pcb",
+        "model": "yolov8n",
+        "seed": 3,
+        "weights": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/pcb/yolov8n_seed3/weights/best.pt",
+        "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+        "protocol": {
+          "truth": "fresh Python process reloads best.pt from disk and evaluates test split",
+          "imgsz": 640,
+          "batch": 32,
+          "device": 0,
+          "rect": false
+        },
+        "structure": {
+          "fused_params": 3006818,
+          "end2end": false,
+          "reg_max": 16,
+          "nl": 3
+        },
+        "test": {
+          "precision": 0.8714346093889199,
+          "recall": 0.7009249511797792,
+          "map50": 0.8473283419660741,
+          "map50_95": 0.4065560906656428,
+          "class_ap50": {
+            "missing_hole": 0.9701192049175619,
+            "mouse_bite": 0.7340678336928534,
+            "open_circuit": 0.8042507893905586,
+            "short": 0.8643275218170673,
+            "spurious_copper": 0.8896873873421395,
+            "spur": 0.8215173146362635
+          },
+          "class_ap50_95": {
+            "missing_hole": 0.5792247194938954,
+            "mouse_bite": 0.2931330305435905,
+            "open_circuit": 0.35135179728267524,
+            "short": 0.38937475752140205,
+            "spurious_copper": 0.4153447555562412,
+            "spur": 0.41090748359605256
+          }
+        },
+        "benchmark": {
+          "fps": 2240.5580846482235,
+          "infer_ms_per_image": 0.4463173737167381,
+          "elapsed_seconds": 2.8564311917871237,
+          "images": 6400,
+          "batch": 32,
+          "imgsz": 640,
+          "warmup_iterations": 50,
+          "measured_iterations": 200,
+          "dtype": "float32",
+          "scope": "fused model forward only; excludes preprocess and postprocess",
+          "device": "NVIDIA GeForce RTX 4090"
+        },
+        "source_report": "/root/autodl-tmp/neu-det-yolo26/runs_sota_yolov8n_multiseed_e250/independent_pcb_yolov8n_seed3_report.json"
+      }
+    }
+  },
+  "summary": {
+    "neudet": {
+      "n": 4,
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "precision": {
+        "mean": 0.6902171149573586,
+        "std": 0.04102604314049878,
+        "min": 0.6631513684571717,
+        "max": 0.751025361324713,
+        "range": 0.08787399286754127
+      },
+      "recall": {
+        "mean": 0.6802041314023084,
+        "std": 0.019942250253359797,
+        "min": 0.6574452161297132,
+        "max": 0.7032468531435804,
+        "range": 0.04580163701386719
+      },
+      "test_map50": {
+        "mean": 0.7135986347632227,
+        "std": 0.00901976505625022,
+        "min": 0.7002592419725641,
+        "max": 0.7200628567224711,
+        "range": 0.019803614749906995
+      },
+      "test_map50_95": {
+        "mean": 0.38253571053205127,
+        "std": 0.0017166541971891317,
+        "min": 0.3801004112038423,
+        "max": 0.3840627569398181,
+        "range": 0.003962345735975814
+      },
+      "fps": {
+        "mean": 2237.2704700255754,
+        "std": 1.4384233630269834,
+        "min": 2236.0615668161445,
+        "max": 2238.953533821159,
+        "range": 2.8919670050145214
+      },
+      "infer_ms_per_image": {
+        "mean": 0.4469733648147667,
+        "std": 0.0002873405846788975,
+        "min": 0.446637228014879,
+        "max": 0.44721487764036283,
+        "range": 0.0005776496254838448
+      },
+      "fused_params": [
+        3006818
+      ],
+      "class_ap50": {
+        "crazing": {
+          "mean": 0.3158390708197897,
+          "std": 0.03131161282426281,
+          "min": 0.27424432194590465,
+          "max": 0.35019950123144583,
+          "range": 0.07595517928554119
+        },
+        "inclusion": {
+          "mean": 0.7633296934814487,
+          "std": 0.020573906127745182,
+          "min": 0.7375502603355182,
+          "max": 0.7858013502768398,
+          "range": 0.048251089941321657
+        },
+        "patches": {
+          "mean": 0.9208996970665404,
+          "std": 0.01144671228910449,
+          "min": 0.9081502291970137,
+          "max": 0.9355644651816087,
+          "range": 0.027414235984595026
+        },
+        "pitted_surface": {
+          "mean": 0.7699226483724022,
+          "std": 0.026572319871787386,
+          "min": 0.7337905768841113,
+          "max": 0.797240482682516,
+          "range": 0.0634499057984047
+        },
+        "rolled-in_scale": {
+          "mean": 0.6070046218092953,
+          "std": 0.028037717312943647,
+          "min": 0.5769479291159575,
+          "max": 0.6447555338404789,
+          "range": 0.06780760472452141
+        },
+        "scratches": {
+          "mean": 0.9045960770298599,
+          "std": 0.013379359474161953,
+          "min": 0.895620205746414,
+          "max": 0.9243463280265269,
+          "range": 0.028726122280112953
+        }
+      },
+      "class_ap50_95": {
+        "crazing": {
+          "mean": 0.10910320907482468,
+          "std": 0.020576486993456187,
+          "min": 0.07893395612743649,
+          "max": 0.12288509793353113,
+          "range": 0.043951141806094635
+        },
+        "inclusion": {
+          "mean": 0.37708261177713565,
+          "std": 0.011273537839601763,
+          "min": 0.3664717736403581,
+          "max": 0.387100520003799,
+          "range": 0.02062874636344092
+        },
+        "patches": {
+          "mean": 0.5777264558612484,
+          "std": 0.012867179828875138,
+          "min": 0.5677347987526999,
+          "max": 0.5951651044364198,
+          "range": 0.027430305683719847
+        },
+        "pitted_surface": {
+          "mean": 0.435717136687345,
+          "std": 0.014735968566509015,
+          "min": 0.41704812823534576,
+          "max": 0.4501516411526854,
+          "range": 0.03310351291733965
+        },
+        "rolled-in_scale": {
+          "mean": 0.28429061450158166,
+          "std": 0.019087635294969416,
+          "min": 0.25634407377306595,
+          "max": 0.298946798992219,
+          "range": 0.04260272521915304
+        },
+        "scratches": {
+          "mean": 0.5112942352901721,
+          "std": 0.007535346225048062,
+          "min": 0.5062662385597374,
+          "max": 0.5223389412781871,
+          "range": 0.01607270271844974
+        }
+      }
+    },
+    "aluminum": {
+      "n": 4,
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "precision": {
+        "mean": 0.9715705177199285,
+        "std": 0.01549090438548726,
+        "min": 0.9486841408437173,
+        "max": 0.9821195312578864,
+        "range": 0.0334353904141691
+      },
+      "recall": {
+        "mean": 0.9824313999553358,
+        "std": 0.004906541392732688,
+        "min": 0.975458199662103,
+        "max": 0.9866870665971335,
+        "range": 0.011228866935030446
+      },
+      "test_map50": {
+        "mean": 0.9857973829897916,
+        "std": 0.004645149538794525,
+        "min": 0.9797933424121281,
+        "max": 0.9904752258023055,
+        "range": 0.010681883390177394
+      },
+      "test_map50_95": {
+        "mean": 0.5749978771091898,
+        "std": 0.007620092475846277,
+        "min": 0.5683339163412178,
+        "max": 0.5819176379959743,
+        "range": 0.01358372165475652
+      },
+      "fps": {
+        "mean": 2243.1977293411665,
+        "std": 1.1060267839163684,
+        "min": 2242.070818686002,
+        "max": 2244.720677153188,
+        "range": 2.6498584671858225
+      },
+      "infer_ms_per_image": {
+        "mean": 0.4457922586152563,
+        "std": 0.00021974588394615204,
+        "min": 0.4454897262621671,
+        "max": 0.44601624162169173,
+        "range": 0.0005265153595246375
+      },
+      "fused_params": [
+        3006428
+      ],
+      "class_ap50": {
+        "zhen_kong": {
+          "mean": 0.977045627009658,
+          "std": 0.014972542397716351,
+          "min": 0.9564389056396252,
+          "max": 0.9911764705882355,
+          "range": 0.034737564948610355
+        },
+        "ca_shang": {
+          "mean": 0.9765843438209816,
+          "std": 0.003829126641746574,
+          "min": 0.9723661245204263,
+          "max": 0.9807244326209864,
+          "range": 0.008358308100560152
+        },
+        "zang_wu": {
+          "mean": 0.995,
+          "std": 0.0,
+          "min": 0.995,
+          "max": 0.995,
+          "range": 0.0
+        },
+        "zhe_zhou": {
+          "mean": 0.9945595611285266,
+          "std": 0.0008808777429467063,
+          "min": 0.9932382445141066,
+          "max": 0.995,
+          "range": 0.0017617554858934126
+        }
+      },
+      "class_ap50_95": {
+        "zhen_kong": {
+          "mean": 0.38187444282042565,
+          "std": 0.012649057755654444,
+          "min": 0.3646758960503202,
+          "max": 0.3946714563206148,
+          "range": 0.029995560270294597
+        },
+        "ca_shang": {
+          "mean": 0.5767652870673087,
+          "std": 0.010789772326591047,
+          "min": 0.5669853609329212,
+          "max": 0.5893673907640126,
+          "range": 0.022382029831091388
+        },
+        "zang_wu": {
+          "mean": 0.6677562359391976,
+          "std": 0.009787509981905773,
+          "min": 0.6587523766087595,
+          "max": 0.6815304466854649,
+          "range": 0.022778070076705403
+        },
+        "zhe_zhou": {
+          "mean": 0.6735955426098271,
+          "std": 0.015771870549455138,
+          "min": 0.6601249315098449,
+          "max": 0.6920968184840992,
+          "range": 0.03197188697425435
+        }
+      }
+    },
+    "pcb": {
+      "n": 4,
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "precision": {
+        "mean": 0.8307124076406232,
+        "std": 0.12107088926040271,
+        "min": 0.6544882377097615,
+        "max": 0.9307188812274122,
+        "range": 0.2762306435176507
+      },
+      "recall": {
+        "mean": 0.7487961543301866,
+        "std": 0.060333683091959016,
+        "min": 0.6960997178015154,
+        "max": 0.819016979425336,
+        "range": 0.12291726162382066
+      },
+      "test_map50": {
+        "mean": 0.8255787462007071,
+        "std": 0.02697327125597753,
+        "min": 0.7984508690042743,
+        "max": 0.850168143695878,
+        "range": 0.0517172746916037
+      },
+      "test_map50_95": {
+        "mean": 0.3698727201191666,
+        "std": 0.03201780393896817,
+        "min": 0.33716400221121096,
+        "max": 0.4065560906656428,
+        "range": 0.06939208845443184
+      },
+      "fps": {
+        "mean": 2241.571721999374,
+        "std": 1.0884183202786022,
+        "min": 2240.5580846482235,
+        "max": 2242.9696544829926,
+        "range": 2.411569834769125
+      },
+      "infer_ms_per_image": {
+        "mean": 0.4461156281467993,
+        "std": 0.00021657832203366881,
+        "min": 0.445837507431861,
+        "max": 0.4463173737167381,
+        "range": 0.00047986628487706184
+      },
+      "fused_params": [
+        3006818
+      ],
+      "class_ap50": {
+        "missing_hole": {
+          "mean": 0.8778718813633313,
+          "std": 0.0803282268647577,
+          "min": 0.7765502173821036,
+          "max": 0.9701192049175619,
+          "range": 0.19356898753545826
+        },
+        "mouse_bite": {
+          "mean": 0.7131217047590579,
+          "std": 0.06576929647854336,
+          "min": 0.6406521454722165,
+          "max": 0.7934677207904732,
+          "range": 0.15281557531825674
+        },
+        "open_circuit": {
+          "mean": 0.8148863636397834,
+          "std": 0.09520412172599999,
+          "min": 0.6848935813696876,
+          "max": 0.8972849982435085,
+          "range": 0.2123914168738209
+        },
+        "short": {
+          "mean": 0.8759409182221917,
+          "std": 0.024940796858143568,
+          "min": 0.8525845486205583,
+          "max": 0.910371254884933,
+          "range": 0.057786706264374654
+        },
+        "spurious_copper": {
+          "mean": 0.880760664191315,
+          "std": 0.06881441536680064,
+          "min": 0.7812870761652004,
+          "max": 0.9341649888447949,
+          "range": 0.1528779126795945
+        },
+        "spur": {
+          "mean": 0.7908909450285639,
+          "std": 0.033321344952545254,
+          "min": 0.7442086324568483,
+          "max": 0.8215173146362635,
+          "range": 0.07730868217941522
+        }
+      },
+      "class_ap50_95": {
+        "missing_hole": {
+          "mean": 0.45952003372338207,
+          "std": 0.08172653196160404,
+          "min": 0.3978848503971318,
+          "max": 0.5792247194938954,
+          "range": 0.18133986909676364
+        },
+        "mouse_bite": {
+          "mean": 0.25199490916869927,
+          "std": 0.042533516211409536,
+          "min": 0.21447311691943732,
+          "max": 0.2931330305435905,
+          "range": 0.0786599136241532
+        },
+        "open_circuit": {
+          "mean": 0.370467944785148,
+          "std": 0.04055455426850467,
+          "min": 0.32267329236482445,
+          "max": 0.40870519309635805,
+          "range": 0.0860319007315336
+        },
+        "short": {
+          "mean": 0.3718416652514111,
+          "std": 0.03210008709461185,
+          "min": 0.3241104802400595,
+          "max": 0.3919211244915832,
+          "range": 0.06781064425152367
+        },
+        "spurious_copper": {
+          "mean": 0.4307713402972434,
+          "std": 0.06247172475249931,
+          "min": 0.34894919005642105,
+          "max": 0.48422515734636173,
+          "range": 0.13527596728994068
+        },
+        "spur": {
+          "mean": 0.33464042748911604,
+          "std": 0.05432982202640203,
+          "min": 0.29525238720098623,
+          "max": 0.41090748359605256,
+          "range": 0.11565509639506633
+        }
+      }
+    }
+  }
+}

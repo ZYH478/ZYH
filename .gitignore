@@ -1,0 +1,30 @@
+# Model weights and deployment artifacts
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Runtime/cache artifacts
+*.pyc
+*.pid
+**/__pycache__/
+**/.cache/
+**/.torch_cache/
+**/.mpl_config/
+**/.mpl_config_slf/
+**/.yolo_config/
+**/.yolo_config_slf/
+
+# Dataset trees excluded from the Git snapshot
+dataset/
+dataset_giis/
+GC10-DET/
+UWWT-Dataset-1500/
+generalization_aluminum_pcb/
+generalization_datasets/
+generalization_wheat_stage/
+gold_yolo_data/
+
+# Active RT-DETR multiseed run excluded from the 2026-08-04 snapshot
+runs_sota_rtdetr_hgnetv2_l_seed123_e250/
+sota_rtdetr_hgnetv2_l_seed123_e250.log

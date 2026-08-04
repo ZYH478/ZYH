@@ -1,0 +1,32 @@
+{
+  "status": "done",
+  "started_at": "2026-08-03 16:57:00",
+  "pid": 64265,
+  "dataset": "neudet",
+  "model": "slf_yolo_slimasfneck_cglu_n",
+  "seed": 2,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/SLF-YOLO/SLF-YOLO/new_cfg/yolov8-SlimAsfNeck-CGLU.yaml",
+  "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 2,
+    "device": 0,
+    "workers": 8,
+    "cache": false,
+    "resume": false,
+    "patience": 0,
+    "deterministic": true,
+    "pretrained": false,
+    "optimizer": "SGD",
+    "amp": false,
+    "close_mosaic": 10
+  },
+  "finished_at": "2026-08-03 17:28:50",
+  "run_dir": "/root/autodl-tmp/neu-det-yolo26/runs_sota_slf_yolo_seed2_e250/neudet/slf_yolo_seed2",
+  "best": "/root/autodl-tmp/neu-det-yolo26/runs_sota_slf_yolo_seed2_e250/neudet/slf_yolo_seed2/weights/best.pt",
+  "last": "/root/autodl-tmp/neu-det-yolo26/runs_sota_slf_yolo_seed2_e250/neudet/slf_yolo_seed2/weights/last.pt",
+  "results_csv": "/root/autodl-tmp/neu-det-yolo26/runs_sota_slf_yolo_seed2_e250/neudet/slf_yolo_seed2/results.csv",
+  "completed_epochs": 250
+}

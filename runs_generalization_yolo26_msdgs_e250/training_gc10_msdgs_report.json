@@ -1,0 +1,27 @@
+{
+  "status": "done",
+  "started_at": "2026-07-31 15:56:56",
+  "dataset": "gc10",
+  "model": "msdgs",
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+  "pid": 42390,
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 0,
+    "device": 0,
+    "cache": false,
+    "resume": false,
+    "patience": 0,
+    "deterministic": true,
+    "pretrained": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt"
+  },
+  "finished_at": "2026-07-31 16:23:36",
+  "run_dir": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/msdgs",
+  "best": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/msdgs/weights/best.pt",
+  "last": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/msdgs/weights/last.pt",
+  "results_csv": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/gc10/msdgs/results.csv",
+  "completed_epochs": 250
+}

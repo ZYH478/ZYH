@@ -1,0 +1,28 @@
+{
+  "status": "done",
+  "started_at": "2026-08-02 00:03:53",
+  "dataset": "pcb",
+  "model": "yolo26n",
+  "seed": 3,
+  "pid": 11644,
+  "cfg": "yolo26n.yaml",
+  "data": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_aluminum_pcb_yolo26_msdgs_e250/datasets/pcb.yaml",
+  "recipe": {
+    "epochs": 250,
+    "batch": 32,
+    "imgsz": 640,
+    "seed": 3,
+    "device": 0,
+    "cache": false,
+    "resume": false,
+    "patience": 0,
+    "deterministic": true,
+    "pretrained": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt"
+  },
+  "finished_at": "2026-08-02 00:26:25",
+  "run_dir": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_yolo26n_multiseed_e250/seed3/yolo26n",
+  "best": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_yolo26n_multiseed_e250/seed3/yolo26n/weights/best.pt",
+  "last": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_yolo26n_multiseed_e250/seed3/yolo26n/weights/last.pt",
+  "results_csv": "/root/autodl-tmp/neu-det-yolo26/runs_pcb_yolo26n_multiseed_e250/seed3/yolo26n/results.csv",
+  "completed_epochs": 250
+}

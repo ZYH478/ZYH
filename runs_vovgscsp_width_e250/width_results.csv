@@ -1,0 +1,2 @@
+name,note,val_map50,val_map50_95,val_precision,val_recall,test_map50,test_map50_95,params,gflops,infer_ms_val,weights,cfg
+y26n_vovgscsp_gsdown_e075_e250,vovgscsp_gsdown: widen VoVGSCSP hidden ratio e=0.75 (default baseline e=0.5),0.7356347087236138,0.3946647008546415,0.690977267360283,0.674686700251086,0.7317979542829849,0.40020905729155143,2230294,,2.9844243389864764,/root/autodl-tmp/neu-det-yolo26/runs_vovgscsp_width_e250/y26n_vovgscsp_gsdown_e075_e250/weights/best.pt,/root/autodl-tmp/neu-det-yolo26/generated_models_vovgscsp_width_e250/y26n_vovgscsp_gsdown_e075_e250.yaml

@@ -1,0 +1,223 @@
+{
+  "status": "pass",
+  "created_at": "2026-07-31 15:25:55",
+  "cuda": "NVIDIA GeForce RTX 4090",
+  "datasets": {
+    "gc10": {
+      "yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10.yaml",
+      "nc": 10,
+      "names": {
+        "0": "10_yaozhe",
+        "1": "1_chongkong",
+        "2": "2_hanfeng",
+        "3": "3_yueyawan",
+        "4": "4_shuiban",
+        "5": "5_youban",
+        "6": "6_siban",
+        "7": "7_yiwu",
+        "8": "8_yahen",
+        "9": "9_zhehen"
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10/train.txt",
+      "val": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10/val.txt",
+      "test": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/gc10/test.txt"
+    },
+    "uwwt": {
+      "yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt.yaml",
+      "nc": 5,
+      "names": {
+        "0": "rubber char",
+        "1": "wire char",
+        "2": "wire broken",
+        "3": "side shedding",
+        "4": "wire stains"
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt/train.txt",
+      "val": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt/val.txt",
+      "test": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/uwwt/test.txt"
+    },
+    "steel_weld": {
+      "yaml": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld.yaml",
+      "nc": 8,
+      "names": {
+        "0": "air-hole",
+        "1": "bite-edge",
+        "2": "broken-arc",
+        "3": "crack",
+        "4": "hollow-bead",
+        "5": "overlap",
+        "6": "slag-inclusion",
+        "7": "unfused"
+      },
+      "train": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld/train.txt",
+      "val": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld/val.txt",
+      "test": "/root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld/test.txt"
+    }
+  },
+  "models": {
+    "yolo26n": {
+      "cfg": "yolo26n.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "msdgs_modules": 0,
+      "fused_params": 2408932,
+      "forward_output": [
+        [
+          1,
+          300,
+          6
+        ],
+        {
+          "one2many": {
+            "boxes": [
+              1,
+              4,
+              8400
+            ],
+            "scores": [
+              1,
+              80,
+              8400
+            ],
+            "feats": [
+              [
+                1,
+                64,
+                80,
+                80
+              ],
+              [
+                1,
+                128,
+                40,
+                40
+              ],
+              [
+                1,
+                256,
+                20,
+                20
+              ]
+            ]
+          },
+          "one2one": {
+            "boxes": [
+              1,
+              4,
+              8400
+            ],
+            "scores": [
+              1,
+              80,
+              8400
+            ],
+            "feats": [
+              [
+                1,
+                64,
+                80,
+                80
+              ],
+              [
+                1,
+                128,
+                40,
+                40
+              ],
+              [
+                1,
+                256,
+                20,
+                20
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "msdgs": {
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_gsdown_e250/y26n_gsdown_msdgs_135eq_e250.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+      "end2end": true,
+      "reg_max": 1,
+      "nl": 3,
+      "msdgs_modules": 4,
+      "fused_params": 1777318,
+      "forward_output": [
+        [
+          1,
+          300,
+          6
+        ],
+        {
+          "one2many": {
+            "boxes": [
+              1,
+              4,
+              8400
+            ],
+            "scores": [
+              1,
+              6,
+              8400
+            ],
+            "feats": [
+              [
+                1,
+                64,
+                80,
+                80
+              ],
+              [
+                1,
+                128,
+                40,
+                40
+              ],
+              [
+                1,
+                256,
+                20,
+                20
+              ]
+            ]
+          },
+          "one2one": {
+            "boxes": [
+              1,
+              4,
+              8400
+            ],
+            "scores": [
+              1,
+              6,
+              8400
+            ],
+            "feats": [
+              [
+                1,
+                64,
+                80,
+                80
+              ],
+              [
+                1,
+                128,
+                40,
+                40
+              ],
+              [
+                1,
+                256,
+                20,
+                20
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

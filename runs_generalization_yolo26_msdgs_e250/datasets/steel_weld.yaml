@@ -1,0 +1,14 @@
+path: /root/autodl-tmp/neu-det-yolo26/generalization_datasets/raw/steel_weld/钢管焊缝缺陷检测数据集
+train: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld/train.txt
+val: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld/val.txt
+test: /root/autodl-tmp/neu-det-yolo26/runs_generalization_yolo26_msdgs_e250/datasets/steel_weld/test.txt
+nc: 8
+names:
+- air-hole
+- bite-edge
+- broken-arc
+- crack
+- hollow-bead
+- overlap
+- slag-inclusion
+- unfused

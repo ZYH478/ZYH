@@ -1,0 +1,25 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_stable_dcnv2",
+  "name": "msdgs_bb_p4_stable_dcnv2_seed0",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2_seed0/weights/best.pt",
+  "params_unfused": 1921042,
+  "deform_units": 2,
+  "deform_strength": {
+    "hold_through_epoch": 20,
+    "full_at_epoch": 80
+  },
+  "offset_mask_gradient_scale": 0.25,
+  "save_period": 5,
+  "schedule_first": {
+    "epoch": 0,
+    "strength": 0.0
+  },
+  "schedule_last": {
+    "epoch": 249,
+    "strength": 1.0
+  },
+  "finished_at": "2026-07-31 11:42:40"
+}

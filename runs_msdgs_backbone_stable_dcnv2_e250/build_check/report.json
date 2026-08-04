@@ -1,0 +1,69 @@
+{
+  "module_behavior": {
+    "device": "cuda:0",
+    "deform_units_smoke": 4,
+    "deform_units_seen": 4,
+    "strength_schedule": {
+      "0": 0.0,
+      "20": 0.0,
+      "21": 0.016666666666666666,
+      "50": 0.5,
+      "80": 1.0,
+      "249": 1.0
+    },
+    "strength0_offset_max_abs": 0.0,
+    "strength0_mask_dev_from_one": 0.0,
+    "strength0_regular_conv_max_abs_error": 0.0,
+    "strength1_offset_abs_max": 1.5,
+    "strength1_mask_min": 0.5,
+    "strength1_mask_max": 1.5,
+    "gradient_scale_target": 0.25,
+    "gradient_scale_max_abs_error": 0.0,
+    "offset_grad": 0.0003817342221736908,
+    "deform_grad": 0.0028085943777114153,
+    "outer_cv1_grad": 0.011176105588674545
+  },
+  "candidate": {
+    "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_stable_dcnv2_e250/msdgs_bb_p4_stable_dcnv2.yaml",
+    "changed_backbone_indices": [
+      6
+    ],
+    "layer6": "C3k2StableDCNv2",
+    "layer8": "C3k2",
+    "layer10": "C2PSA",
+    "deform_units_layer6": 2,
+    "end2end": true,
+    "reg_max": 1,
+    "nl": 3,
+    "detect_input_channels": [
+      64,
+      128,
+      256
+    ],
+    "strength0_layer6_max_abs_error": 0.0,
+    "strength0_full_model_max_abs_error": 0.0,
+    "cuda_forward_backward": true,
+    "cuda_backward_offset_grad": 0.12218888103961945,
+    "eval_shape": [
+      1,
+      300,
+      6
+    ],
+    "fused_shape": [
+      1,
+      300,
+      6
+    ],
+    "fused_deform_units": 2,
+    "preserved_mainpath_tensors": 50,
+    "preserved_mainpath_max_abs_error": 0.0,
+    "missing_custom_state_items": 8,
+    "official_matched_tensors": 400,
+    "baseline_matched_tensors": 622,
+    "params_unfused": 1921042,
+    "params_fused": 1792988,
+    "gflops_fused_inference": 4.0740352,
+    "gflops_source": "legacy P4 DCNv2 CUDA build gate; identical deform op/count/shapes",
+    "roundtrip_checkpoint": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_stable_dcnv2_e250/build_check/msdgs_bb_p4_stable_dcnv2_roundtrip.pt"
+  }
+}

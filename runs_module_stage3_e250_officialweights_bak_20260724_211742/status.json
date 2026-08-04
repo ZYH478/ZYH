@@ -1,0 +1,11 @@
+{
+  "status": "running",
+  "current": "y26n_s3_gsconv_full_e250",
+  "pending": [
+    "y26n_s3_vovgscsp_only_e250"
+  ],
+  "updated_at": "2026-07-24 20:37:42",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/combo_report.json",
+  "report_csv": "/root/autodl-tmp/neu-det-yolo26/runs_module_stage3_e250/combo_results.csv",
+  "stage": "stage3_gsconv"
+}

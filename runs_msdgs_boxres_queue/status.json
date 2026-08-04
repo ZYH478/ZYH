@@ -1,0 +1,11 @@
+{
+  "status": "done",
+  "current": null,
+  "pending": [],
+  "note": "both seed0 candidates finished or isolated",
+  "updated_at": "2026-07-30 08:05:03",
+  "pid": 2379,
+  "project": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_e250",
+  "report_json": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_queue/report.json",
+  "report_md": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_boxres_queue/report.md"
+}

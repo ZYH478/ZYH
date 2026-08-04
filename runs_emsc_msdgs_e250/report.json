@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "baseline": {
+    "gsdown": {
+      "test_map50": 0.7338,
+      "test_map50_95": 0.401794,
+      "fused_params": 1935814
+    },
+    "msdgs135eq": {
+      "test_map50": 0.732411,
+      "test_map50_95": 0.398837,
+      "fused_params": 1777318
+    }
+  },
+  "experiments": {
+    "msdgs_p5stage_emsc": {
+      "status": "done",
+      "candidate": "msdgs_p5stage_emsc",
+      "iteration": 45,
+      "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_emsc_msdgs_e250/msdgs_p5stage_emsc.yaml",
+      "data": "/root/autodl-tmp/neu-det-yolo26/dataset/neu-det.yaml",
+      "weights": "/root/autodl-tmp/neu-det-yolo26/runs_emsc_msdgs_e250/msdgs_p5stage_emsc/weights/best.pt",
+      "epochs": 250,
+      "batch": 32,
+      "imgsz": 640,
+      "seed": 0,
+      "cache": false,
+      "init_weights": "/root/autodl-tmp/neu-det-yolo26/yolo26n.pt",
+      "params_unfused_before_train": 1973916,
+      "evaluated_at": "2026-07-30 03:38:43",
+      "evaluator_pid": 9489,
+      "params_unfused": 1973916,
+      "params_fused": 1845414,
+      "gflops": null,
+      "val": {
+        "map50": 0.7331938115524359,
+        "map50_95": 0.402333780918331,
+        "precision": 0.7902196908390623,
+        "recall": 0.6407455317507417,
+        "infer_ms": 2.3081988965471587,
+        "fps_infer_only": 433.238228081602,
+        "per_class": {
+          "crazing": {
+            "map50": 0.46327857259113214,
+            "map50_95": 0.17485826638764515,
+            "precision": 0.6700311561062812,
+            "recall": 0.3469387755102041
+          },
+          "inclusion": {
+            "map50": 0.8092248922912122,
+            "map50_95": 0.4469784753407092,
+            "precision": 0.8197927653070297,
+            "recall": 0.6729559748427673
+          },
+          "patches": {
+            "map50": 0.8862338964857257,
+            "map50_95": 0.546645183930977,
+            "precision": 0.8721886477308105,
+            "recall": 0.8028462702835644
+          },
+          "pitted_surface": {
+            "map50": 0.7681880861394743,
+            "map50_95": 0.4512545604451967,
+            "precision": 0.8235676353331863,
+            "recall": 0.6901408450704225
+          },
+          "rolled-in_scale": {
+            "map50": 0.5712882672469126,
+            "map50_95": 0.26767937379119056,
+            "precision": 0.6619000861970827,
+            "recall": 0.4943820224719101
+          },
+          "scratches": {
+            "map50": 0.900949154560158,
+            "map50_95": 0.526586825614267,
+            "precision": 0.8938378543599831,
+            "recall": 0.8372093023255814
+          }
+        }
+      },
+      "test": {
+        "map50": 0.7203906027235768,
+        "map50_95": 0.38719826553031067,
+        "precision": 0.6898882511240326,
+        "recall": 0.7194145283335643,
+        "infer_ms": 2.4417503285268474,
+        "fps_infer_only": 409.5422813368958,
+        "per_class": {
+          "crazing": {
+            "map50": 0.413897959504972,
+            "map50_95": 0.14850212063908813,
+            "precision": 0.48897023347677504,
+            "recall": 0.41904761904761906
+          },
+          "inclusion": {
+            "map50": 0.7238758161812686,
+            "map50_95": 0.389749409290568,
+            "precision": 0.7354819245777029,
+            "recall": 0.7
+          },
+          "patches": {
+            "map50": 0.9433049879511407,
+            "map50_95": 0.6114726250450186,
+            "precision": 0.8143124742446678,
+            "recall": 0.9653460619697284
+          },
+          "pitted_surface": {
+            "map50": 0.7564393652500643,
+            "map50_95": 0.4268871797442304,
+            "precision": 0.7264222873839421,
+            "recall": 0.7479811242591939
+          },
+          "rolled-in_scale": {
+            "map50": 0.5791666947882081,
+            "map50_95": 0.26692968213818585,
+            "precision": 0.5665634994805899,
+            "recall": 0.5930232558139535
+          },
+          "scratches": {
+            "map50": 0.9056587926658068,
+            "map50_95": 0.47964857632477303,
+            "precision": 0.8075790875805184,
+            "recall": 0.8910891089108911
+          }
+        }
+      },
+      "finished_at": "2026-07-30 03:38:43"
+    }
+  }
+}

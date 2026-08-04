@@ -1,0 +1,10 @@
+{
+  "status": "done",
+  "candidate": "msdgs_bb_p4_dcnv2",
+  "seed": 0,
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_msdgs_backbone_dcnv2_e250/msdgs_bb_p4_dcnv2.yaml",
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_msdgs_backbone_dcnv2_e250/msdgs_bb_p4_dcnv2/weights/best.pt",
+  "params_unfused": 1921042,
+  "deform_units": 2,
+  "finished_at": "2026-07-30 19:52:54"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "y26n_gsdown_dwr_e250",
+  "val_map50": 0.7043427144811183,
+  "val_map50_95": 0.3895297253923641,
+  "test_map50": 0.6975080314759777,
+  "test_map50_95": 0.38073222175649885,
+  "weights": "/root/autodl-tmp/neu-det-yolo26/runs_gsdown_dwr_e250/y26n_gsdown_dwr_e250/weights/best.pt",
+  "cfg": "/root/autodl-tmp/neu-det-yolo26/generated_models_gsdown_dwr_e250/y26n_gsdown_dwr_e250.yaml",
+  "finished_at": "2026-07-26 11:07:50"
+}
